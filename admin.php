@@ -1,17 +1,5 @@
 <?php
-$choice = 0;
 
-$new_item = '<form action="admin.php" method="POST" enctype ="multipart/form-data">
-				<label for="i2">Select Picture to upload:</label>
-				<input id="image" name="myimage" type="file"><br>
-				<label for="name">Name:</label>
-				<input type ="text" name="name"><br>
-				<label for="description">Description:</label>
-				<input type ="text" name="description"><br>
-				<label for="cost">Cost:</label>
-				<input type ="text" name="cost"><br>
-				<input type="submit" name="submit2" value="submit">
-			</form>';
 	if( isset($_POST['submit1'])){
 		$choice = 1;
 	}else if (isset($_POST['submit2'])) {
@@ -42,9 +30,9 @@ $new_item = '<form action="admin.php" method="POST" enctype ="multipart/form-dat
 <content class="container">
 	<div class="row">
 		<div class="col-sm-offset-2 col-sm-10">
-			<form action="admin.php" method ="POST" enctype ="multipart/form-data">
+			<form action="newItem.php" method ="POST" enctype ="multipart/form-data">
 				<legend>Shopping Page</legend>
-				<input type="submit" name="submit1" value="New item">
+				<input class="btn btn-success" type="submit" name="submit1" value="New item">
 			</form>
 		</div>
 	</div>
@@ -53,12 +41,7 @@ $new_item = '<form action="admin.php" method="POST" enctype ="multipart/form-dat
 <footer class="container">
 	<div class="row">
 		<div class="col-sm=6 col-sm-offset-2">
-<?php
 
-	if ($choice == 1)
-		echo $new_item;
-	
-?>
 		</div>
 	</div>
 </footer>
