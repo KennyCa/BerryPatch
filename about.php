@@ -15,7 +15,7 @@
 		<nav>
 			<ul>
 				<li><a href="index.php">HOME<a></li>
-				<li><a href="#.php">SERVICES</a></li>
+				<li><a href="services.php">SERVICES</a></li>
 				<li><a href="#.php">SHOP</a></li>
 				<li><a href="about.php">ABOUT US</a></li>
 				<li><a href="contact.php">CONTACT</a></li>

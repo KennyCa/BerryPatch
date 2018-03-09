@@ -2,7 +2,7 @@
 <html> 
 <head> 
 	<meta charset="utf-8"> 
-	<title>Barry Patch Home</title> 
+	<title>Barry Patch Contact</title> 
 	<link rel="stylesheet" type="text/css" href="#" /> 
 	<!-- <link rel="stylesheet/less" type="text/css" href="styles.less" />
 	<script src="less.min.js" type="text/javascript"></script>-->
@@ -15,7 +15,7 @@
 		<nav>
 			<ul>
 				<li><a href="index.php">HOME<a></li>
-				<li><a href="#.php">SERVICES</a></li>
+				<li><a href="services.php">SERVICES</a></li>
 				<li><a href="#.php">SHOP</a></li>
 				<li><a href="about.php">ABOUT US</a></li>
 				<li><a href="contact.php">CONTACT</a></li>
