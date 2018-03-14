@@ -1,0 +1,17 @@
+.shopborder {
+	border-bottom-style: solid;
+	border-width: 1px;
+	border-color: #b3b3b3;
+}
+
+img {
+	margin-top:20px;
+}
+.btncenter {
+	text-align:center;
+}
+
+.btnwide {
+	width: 200px;
+	text-align:center;
+}

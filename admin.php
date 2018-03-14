@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
  	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/customAdmin.css">
+	<link rel ="stylesheet" href = "css\custom.css">
 </head>
 <body>
 <header class="container">
@@ -32,7 +32,10 @@
 		<div class="col-sm-offset-2 col-sm-10">
 			<form action="newItem.php" method ="POST" enctype ="multipart/form-data">
 				<legend>Shopping Page</legend>
-				<input class="btn btn-success" type="submit" name="submit1" value="New item">
+				<input class="btn btn-success btnwide" type="submit" name="submit1" value="Add an item">
+			</form>
+			<form action="deleteItem.php" method ="POST" enctype ="multipart/form-data">
+				<input class="btn btn-success btnwide" type="submit" name="submit1" value="Remove an item">
 			</form>
 		</div>
 	</div>
