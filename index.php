@@ -26,11 +26,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.php" target="_blank">HOME</a></li>
-                <li><a href="services.php" target="_blank">SERVICES</a></li>
-                <li><a href="shop.php" target="_blank">SHOP</a></li>
-                <li><a href="about.php" target="_blank">ABOUT</a></li>
-                <li><a href="contact.php" target="_blank">CONTACT</a></li>
+                <li class="active"><a href="index.php">HOME</a></li>
+                <li><a href="services.php">SERVICES</a></li>
+                <li><a href="shop.php">SHOP</a></li>
+                <li><a href="about.php">ABOUT</a></li>
+                <li><a href="contact.php">CONTACT</a></li>
+				<li><a href="admin.php">ADMIN</a></li>
             </ul>
         </div>
     </div>
