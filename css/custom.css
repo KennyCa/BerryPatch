@@ -3,9 +3,14 @@
 	border-width: 1px;
 	border-color: #b3b3b3;
 }
+.shopcontent {
+	margin-left:15px;
+	float:left;
+
+}
 
 img {
-	margin-top:20px;
+	margin:20px;
 }
 .btncenter {
 	text-align:center;
@@ -16,7 +21,8 @@ img {
 	text-align:center;
 }
 
-.quotation-mark{
+
+.quotation_mark{
     
     margin-top: -10px;
     font-weight: bold;
@@ -25,3 +31,12 @@ img {
     font-family: "Times New Roman", Georgia, Serif;
     
 }
+
+.ftleft {
+	float:left;
+}
+
+.ftright {
+	float:right;
+}
+

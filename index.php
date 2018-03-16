@@ -23,9 +23,7 @@
         <!--collections Nav for toggle-->
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="nav navbar-nav">
-
                 <li class="active"><a href="index.php">HOME</a></li>
-
                 <li><a href="services.php">SERVICES</a></li>
                 <li><a href="shop.php">SHOP</a></li>
                 <li><a href="about.php">ABOUT</a></li>
@@ -106,7 +104,7 @@
         </div>
         <div class="col-sm-6">
             <blockquote class="quote-box">
-      <p class="quotation-mark"><h1><b>
+      <p class="quotation_mark"><h1><b>
         “
       </b></h1></p>
       <p class="quote-text">
