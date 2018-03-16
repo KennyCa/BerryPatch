@@ -20,6 +20,18 @@ img {
 	width: 200px;
 	text-align:center;
 }
+
+
+.quotation_mark{
+    
+    margin-top: -10px;
+    font-weight: bold;
+    font-size:100px;
+    color:white;
+    font-family: "Times New Roman", Georgia, Serif;
+    
+}
+
 .ftleft {
 	float:left;
 }
@@ -27,3 +39,4 @@ img {
 .ftright {
 	float:right;
 }
+
