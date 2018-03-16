@@ -118,8 +118,6 @@ $elem = -1;
 	for ($i = 0; $i < $ind; $i++) {
 		echo "<div class='row shopborder' >";
 		echo "<form id='".$i."' action='shop.php' method='POST' enctype ='multipart/form-data'>";
-		echo "<div class='col-sm-2 col-sm-offset-1 col-xs-7 '>";
-		echo "<form action='shop.php' method='POST' enctype ='multipart/form-data'>";
 		echo "<div class='col-md-2 col-sm-offset-1 ftleft'>";
 		echo "<img src='".$itemarray[$i]['imagepath']."' height='200' width='auto'><br>" ;
 		echo "<input type='hidden' name='image' value='".$itemarray[$i]['imagepath']."'>";
