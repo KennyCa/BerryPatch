@@ -1,16 +1,38 @@
 <?php
 
-$subtotal = 0;
 
-	if (file_exists("library/cartarray.php")) {
-		$cartarray = json_decode(file_get_contents("library/cartarray.php"), true);
-		$ind = count($cartarray);
-		echo $ind."<br>";
-		for ($i = 0; $i < $ind; $i++) {
-			$subtotal += doubleval(preg_replace("/[^0-9.]/", "",$cartarray[$i]['cost']));
+$delind = -1;
+$ind = 0;
+//$cartarray = array();
+	
+	if (empty($cartarray)) {
+		if (file_exists("library/cartarray.php")) {
+			$cartarray = json_decode(file_get_contents("library/cartarray.php"), true);
+			$ind = count($cartarray);
+
+			$subtotal = calcsub($ind, $cartarray);
+
 		}
-		$subtotal ='$ ' . number_format($subtotal, 2);
-		echo $subtotal."<br>";
+	}
+	
+	if( isset($_POST['submit'])){
+		$ind = $_POST['ind'];
+		$subtotal = $_POST['sub'];
+		$delind = $_POST['delind'];
+		$minus = $_POST['cost'];
+		array_splice($cartarray,$delind, 1);
+		file_put_contents('library/cartarray.php',json_encode($cartarray));
+		$ind -= 1;
+		echo $ind;
+		$subtotal = calcsub($ind, $cartarray);
+	}
+	
+	function calcsub ($in, $ca) {
+		$sub = 0;
+		for ($i = 0; $i < $in; $i++) {
+			$sub += doubleval(preg_replace("/[^0-9.]/", "",$ca[$i]['cost']));
+		}
+		return $sub ='$ ' . number_format($sub, 2);
 	}
 ?>
 <html>
@@ -84,6 +106,9 @@ $subtotal = 0;
 		echo "</div>";
 		echo "<div class='btncenter col-sm-2'>";
 		echo "<br><br><br><br>";
+		echo "<input type='hidden' name='cost' value='".$cartarray[$i]['cost']."'>";
+		echo "<input type='hidden' name='sub' value='".$subtotal."'>";
+		echo "<input type='hidden' name='ind' value =".$ind."'>";
 		echo "<input type='hidden' name='imagepath' value='".$cartarray[$i]['imagepath']."'>";
 		echo "<input type ='hidden' name='delind' value='".$i."'><br><br>";
 		echo "<input class='btn btn-success' type='submit' name='submit' value='Remove Item from Cart'>";
@@ -92,6 +117,12 @@ $subtotal = 0;
 		echo "</div>";
 	}
 ?>
+	<div class="row">
+		<div class="col-sm-2 col-sm-offset-7 text-center">
+			<br><br><br>
+			<p><b>Subtotal: </b><?php echo $subtotal; ?></p>
+		</div>
+	</div>
 </content>
 <footer>
 

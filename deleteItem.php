@@ -6,12 +6,12 @@
 	}
 $delind = -1;	
 	if( isset($_POST['submit'])){
-	$delind = $_POST['delind'];
-	echo $delind;
-	array_splice($itemarray,$delind, 1);
-	file_put_contents('library/itemarray.php',json_encode($itemarray));
-	$ind--;
-	unlink($_POST['imagepath']);
+		$delind = $_POST['delind'];
+		echo $delind;
+		array_splice($itemarray,$delind, 1);
+		file_put_contents('library/itemarray.php',json_encode($itemarray));
+		$ind--;
+		unlink($_POST['imagepath']);
 	}
 	echo '<pre>'; print_r($itemarray); echo '</pre>';
 ?>
