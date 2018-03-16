@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
+
 <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
     <!-- grouping -->
     <div class="container-fluid">
@@ -28,10 +29,31 @@
                 <li><a href="shop.php">SHOP</a></li>
                 <li><a href="about.php">ABOUT</a></li>
                 <li><a href="contact.php">CONTACT</a></li>
+				<li><a href="admin.php">ADMIN</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
+<!--footer-->
+    
+                <div class="row">
+                    <div class="col-sm-9" style="background-color:#000000; color:#ffffff;">
+                        <footer>
+                            <p>641-683-5754
+                                <br>
+                            Berry Patch IT Services
+                        </p>
+                        </footer>
+                    </div>
+                    <div class="col-sm-3" style="background-color:#000000; color:#ffffff;">
+                        <footer>
+                            <br>
+                        
+                            <p>&copy; 2016 by Berry Patch IT Services.</p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
 </body>
 </html>

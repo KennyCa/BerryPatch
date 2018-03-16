@@ -9,6 +9,7 @@ require("library/item.php");
 		$name;
 		$description;
 		$cost;
+		$forcost;
 		
 
 	if( isset($_POST['submit'])){
@@ -18,16 +19,16 @@ require("library/item.php");
 		$imagepath= "newitems/$imagename";
 		$name = $_POST['name'];
 		$description = $_POST['description'];
-		$cost = $_POST['cost'];
-		
+		$cost = asDollars(doubleval($_POST['cost']));
+		$quantity = $_POST['quantity'];
 		
 
 		if (file_exists($imagepath)) {
 			$display = 1;
 		} else {
 			$display = 2;
-			//move();
-			writeArray($name, $description, $cost, $imagename, $imagepath);
+			move();
+			writeArray($name, $description, $cost, $imagename, $imagepath, $quantity);
 		}	
 	}
 	
@@ -36,14 +37,14 @@ require("library/item.php");
 		move_uploaded_file($_FILES["myimage"]["tmp_name"], "$folder".$_FILES["myimage"]["name"]);
 	}
 	
-	function writeArray($n, $d, $c, $in, $ip) {
+	function writeArray($n, $d, $c, $in, $ip, $q) {
 		$itemarray = array();
-		$array = array();
 		$ind = 0;
 		$item = new item();
 		$item->setName($n);
 		$item->setDescription($d);
 		$item->setCost($c);
+		$item->setQty($q);
 		$item->setImageName($in);
 		$item->setImagePath($ip);
 		
@@ -60,7 +61,11 @@ require("library/item.php");
 		
 	}
 	
-
+	function asDollars ($num) {
+		$money = '$ ' . number_format($num, 2);
+		return $money;
+	}
+	
 ?>
 <html>
 <head>
@@ -72,17 +77,50 @@ require("library/item.php");
 	<link rel="stylesheet" href="css/customAdmin.css">
 </head>
 <body>
-<header class="container">
-	<div class="row">
-		<div class="col-sm-2">
-			<image src="images\BpLogo.JPG" alt="logo"></image>
+	<nav id="myNavbar" class="navbar navbar-default navbar-inverse role="navigation">
+		<!-- grouping -->
+		<div class="container">
+			<div class="navbar-header col-sm-5 col-xs4" style="padding-bottom: 10px;">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand"><i>Berry Patch IT Services and Computer Repair</i></a>
+			</div>
+			<!--collections Nav for toggle-->
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.php" >HOME</a></li>
+					<li><a href="services.php">SERVICES</a></li>
+					<li><a href="shop.php">SHOP</a></li>
+					<li><a href="about.php">ABOUT</a></li>
+					<li><a href="contact.php">CONTACT</a></li>
+					<li class="active"><a href="admin.php">ADMIN</a></li>
+				</ul>
+			</div>
 		</div>
-		<div class="col-sm-8 text-center">
-			<b><h1>Berry Patch</h1></b>
+	</nav>
+
+	<div class="container-fluid" style="background: linear-gradient(#ce0f0f, #808080, #000000); color: #000000;" >
+		<div class="row">
+			<div class="col-sm-4" style="padding-top: 15px;">
+				<br>
+				<br>
+				<br>
+				  <img src="images/bp-logo.png" class="img-responsive img-rounded"  style="background-color: #dcdcdc;" alt="logo" width="80px" height="50px" >
+			</div>
+
+		   
+
+			<div class="col-sm-4 text-center" style="padding-top: 15px;">
+				
+				<hr style="border-color: #000000; border-size: 2px"> 
+				<h1>Add Items To Shop</h1>
+			</div>
 		</div>
 	</div>
-	
-</header>
 <content class="container">
 	<div class="row">
 		<div class="col-sm-4 col-sm-offset-2">
@@ -95,6 +133,8 @@ require("library/item.php");
 				<input type ="text" name="description"><br><br>
 				<label for="cost">Cost:</label><br>
 				<input type ="text" name="cost"><br><br>
+				<label for="quantity">Quantity:</label><br>
+				<input type ="text" name="quantity"><br><br>
 				<input type="submit" name="submit" value="Submit">
 			</form>
 		</div>

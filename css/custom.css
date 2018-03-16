@@ -3,9 +3,14 @@
 	border-width: 1px;
 	border-color: #b3b3b3;
 }
+.shopcontent {
+	margin-left:15px;
+	float:left;
+
+}
 
 img {
-	margin-top:20px;
+	margin:20px;
 }
 .btncenter {
 	text-align:center;
@@ -14,4 +19,11 @@ img {
 .btnwide {
 	width: 200px;
 	text-align:center;
+}
+.ftleft {
+	float:left;
+}
+
+.ftright {
+	float:right;
 }
