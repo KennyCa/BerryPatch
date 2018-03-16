@@ -1,19 +1,17 @@
 <?php
 
-	if (file_exists("library/itemarray.php")) {
-		$itemarray = json_decode(file_get_contents("library/itemarray.php"), true);
-		$ind = count($itemarray);
+$subtotal = 0;
+
+	if (file_exists("library/cartarray.php")) {
+		$cartarray = json_decode(file_get_contents("library/cartarray.php"), true);
+		$ind = count($cartarray);
+		echo $ind."<br>";
+		for ($i = 0; $i < $ind; $i++) {
+			$subtotal += doubleval(preg_replace("/[^0-9.]/", "",$cartarray[$i]['cost']));
+		}
+		$subtotal ='$ ' . number_format($subtotal, 2);
+		echo $subtotal."<br>";
 	}
-$delind = -1;	
-	if( isset($_POST['submit'])){
-	$delind = $_POST['delind'];
-	echo $delind;
-	array_splice($itemarray,$delind, 1);
-	file_put_contents('library/itemarray.php',json_encode($itemarray));
-	$ind--;
-	unlink($_POST['imagepath']);
-	}
-	echo '<pre>'; print_r($itemarray); echo '</pre>';
 ?>
 <html>
 <head>
@@ -24,7 +22,6 @@ $delind = -1;
 	<link rel ="stylesheet" href = "css\custom.css">
 </head>
 <body>
-
 	<nav id="myNavbar" class="navbar navbar-default navbar-inverse role="navigation">
 		<!-- grouping -->
 		<div class="container">
@@ -42,10 +39,10 @@ $delind = -1;
 				<ul class="nav navbar-nav">
 					<li><a href="index.php" >HOME</a></li>
 					<li><a href="services.php">SERVICES</a></li>
-					<li><a href="shop.php">SHOP</a></li>
+					<li class="active"><a href="shop.php">SHOP</a></li>
 					<li><a href="about.php">ABOUT</a></li>
 					<li><a href="contact.php">CONTACT</a></li>
-					<li class="active"><a href="admin.php">ADMIN</a></li>
+					<li><a href="admin.php">ADMIN</a></li>
 				</ul>
 			</div>
 		</div>
@@ -65,37 +62,36 @@ $delind = -1;
 			<div class="col-sm-4 text-center" style="padding-top: 15px;">
 				
 				<hr style="border-color: #000000; border-size: 2px"> 
-				<h1>Remove Items From Shop</h1>
+				<h1>Review Order</h1>
 			</div>
 		</div>
 	</div>
 <content class="container">
-	
+
 <?php
 	for ($i = 0; $i < $ind; $i++) {
 		echo "<div class='row shopborder' >";
 		echo "<div class='col-sm-2 col-sm-offset-1'>";
 		echo "<form action='#' method='POST' enctype ='multipart/form-data'>";
-		echo "<img src='".$itemarray[$i]['imagepath']."' height='200' width='auto'><br>" ;
+		echo "<img src='".$cartarray[$i]['imagepath']."' height='200' width='auto'><br>" ;
 		echo "</div>";
 		echo "<div class='col-sm-3'>";
 		echo "<br><br><br>";
-		echo "<p>Name: ".$itemarray[$i]['name']."</p>";
-		echo "<p>Description: ".$itemarray[$i]['description']."</p>";
-		echo "<p>Price: ".$itemarray[$i]['cost']."</p>";
-		echo "<p>Quantity: ".$itemarray[$i]['qty']."</p>";
+		echo "<p>Name: ".$cartarray[$i]['name']."</p>";
+		echo "<p>Description: ".$cartarray[$i]['description']."</p>";
+		echo "<p>Price: ".$cartarray[$i]['cost']."</p>";
+		echo "<p>Quantity: ".$cartarray[$i]['qty']."</p>";
 		echo "</div>";
 		echo "<div class='btncenter col-sm-2'>";
 		echo "<br><br><br><br>";
-		echo "<input type='hidden' name='imagepath' value='".$itemarray[$i]['imagepath']."'>";
+		echo "<input type='hidden' name='imagepath' value='".$cartarray[$i]['imagepath']."'>";
 		echo "<input type ='hidden' name='delind' value='".$i."'><br><br>";
-		echo "<input class='btn btn-success' type='submit' name='submit' value='Delete Item'>";
+		echo "<input class='btn btn-success' type='submit' name='submit' value='Remove Item from Cart'>";
 		echo "</div>";
 		echo "</form>";
 		echo "</div>";
 	}
 ?>
-
 </content>
 <footer>
 

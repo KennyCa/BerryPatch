@@ -24,19 +24,12 @@
         <!--collections Nav for toggle-->
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="nav navbar-nav">
-<<<<<<< HEAD
                 <li class="active"><a href="index.php">HOME</a></li>
-=======
-                <li class="active"><a href="index.php">HOME</a></li>
->>>>>>> 27c1e879f68da768b11b475a32b7f18684b6b5a9
                 <li><a href="services.php">SERVICES</a></li>
                 <li><a href="shop.php">SHOP</a></li>
                 <li><a href="about.php">ABOUT</a></li>
                 <li><a href="contact.php">CONTACT</a></li>
-<<<<<<< HEAD
-=======
 				<li><a href="admin.php">ADMIN</a></li>
->>>>>>> 27c1e879f68da768b11b475a32b7f18684b6b5a9
             </ul>
         </div>
     </div>
