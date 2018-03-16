@@ -1,1 +1,1 @@
-[{"name":"Pc","description":"Dell lapTop, i5 processor","cost":"$ 100.95","qty":"2","imagename":"na","imagepath":"newitems\/dollar.jpg"},{"name":"Picture","description":"Dells","cost":"$ 1,000.00","qty":"1","imagename":"na","imagepath":"newitems\/granite.jpg"},{"name":"Pc","description":"Dell lapTop, i5 processor","cost":"$ 100.95","qty":"2","imagename":"na","imagepath":"newitems\/dollar.jpg"},{"name":"Picture","description":"Dells","cost":"$ 1,000.00","qty":"1","imagename":"na","imagepath":"newitems\/granite.jpg"}]
+[]
