@@ -4,46 +4,40 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Berry Patch Home</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="css/jquery-3.3.1.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
 <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
     <!-- grouping -->
     <div class="container-fluid">
-        <div class="navbar-header col-sm-5 col-xs4" style="padding-bottom: 10px;">
+        <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand"><i>Berry Patch IT Services and Computer Repair</i></a>
+            <a class="navbar-brand col-sm-10"><i>Berry Patch IT Services and Computer Repair</i></a>
         </div>
         <!--collections Nav for toggle-->
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="nav navbar-nav">
-<<<<<<< HEAD
+
                 <li class="active"><a href="index.php">HOME</a></li>
-=======
-                <li class="active"><a href="index.php">HOME</a></li>
->>>>>>> 27c1e879f68da768b11b475a32b7f18684b6b5a9
+
                 <li><a href="services.php">SERVICES</a></li>
                 <li><a href="shop.php">SHOP</a></li>
                 <li><a href="about.php">ABOUT</a></li>
                 <li><a href="contact.php">CONTACT</a></li>
-<<<<<<< HEAD
-=======
 				<li><a href="admin.php">ADMIN</a></li>
->>>>>>> 27c1e879f68da768b11b475a32b7f18684b6b5a9
             </ul>
         </div>
     </div>
 </nav>
 <div class="jumbotron" style="background-color: #dcdcdc" >
     <div class="container-fluid">
-        <h1 style="color: #ce0f0f; padding-top: 60px;" ><i>Berry Patch IT Services and Computer Repair</i></h1>
+        <h1 style="color: #ce0f0f; padding-top: 70px;" ><i>Berry Patch IT Services and Computer Repair</i></h1>
         <img src="images/bp-logo.png" class="img-responsive col-sm-1" style="background-color: #dcdcdc;" alt="logo"">
         <br>
         <br>
@@ -80,6 +74,7 @@
                 <p>Berry Patch IT Services now replaces screens on all devices phone or Tablets. Screens are ordered as needed and take 2-3 days to arrive. It takes about 2 hours to replace the screen. Contact us for an estimate.</p>  
         </div>
     </div>
+</div>
     <hr>
     <!-- form and customer quote-->
     <div class="container-fluid" style="background-color: #f8f8f8;">
@@ -149,6 +144,7 @@
             </footer>
         </div>
     </div>
-</div>
+
+
 </body>
 </html>                            

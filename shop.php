@@ -33,7 +33,7 @@
 <?php
 	for ($i = 0; $i < $ind; $i++) {
 		echo "<div class='row shopborder' >";
-		echo "<div class='col-sm-2 col-sm-offset-1'>";
+		echo "<div class='col-sm-2 col-sm-offset-1 col-xs-7 '>";
 		echo "<img src='".$itemarray[$i]['imagepath']."' height='200' width='auto'><br>" ;
 		echo "</div>";
 		echo "<div class='col-sm-7'>";
