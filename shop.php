@@ -11,7 +11,7 @@ $elem = -1;
 	if (isset($_POST['cart'])) {
 		
 		$elem = $_POST['element'];
-		echo $elem;
+
 		
 		$item = $_POST['item'];
 		$description = $_POST['description'];
@@ -52,12 +52,7 @@ $elem = -1;
 ?>
 <html>
 <head>
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
- 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-	<link rel ="stylesheet" href = "css\bootstrap.css">
-	<link rel ="stylesheet" href = "css\custom.css">
-	<script src="css/jquery-3.3.1.js"></script>
+<?php require ("library/head.php"); ?>
 	<script type="text/javascript">
 		$(document).ready(function () {
 		// Handler for .ready() called.
@@ -118,7 +113,7 @@ $elem = -1;
 	for ($i = 0; $i < $ind; $i++) {
 		echo "<div class='row shopborder' >";
 		echo "<form id='".$i."' action='shop.php' method='POST' enctype ='multipart/form-data'>";
-		echo "<div class='col-md-2 col-sm-offset-1 ftleft'>";
+		echo "<div class='col-md-2 col-sm-offset-1'>";
 		echo "<img src='".$itemarray[$i]['imagepath']."' height='200' width='auto'><br>" ;
 		echo "<input type='hidden' name='image' value='".$itemarray[$i]['imagepath']."'>";
 		echo "</div>";

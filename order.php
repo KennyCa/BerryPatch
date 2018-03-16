@@ -37,11 +37,7 @@ $ind = 0;
 ?>
 <html>
 <head>
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
- 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-	<link rel ="stylesheet" href = "css\bootstrap.css">
-	<link rel ="stylesheet" href = "css\custom.css">
+<?php require ("library/head.php"); ?>
 </head>
 <body>
 	<nav id="myNavbar" class="navbar navbar-default navbar-inverse role="navigation">
@@ -97,7 +93,7 @@ $ind = 0;
 		echo "<form action='#' method='POST' enctype ='multipart/form-data'>";
 		echo "<img src='".$cartarray[$i]['imagepath']."' height='200' width='auto'><br>" ;
 		echo "</div>";
-		echo "<div class='col-sm-3'>";
+		echo "<div class='col-sm-3 shopcontent'>";
 		echo "<br><br><br>";
 		echo "<p>Name: ".$cartarray[$i]['name']."</p>";
 		echo "<p>Description: ".$cartarray[$i]['description']."</p>";
