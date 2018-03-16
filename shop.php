@@ -1,12 +1,18 @@
 <?php
 require ("library/item.php");
 
+$elem = -1;
+
 	if (file_exists("library/itemarray.php")) {
 		$itemarray = json_decode(file_get_contents("library/itemarray.php"), true);
 		$ind = count($itemarray);
 	}
 	
 	if (isset($_POST['cart'])) {
+		
+		$elem = $_POST['element'];
+		echo $elem;
+		
 		$item = $_POST['item'];
 		$description = $_POST['description'];
 		$price = $_POST['cost'];
@@ -34,7 +40,6 @@ require ("library/item.php");
 		
 		if (file_exists("library/cartarray.php")) {
 			$cartarray = json_decode(file_get_contents("library/cartarray.php"), true);
-			//print_r($cartarray);
 			$ind = count($cartarray);
 			$cartarray[$ind] = $cart; 
 			//echo '<pre>'; print_r($cartarray); echo '</pre>';
@@ -52,6 +57,15 @@ require ("library/item.php");
  	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 	<link rel ="stylesheet" href = "css\bootstrap.css">
 	<link rel ="stylesheet" href = "css\custom.css">
+	<script src="css/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+		// Handler for .ready() called.
+		$('html, body').animate({
+			scrollTop: $('<?php echo "#".$elem; ?>').offset().top
+		}, 'fast');
+		});
+	</script>
 </head>
 <body>
 	<nav id="myNavbar" class="navbar navbar-default navbar-inverse role="navigation">
@@ -103,7 +117,7 @@ require ("library/item.php");
 <?php
 	for ($i = 0; $i < $ind; $i++) {
 		echo "<div class='row shopborder' >";
-		echo "<form action='shop.php' method='POST' enctype ='multipart/form-data'>";
+		echo "<form id='".$i."' action='shop.php' method='POST' enctype ='multipart/form-data'>";
 		echo "<div class='col-md-2 col-sm-offset-1 ftleft'>";
 		echo "<img src='".$itemarray[$i]['imagepath']."' height='200' width='auto'><br>" ;
 		echo "<input type='hidden' name='image' value='".$itemarray[$i]['imagepath']."'>";
@@ -130,7 +144,8 @@ require ("library/item.php");
 		echo "</div>";
 		echo "<div class='col-sm-1'>";
 		echo "<br><br><br><br><br>";
-		echo "<input class='btn btn-success' type='submit' name='cart' value='Add to Cart'>";
+		echo "<input id='element' type='hidden' name='element' value='".$i."'>";
+		echo "<input onClick='reply_click(this.id)' class='btn btn-success' type='submit' name='cart' value='".$i."'>";
 		echo "</div>";
 		echo "</div>";
 		echo "</form>";
@@ -147,5 +162,13 @@ require ("library/item.php");
 <footer>
 
 </footer>
+<script type="text/javascript">
+function reply_click(clicked_id)
+{
+    alert("Item Added to Cart");
+	
+}
+
+</script>
 </body>
 </html>
