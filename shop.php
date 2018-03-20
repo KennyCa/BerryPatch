@@ -1,14 +1,15 @@
 <?php
-require ("library/item.php");
+//require ("library/item.php");
 
-$elem = -1;
+//$elem = -1;
 
 	if (file_exists("library/itemarray.php")) {
 		$itemarray = json_decode(file_get_contents("library/itemarray.php"), true);
 		$ind = count($itemarray);
+
 	}
 	
-	if (isset($_POST['cart'])) {
+	/*if (isset($_POST['cart'])) {
 		
 		$elem = $_POST['element'];
 
@@ -42,10 +43,11 @@ $elem = -1;
 			$cartarray = json_decode(file_get_contents("library/cartarray.php"), true);
 			$ind = count($cartarray);
 			$cartarray[$ind] = $cart; 
+
 			//echo '<pre>'; print_r($cartarray); echo '</pre>';
 			file_put_contents('library/cartarray.php',json_encode($cartarray));
 		}
-	}
+	}*/
 	
 	
 	
@@ -53,14 +55,7 @@ $elem = -1;
 <html>
 <head>
 <?php require ("library/head.php"); ?>
-	<script type="text/javascript">
-		$(document).ready(function () {
-		// Handler for .ready() called.
-		$('html, body').animate({
-			scrollTop: $('<?php echo "#".$elem; ?>').offset().top
-		}, 'fast');
-		});
-	</script>
+
 </head>
 <body>
 	<nav id="myNavbar" class="navbar navbar-default navbar-inverse role="navigation">
@@ -110,9 +105,10 @@ $elem = -1;
 <content class="container">
 	
 <?php
+		
 	for ($i = 0; $i < $ind; $i++) {
 		echo "<div class='row shopborder' >";
-		echo "<form id='".$i."' action='shop.php' method='POST' enctype ='multipart/form-data'>";
+		//echo "<form id='".$i."' action='shop.php' method='POST' enctype ='multipart/form-data'>";
 		echo "<div class='col-md-2 col-sm-offset-1'>";
 		echo "<img src='".$itemarray[$i]['imagepath']."' height='200' width='auto'><br>" ;
 		echo "<input type='hidden' name='image' value='".$itemarray[$i]['imagepath']."'>";
@@ -140,16 +136,17 @@ $elem = -1;
 		echo "<div class='col-sm-1'>";
 		echo "<br><br><br><br><br>";
 		echo "<input id='element' type='hidden' name='element' value='".$i."'>";
-		echo "<input onClick='reply_click(this.id)' class='btn btn-success' type='submit' name='cart' value='".$i."'>";
+		echo "<button id='".$i."' onClick='reply_click(this.id)' class='btn btn-success'>Add to Cart</button>";
 		echo "</div>";
 		echo "</div>";
-		echo "</form>";
+		//echo "</form>";
 		
 	}
 ?>
 		<br><br>
 	<form action='order.php' method='POST' enctype ='multipart/form-data'>
 		<div class="btncenter">
+			<input type = "hidden" id="ids" name="ids">
 			<input class="btn btn-info" type="submit" name="review" value="Review Order">
 		</div>
 	</form>
@@ -158,9 +155,14 @@ $elem = -1;
 
 </footer>
 <script type="text/javascript">
+	var divids = [];
 function reply_click(clicked_id)
 {
     alert("Item Added to Cart");
+
+	divids.push(clicked_id);
+	json = JSON.stringify(divids);
+	document.getElementById("ids").value = json;
 	
 }
 

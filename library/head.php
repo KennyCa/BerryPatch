@@ -7,3 +7,4 @@ echo '<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 	<script src="css/jquery-3.3.1.js"></script>';
 
 ?>
+
