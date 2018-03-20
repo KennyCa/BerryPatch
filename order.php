@@ -3,34 +3,40 @@
 
 $delind = -1;
 $ind = 0;
-//$cartarray = array();
-	
-	if (empty($cartarray)) {
-		if (file_exists("library/cartarray.php")) {
-			$cartarray = json_decode(file_get_contents("library/cartarray.php"), true);
-			$ind = count($cartarray);
+$cartarray = array();
+$itemarray = array();
 
-			$subtotal = calcsub($ind, $cartarray);
+	if (isset($_POST['review'])) {
+		$cartarray = json_decode($_POST['ids']);
+		echo '<pre>'; print_r($cartarray); echo '</pre>';
+	}
+	
+	if (empty($itemarray)) {
+		if (file_exists("library/itemarray.php")) {
+			$itemarray = json_decode(file_get_contents("library/itemarray.php"), true);
+			$ind = count($cartarray);
+			echo $ind;
+			$subtotal = calcsub($ind, $cartarray, $itemarray);
 
 		}
 	}
 	
 	if( isset($_POST['submit'])){
+		$cartarray = json_decode($_POST['array']);
 		$ind = $_POST['ind'];
 		$subtotal = $_POST['sub'];
 		$delind = $_POST['delind'];
 		$minus = $_POST['cost'];
 		array_splice($cartarray,$delind, 1);
-		file_put_contents('library/cartarray.php',json_encode($cartarray));
+		//file_put_contents('library/cartarray.php',json_encode($cartarray));
 		$ind -= 1;
-		echo $ind;
-		$subtotal = calcsub($ind, $cartarray);
+		$subtotal = calcsub($ind, $cartarray, $itemarray);
 	}
 	
-	function calcsub ($in, $ca) {
+	function calcsub ($in, $ca, $ia) {
 		$sub = 0;
 		for ($i = 0; $i < $in; $i++) {
-			$sub += doubleval(preg_replace("/[^0-9.]/", "",$ca[$i]['cost']));
+			$sub += doubleval(preg_replace("/[^0-9.]/", "",$ia[$ca[$i]]['cost']));
 		}
 		return $sub ='$ ' . number_format($sub, 2);
 	}
@@ -91,21 +97,22 @@ $ind = 0;
 		echo "<div class='row shopborder' >";
 		echo "<div class='col-sm-2 col-sm-offset-1'>";
 		echo "<form action='#' method='POST' enctype ='multipart/form-data'>";
-		echo "<img src='".$cartarray[$i]['imagepath']."' height='200' width='auto'><br>" ;
+		echo "<img src='".$itemarray[$cartarray[$i]]['imagepath']."' height='200' width='auto'><br>" ;
 		echo "</div>";
 		echo "<div class='col-sm-3 shopcontent'>";
 		echo "<br><br><br>";
-		echo "<p>Name: ".$cartarray[$i]['name']."</p>";
-		echo "<p>Description: ".$cartarray[$i]['description']."</p>";
-		echo "<p>Price: ".$cartarray[$i]['cost']."</p>";
-		echo "<p>Quantity: ".$cartarray[$i]['qty']."</p>";
+		echo "<p>Name: ".$itemarray[$cartarray[$i]]['name']."</p>";
+		echo "<p>Description: ".$itemarray[$cartarray[$i]]['description']."</p>";
+		echo "<p>Price: ".$itemarray[$cartarray[$i]]['cost']."</p>";
+		echo "<p>Quantity: ".$itemarray[$cartarray[$i]]['qty']."</p>";
 		echo "</div>";
 		echo "<div class='btncenter col-sm-2'>";
 		echo "<br><br><br><br>";
-		echo "<input type='hidden' name='cost' value='".$cartarray[$i]['cost']."'>";
+		echo "<input type='hidden' name='cost' value='".$itemarray[$cartarray[$i]]['cost']."'>";
 		echo "<input type='hidden' name='sub' value='".$subtotal."'>";
 		echo "<input type='hidden' name='ind' value =".$ind."'>";
-		echo "<input type='hidden' name='imagepath' value='".$cartarray[$i]['imagepath']."'>";
+		echo "<input type='hidden' name='imagepath' value='".$itemarray[$cartarray[$i]]['imagepath']."'>";
+		echo "<input type='hidden' name='array' value='".json_encode($cartarray)."'>";
 		echo "<input type ='hidden' name='delind' value='".$i."'><br><br>";
 		echo "<input class='btn btn-success' type='submit' name='submit' value='Remove Item from Cart'>";
 		echo "</div>";
