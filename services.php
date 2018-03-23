@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Services</title>
-<script src="css/jquery-3.3.1.js"></script>
+
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/custom.css">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -60,69 +60,75 @@
 	</div>
 </div>	
 
-
-<!--caro.-->
-
-<div class="container-fluid">
-	<div class="row">
-
-
-		
-			<div id="servicescaro"  class="carousel slide col-sm-offset-3 col-sm-6 carousel-center"   >
-
-				<div class="carousel-inner" style=" padding-left: 50px; padding-right: 50px;">
-					<div class="item active ">
-						<h3>Custom Computer builds</h3>
+<div class ="carousel">
+	<div class ="container-fluid">
+		<div class="row">
+				<div class="col-sm-offset-3 col-sm-6">
+					<div id="locations" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#locations" data-slide-to="car0" class="active"></li>
+							<li data-target="#locations" data-slide-to="car1"></li>
+							<li data-target="#locations" data-slide-to="car2"></li>
+							<li data-target="#locations" data-slide-to="car3"></li>
+							<li data-target="#locations" data-slide-to="car4"></li>
+							<li data-target="#locations" data-slide-to="car5"></li>
+							<li data-target="#locations" data-slide-to="car6"></li>
+							
+						</ol>
+					<div class="carousel-inner" style="padding-right: 70px; padding-left: 70px;">
+						<div class="item active">
+							<h3>Custom Computer builds</h3>
 							<p>
 								We have built more than a 100 custom PC's from simple personal systems to very large gaming systems, We use Intel and AMD. We can install Linux or Windows. 
 							</p>
-					</div>
-
-					<div class="item">
-						<h3>Computer Repair</h3>
+						</div>
+						<div class="item">
+							<h3>Computer Repair</h3>
 							<p>
 								Computer not running right? Give us a try! We can diagnose most PC problems and fix them.  
 							</p>
-					</div>
-				
-					<div class="item">
-						<h3>Computer Deployment Services</h3>
+						</div>
+						<div class="item">
+							<h3>Computer Deployment Services</h3>
 							<p>
 								In need of new computers, We can help. We can build PC to your specs or deploy ones than you have gotten. We can also help in the search for what you need.
 							</p>
-					</div>
-
-					<div class="item">
-						<h3>Computer Data Recovery</h3>
+						</div>
+						<div class="item">
+							<h3>Computer Data Recovery</h3>
 							<p>
 								Your PC die on you? Think you have lost all of your Information? Well maybe not! Bring your PC or drive to us and we can try and recover your data for you. 
 							</p>
-					</div>
-
-					<div class="item">
-						<h3>Phone & Tablet Screen Replacement</h3>
+						</div>
+						<div class="item">
+							<h3>Phone & Tablet Screen Replacement</h3>
 							<p>
 								Berry Patch IT Services now replaces screens on all devices phone or Tablets. Screens are ordered as needed and take 2-3 days to arrive. It takes about 2 hours to replace the screen. Contact us for an estimate.   
 							</p>
-					</div>
+						</div>
+						<div class="item">
+							<h3>Computer Recycling</h3>
+								<p>
+									Berry Patch IT Services offer recycling of old computers. We can erase or destroy the hard drive, which ever you prefer. We will come to your home or Business and pick up the equipment and recycle it properly. 
+								</p>
+						</div>
 
-					<div class="item">
-						<h3>Computer Recycling</h3>
-							<p>
-								Berry Patch IT Services offer recycling of old computers. We can erase or destroy the hard drive, which ever you prefer. We will come to your home or Business and pick up the equipment and recycle it properly. 
-							</p>
-					</div>
-				</div>
-				<a class="left carousel-control" href="carousel-inner" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left"></span>
-				</a>
-				<a class="right carousel-control" href="servicescaro" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right"></span>
-				</a>
+
+
+							
+					<a class="left carousel-control" href="#locations" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a class="right carousel-control" href="#locations" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+				</div>	
+			</div>
 		</div>
 	</div>
-</div>
-	
+</div>  
+
+
 
 <div class="row">
 	<div class="container-fluid" style="background-color: #f2f2f2;">
@@ -149,7 +155,7 @@
 </div>
 
 <!--footer-->
-<footer style="background-color: #000000;">
+<footer class="footer-fixed-bottom" style="background-color: #000000;">
    <div class ="col-sm-9"  style="background-color:#000000; color:#ffffff;">
         Berry Patch IT Services <br>
         "We Have A Passion For Technology!"
@@ -161,5 +167,18 @@
 
 	</div>	
 
+
+<script>
+$('#servicescaro').carousel
+({
+    interval: 2000,
+
+
+    })
+</script>
+<script src="css/jquery-3.3.1.js"></script>
+<!--<script src="js/jquery-2.1.4.min.js"></script> -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
