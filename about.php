@@ -40,7 +40,8 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-8" style="padding-top: 30px;">
+            <br>
             <h1 style=""><b>About Us</b></h1>
             <p>Berry Patch IT Services is a small I.T. business in Ottumwa, Iowa. We have professionally trained techs in Information Technology. Our techs love everything to do with the Technology Industry and are always completing additional training so they are up to date on the latest changes in the industry. We are a computer repair service Ottumwa can count on.</p>
              
@@ -56,7 +57,12 @@
         </div>
 
         <div class="col-sm-4">
-        	<img src="images/hire-staff.jpg" class="img-responsive img-rounded col-sm-1" style=";" alt="H-A-G"">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        	<a href="contact.php"><img src="images/hireStaff.jpg" class="img-responsive img-rounded" style="padding-top: 50px;" alt="hire"></a>
         </div>
 
     </div><!--end row-->

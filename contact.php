@@ -39,7 +39,7 @@
                             <br>
                             <br>
                             <br>
-                              <img src="images/bp-logo.png" class="img-responsive img-rounded"  style="background-color: #dcdcdc;" alt="logo" width="80px" height="50px" >
+                              <img src="images/BpLogo.JPG" class="img-responsive img-rounded"  style="background-color: #dcdcdc;" alt="logo" width="80px" height="50px" >
                         </div>
 
                        
