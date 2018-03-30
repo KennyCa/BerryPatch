@@ -5,6 +5,8 @@
 		var $description = "na";
 		var $cost = 0;
 		var $qty = 0;
+		var $lbs = 0;
+		var $oz = 0;
 		var $imagename = "na";
 		var $imagepath= "na";
 
@@ -52,6 +54,20 @@
 		}
 		public function getQty (){
 			return $this->qty;
+		}
+		
+		public function setLbs ($l) {
+			$this->lbs = $l;
+		}
+		public function getLbs (){
+			return $this->lbs;
+		}
+		
+		public function setOzs ($o) {
+			$this->oz = $o;
+		}
+		public function getOzs (){
+			return $this->oz;
 		}
 
 	

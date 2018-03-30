@@ -7,11 +7,19 @@
 	margin-left:15px;
 
 
+
 }
 
 img {
 	margin:20px;
+	
 }
+
+.btn-up {
+	margin-bottom:15px;
+	margin-left:10px;
+}
+
 .btncenter {
 	text-align:center;
 }
