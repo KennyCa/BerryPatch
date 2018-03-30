@@ -48,3 +48,7 @@ img {
 	float:right;
 }
 
+
+.carousel-indicators li { 
+	visibility: hidden; 
+}
