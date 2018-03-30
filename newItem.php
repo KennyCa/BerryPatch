@@ -21,6 +21,8 @@ require("library/item.php");
 		$description = $_POST['description'];
 		$cost = asDollars(doubleval($_POST['cost']));
 		$quantity = $_POST['quantity'];
+		$lbs = $_POST['lbs'];
+		$oz = $_POST['ozs'];
 		
 
 		if (file_exists($imagepath)) {
@@ -28,7 +30,7 @@ require("library/item.php");
 		} else {
 			$display = 2;
 			move();
-			writeArray($name, $description, $cost, $imagename, $imagepath, $quantity);
+			writeArray($name, $description, $cost, $imagename, $imagepath, $quantity, $lbs, $oz);
 		}	
 	}
 	
@@ -37,7 +39,7 @@ require("library/item.php");
 		move_uploaded_file($_FILES["myimage"]["tmp_name"], "$folder".$_FILES["myimage"]["name"]);
 	}
 	
-	function writeArray($n, $d, $c, $in, $ip, $q) {
+	function writeArray($n, $d, $c, $in, $ip, $q, $l, $o) {
 		$itemarray = array();
 		$ind = 0;
 		$item = new item();
@@ -47,6 +49,8 @@ require("library/item.php");
 		$item->setQty($q);
 		$item->setImageName($in);
 		$item->setImagePath($ip);
+		$item->setLbs($l);
+		$item->setOzs($o);
 		
 		if (file_exists("library/itemarray.php")) {
 			$itemarray = json_decode(file_get_contents("library/itemarray.php"), true);
@@ -71,7 +75,6 @@ require("library/item.php");
 <head>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
- 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 	<script src="css/jquery-3.3.1.js"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/customAdmin.css">
@@ -135,6 +138,11 @@ require("library/item.php");
 				<input type ="text" name="cost"><br><br>
 				<label for="quantity">Quantity:</label><br>
 				<input type ="text" name="quantity"><br><br>
+				<h5><b>Weight</b></h5><br>
+				<label for="quantity">Lbs:</label><br>
+				<input type ="text" name="lbs"><br><br>
+				<label for="quantity">Ozs:</label><br>
+				<input type ="text" name="ozs"><br><br>
 				<input type="submit" name="submit" value="Submit">
 			</form>
 		</div>

@@ -1,55 +1,10 @@
 <?php
-//require ("library/item.php");
-
-//$elem = -1;
 
 	if (file_exists("library/itemarray.php")) {
 		$itemarray = json_decode(file_get_contents("library/itemarray.php"), true);
 		$ind = count($itemarray);
 
 	}
-	
-	/*if (isset($_POST['cart'])) {
-		
-		$elem = $_POST['element'];
-
-		
-		$item = $_POST['item'];
-		$description = $_POST['description'];
-		$price = $_POST['cost'];
-		$imagepath = $_POST['image'];
-		
-		if (is_null($_POST['quantity'])) {
-			$qty = 1;
-		} else {
-			$qty = $_POST['quantity'];
-		}
-		
-		writeOrder($item, $description, $price, $imagepath, $qty);
-
-	}
-	
-	function writeOrder ($n, $d, $c, $ip, $q) {
-		$cartarray = array();
-		$ind = 0;
-		$cart = new item();
-		$cart->setName($n);
-		$cart->setDescription($d);
-		$cart->setCost($c);
-		$cart->setQty($q);
-		$cart->setImagePath($ip);
-		
-		if (file_exists("library/cartarray.php")) {
-			$cartarray = json_decode(file_get_contents("library/cartarray.php"), true);
-			$ind = count($cartarray);
-			$cartarray[$ind] = $cart; 
-
-			//echo '<pre>'; print_r($cartarray); echo '</pre>';
-			file_put_contents('library/cartarray.php',json_encode($cartarray));
-		}
-	}*/
-	
-	
 	
 ?>
 <html>
@@ -107,20 +62,21 @@
 <?php
 		
 	for ($i = 0; $i < $ind; $i++) {
-		echo "<div class='row shopborder' >";
+		echo "<div id='".$i."' class='row shopborder' >";
 		//echo "<form id='".$i."' action='shop.php' method='POST' enctype ='multipart/form-data'>";
-		echo "<div class='col-md-2 col-sm-offset-1'>";
-		echo "<img src='".$itemarray[$i]['imagepath']."' height='200' width='auto'><br>" ;
-		echo "<input type='hidden' name='image' value='".$itemarray[$i]['imagepath']."'>";
+		echo "<div class=' col-xs-4 col-sm-2 col-sm-offset-1'>";
+		echo "<img class='img-responsive' src='".$itemarray[$i]['imagepath']."' height='200' width='auto'>" ;
+		//echo "<input type='hidden' name='image' value='".$itemarray[$i]['imagepath']."'>";
 		echo "</div>";
-		echo "<div class='col-sm-4 shopcontent'>";
+		//echo "<div class='col-sm-9 ftright'>";
+		echo "<div class='col-xs-6 col-sm-4 shopcontent'>";
 		echo "<br><br><br>";
 		echo "<p><b>Item:</b> ".$itemarray[$i]['name']."</p>";
-		echo "<input type='hidden' name='item' value='".$itemarray[$i]['name']."'>";
+		//echo "<input type='hidden' name='item' value='".$itemarray[$i]['name']."'>";
 		echo "<p><b>Description:</b> ".$itemarray[$i]['description']."</p>";
-		echo "<input type='hidden' name='description' value='".$itemarray[$i]['description']."'>";
+		//echo "<input type='hidden' name='description' value='".$itemarray[$i]['description']."'>";
 		echo "<p><b>Price:</b> ".$itemarray[$i]['cost']."</p>";
-		echo "<input type='hidden' name='cost' value='".$itemarray[$i]['cost']."'>";
+		//echo "<input type='hidden' name='cost' value='".$itemarray[$i]['cost']."'>";
 		if ($itemarray[$i]['qty'] > 1) {
 			echo "<p><b>Quantity:</b> ";
 			echo "<select name='quantity'>";
@@ -130,15 +86,15 @@
 			echo "</select>";
 		} else {
 			echo "<p><b style='color:red'>1 Available</b></p>";
-			echo "<input type='hidden' name='quantity' value=1>";
+			//echo "<input type='hidden' name='quantity' value=1>";
 		}
 		echo "</div>";
 		echo "<div class='col-sm-1'>";
 		echo "<br><br><br><br><br>";
-		echo "<input id='element' type='hidden' name='element' value='".$i."'>";
-		echo "<button id='".$i."' onClick='reply_click(this.id)' class='btn btn-success'>Add to Cart</button>";
+		echo "<button id='".$i."' onClick='reply_click(this.id)' class='btn btn-success btn-up'>Add to Cart</button>";
 		echo "</div>";
 		echo "</div>";
+		//echo "</div>";
 		//echo "</form>";
 		
 	}
@@ -158,12 +114,13 @@
 	var divids = [];
 function reply_click(clicked_id)
 {
-    alert("Item Added to Cart");
-
+    var con = confirm("Item Added to Cart");
+	if (con == true) {
 	divids.push(clicked_id);
 	json = JSON.stringify(divids);
 	document.getElementById("ids").value = json;
-	
+	document.getElementById(clicked_id).style.display = "none";
+	} 
 }
 
 </script>

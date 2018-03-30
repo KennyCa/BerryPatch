@@ -1,21 +1,22 @@
 <?php
-
+require_once 'braintree-php-3.29.0/lib/Braintree.php';
 
 $delind = -1;
 $ind = 0;
 $cartarray = array();
 $itemarray = array();
 
+
 	if (isset($_POST['review'])) {
 		$cartarray = json_decode($_POST['ids']);
-		echo '<pre>'; print_r($cartarray); echo '</pre>';
+		//echo '<pre>'; print_r($cartarray); echo '</pre>';
 	}
 	
 	if (empty($itemarray)) {
 		if (file_exists("library/itemarray.php")) {
 			$itemarray = json_decode(file_get_contents("library/itemarray.php"), true);
 			$ind = count($cartarray);
-			echo $ind;
+			//echo $ind;
 			$subtotal = calcsub($ind, $cartarray, $itemarray);
 
 		}
@@ -44,6 +45,7 @@ $itemarray = array();
 <html>
 <head>
 <?php require ("library/head.php"); ?>
+<script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.min.js"></script>
 </head>
 <body>
 	<nav id="myNavbar" class="navbar navbar-default navbar-inverse role="navigation">
@@ -95,11 +97,11 @@ $itemarray = array();
 <?php
 	for ($i = 0; $i < $ind; $i++) {
 		echo "<div class='row shopborder' >";
-		echo "<div class='col-sm-2 col-sm-offset-1'>";
+		echo "<div class='col-xs-4 col-sm-offset-1 col-sm-2'>";
 		echo "<form action='#' method='POST' enctype ='multipart/form-data'>";
-		echo "<img src='".$itemarray[$cartarray[$i]]['imagepath']."' height='200' width='auto'><br>" ;
+		echo "<img class='img-responsive' src='".$itemarray[$cartarray[$i]]['imagepath']."' height='200' width='auto'>" ;
 		echo "</div>";
-		echo "<div class='col-sm-3 shopcontent'>";
+		echo "<div class='col-xs-6 col-sm-3 shopcontent'>";
 		echo "<br><br><br>";
 		echo "<p>Name: ".$itemarray[$cartarray[$i]]['name']."</p>";
 		echo "<p>Description: ".$itemarray[$cartarray[$i]]['description']."</p>";
@@ -114,7 +116,7 @@ $itemarray = array();
 		echo "<input type='hidden' name='imagepath' value='".$itemarray[$cartarray[$i]]['imagepath']."'>";
 		echo "<input type='hidden' name='array' value='".json_encode($cartarray)."'>";
 		echo "<input type ='hidden' name='delind' value='".$i."'><br><br>";
-		echo "<input class='btn btn-success' type='submit' name='submit' value='Remove Item from Cart'>";
+		echo "<input class='btn btn-success btn-up' type='submit' name='submit' value='Remove Item from Cart'>";
 		echo "</div>";
 		echo "</form>";
 		echo "</div>";
@@ -123,12 +125,53 @@ $itemarray = array();
 	<div class="row">
 		<div class="col-sm-2 col-sm-offset-7 text-center">
 			<br><br><br>
-			<p><b>Subtotal: </b><?php echo $subtotal; ?></p>
+			<p><b>Subtotal: </b><?php echo $subtotal; ?></p><br><br>
 		</div>
+		
 	</div>
+	<div class="row text-center">
+		<div class="col-sm-offset-4 col-sm-4" id="bt-dropin"></div>
+	</div>
+	<div class="row text-center">
+		<form action="shipping.php" method="GET" enctype="multipart/form-data">
+			<input type="hidden" name="subtotal" value="<?php echo $subtotal; ?>">
+			<input class="btn btn-success" type="submit" name="ship" value="Continue">
+		</form>
+	</div>
+	<br><br><br>
 </content>
 <footer>
 
 </footer>
+<script>
+    var button = document.querySelector('#submit-button');
+	var form = document.querySelector('#payment-form');
+	var client_token = "<?php echo($gateway->ClientToken()->generate()); ?>";
+
+            braintree.dropin.create({
+          authorization: client_token,
+          selector: '#bt-dropin',
+          paypal: {
+            flow: 'vault'
+          }
+        }, function (createErr, instance) {
+          if (createErr) {
+            console.log('Create Error', createErr);
+            return;
+          }
+          form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            instance.requestPaymentMethod(function (err, payload) {
+              if (err) {
+                console.log('Request Payment Method Error', err);
+                return;
+              }
+              // Add the nonce to the form and submit
+              document.querySelector('#nonce').value = payload.nonce;
+              form.submit();
+            });
+          });
+        });
+    </script>
 </body>
 </html>

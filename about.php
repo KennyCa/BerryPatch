@@ -1,46 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<?php require ("library/head.php"); ?>
 <title>About Us</title>
-<script src="css/jquery-3.3.1.js"></script>
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<?php require ("library/favicon.php"); ?>
 </head>
 <body>
-<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
-    <!-- grouping -->
-    <div class="container-fluid">
-        <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand col-sm-10"><i>Berry Patch IT Services and Computer Repair</i></a>
-        </div>
-        <!--collections Nav for toggle-->
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="nav navbar-nav">
-
-                <li><a href="index.php">HOME</a></li>
-
-                <li><a href="services.php">SERVICES</a></li>
-                <li><a href="shop.php">SHOP</a></li>
-                <li class="active"><a href="about.php">ABOUT</a></li>
-                <li><a href="contact.php">CONTACT</a></li>
-                <li><a href="admin.php">ADMIN</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<?php require ("library/aboutNav.php"); ?>
 
 
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-8" style="padding-top: 30px;">
+            <br>
             <h1 style=""><b>About Us</b></h1>
             <p>Berry Patch IT Services is a small I.T. business in Ottumwa, Iowa. We have professionally trained techs in Information Technology. Our techs love everything to do with the Technology Industry and are always completing additional training so they are up to date on the latest changes in the industry. We are a computer repair service Ottumwa can count on.</p>
              
@@ -56,22 +29,19 @@
         </div>
 
         <div class="col-sm-4">
-        	<img src="images/hire-staff.jpg" class="img-responsive img-rounded col-sm-1" style=";" alt="H-A-G"">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        	<?php require ("library/hire.php"); ?>
         </div>
 
     </div><!--end row-->
 </div><!--end container-->
 
 <!--footer-->
-<footer style="background-color: #000000;">
-   <div class ="col-sm-9"  style="background-color:#000000; color:#ffffff;">
-        Berry Patch IT Services <br>
-        "We Have A Passion For Technology!"
-    </div><!-- end footer-left-col-->
-
-    <div class="col-sm-3"  style="background-color:#000000; color:#ffffff;">
-        641-683-5754<br>
-        &copy2016 by Berry Patch IT Services.
+<?php require ("library/footer.php"); ?>
 
 </body>
 </html>
