@@ -44,3 +44,11 @@ img {
 .carousel-indicators li { 
 	visibility: hidden; 
 }
+
+.aboutPara{
+	background-image: images/modernBG.jpg;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 200px;
+
+}

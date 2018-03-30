@@ -1,5 +1,5 @@
 <?php
-echo'
+	echo'
 		<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
 		    <!-- grouping -->
 		    <div class="container-fluid">
