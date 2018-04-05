@@ -7,3 +7,6 @@ if (isset($_GET['ship'])) {
 	echo $_SESSION['subtotal'];
 }
 ?>
+
+
+

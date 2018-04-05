@@ -1,3 +1,6 @@
+<?php
+$page = "contact.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +11,9 @@
 <body>
                <?php require ("library/contactNav.php"); ?>
 
-                <div class="container-fluid" style="background: linear-gradient(#ce0f0f, #808080, #000000); color: #000000;" >
+                <div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
                     <div class="row">
-                        <div class="col-sm-4" style="padding-top: 15px;">
+                        <div class="col-sm-4 col-xs-12" style="padding-top: 15px;">
                             <br>
                             <br>
                             <br>
@@ -46,9 +49,9 @@
                         <?php require ("library/form.php"); ?>
                         </div>
                         <!--map-->
-                        <div class="col-sm-6">
+                        <div class="col-sm-6" style="box-shadow: 10px 10px 5px #b72a2a;">
                             
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.0736796868878!2d-92.43469508710203!3d41.10888211491939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87e61c208f99a511%3A0x8b2f666ebb1fc344!2sBerry+Patch+IT+Services!5e0!3m2!1sen!2sus!4v1520628756167" width="655" height="425" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.0736796868878!2d-92.43469508710203!3d41.10888211491939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87e61c208f99a511%3A0x8b2f666ebb1fc344!2sBerry+Patch+IT+Services!5e0!3m2!1sen!2sus!4v1520628756167" width="655" height="635" frameborder="0" style="border:0" allowfullscreen></iframe>
                      
                             
                         </div>
