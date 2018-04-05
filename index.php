@@ -42,24 +42,19 @@ if( isset($_POST['submit'])){
 <html lang="en">
 <head>
 <?php require ("library/head.php"); ?>
-    <title>Berry Patch Home</title>
+<title>Berry Patch Home</title>
 <?php require ("library/favicon.php"); ?>
 </head>
+
 <body>
 <?php require ("library/indexNav.php"); ?>
-    <title>Berry Patch Home</title>
-
-</head>
-<body>
 
 <div class="jumbotron jumbotron-fluid" style="background-color: #dcdcdc; " >
-    <div class="container-fluid">
         <h1 style="color: #ce0f0f; padding-top:10px;"><i>Berry Patch IT Services and Computer Repair</i></h1>
         <img src="images/bp-logo.png" class="img-responsive col-sm-1" style="background-color: #dcdcdc;" alt="logo">
         <br>
         <br>
         <p><i>"We Have A Passion For Technology!"</i></p>
-    </div>
 </div>
 <!--3 paagraph grid-->
 <div class="container-fluid">
