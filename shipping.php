@@ -8,5 +8,3 @@ if (isset($_GET['ship'])) {
 }
 ?>
 
-
-

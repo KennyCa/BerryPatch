@@ -48,50 +48,32 @@ $itemarray = array();
 <script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.min.js"></script>
 </head>
 <body>
-	<nav id="myNavbar" class="navbar navbar-default navbar-inverse role="navigation">
-		<!-- grouping -->
-		<div class="container">
-			<div class="navbar-header col-sm-5 col-xs4" style="padding-bottom: 10px;">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand"><i>Berry Patch IT Services and Computer Repair</i></a>
-			</div>
-			<!--collections Nav for toggle-->
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<ul class="nav navbar-nav">
-					<li><a href="index.php" >HOME</a></li>
-					<li><a href="services.php">SERVICES</a></li>
-					<li class="active"><a href="shop.php">SHOP</a></li>
-					<li><a href="about.php">ABOUT</a></li>
-					<li><a href="contact.php">CONTACT</a></li>
-					<li><a href="admin.php">ADMIN</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+	                <?php require ("library/otherNav.php"); ?>
 
-	<div class="container-fluid" style="background: linear-gradient(#ce0f0f, #808080, #000000); color: #000000;" >
-		<div class="row">
-			<div class="col-sm-4" style="padding-top: 15px;">
-				<br>
-				<br>
-				<br>
-				  <img src="images/bp-logo.png" class="img-responsive img-rounded"  style="background-color: #dcdcdc;" alt="logo" width="80px" height="50px" >
-			</div>
+                 <div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
+                    <div class="row" style="padding-top: 20px;">
+                        <div class="col-sm-4 col-xs-12">
+                            <br>
+                            <br>
+                            <br>
+                              <img src="images/rvBpLogo.png" class="img-responsive img-rounded" style="padding-top: 10px;" alt="logo" width="100px" height="150px" >
+                        </div>
+                    
+                       
 
-		   
+                       <div class="col-sm-4 text-center col-xs-12" style="padding-top: 50px;">
+                            <br>
+                            <br>
+                            <h2>Review Order</h2>
+                                <h3>****</h3>
+                           <hr style="border-color: #000000; border-size: 2px"> 
+                        </div>
 
-			<div class="col-sm-4 text-center" style="padding-top: 15px;">
-				
-				<hr style="border-color: #000000; border-size: 2px"> 
-				<h1>Review Order</h1>
-			</div>
-		</div>
-	</div>
+                        <div class="col-sm-4">
+
+                        </div>
+                     </div>
+                </div>
 <content class="container">
 
 <?php

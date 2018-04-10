@@ -12,12 +12,12 @@ $page = "contact.php";
                <?php require ("library/contactNav.php"); ?>
 
                 <div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-12" style="padding-top: 15px;">
+                    <div class="row" style="padding-top: 20px;">
+                        <div class="col-sm-4">
                             <br>
                             <br>
                             <br>
-                              <img src="images/BpLogo.JPG" class="img-responsive img-rounded"  style="background-color: #dcdcdc;" alt="logo" width="80px" height="50px" >
+                              <img src="images/rvBpLogo.png" class="img-responsive img-rounded" alt="logo" width="100px" height="150px" >
                         </div>
 
                        
@@ -59,6 +59,7 @@ $page = "contact.php";
                 </div>
             <!--footer-->
             <?php require ("library/footer.php"); ?>
-            
+      
+<?php require ("library/script.php"); ?>     
 </body>
 </html>                            

@@ -5,13 +5,14 @@
 <title>About Us</title>
 <?php require ("library/favicon.php"); ?>
 </head>
-<body style="background-color: #FFFFF0;">
+<body style="background-color: #ffffff;">
 <?php require ("library/aboutNav.php"); ?>
 
 
 
 <div class="container-fluid">
-    <div class="row col-sm-8" style="background-color:#ffffff; box-shadow: 10px 10px 5px #e60000; ">
+    <div class="row" style="padding-top: 30px;">
+    <div class="row col-sm-8" style="background-color:#FFFFCD; box-shadow: 10px 10px 5px #e60000; ">
         <div style="padding-top: 30px;">
             <br>
             <h1 style="text-align:center; padding-top:20px;"><b>About Us</b></h1>
@@ -22,7 +23,7 @@
                </p>
            </div>
         <div class="text-center">
-            <img class="img-responsive" src="images/storeFront.jpg" width="600px" alt="store" >
+            <img class="img-responsive img-rounded" src="images/storeFront.jpg" width="600px" alt="store" >
         </div>
     </div>
 
@@ -38,6 +39,7 @@
                 </blockquote>  
             </div>     
         </div>
+    </div>
 </div>
 <div class="container container-fluid">
     <div class="row" style="padding-top:30px;">
@@ -48,5 +50,6 @@
 <!--footer-->
 <?php require ("library/footer.php"); ?>
 
+<?php require ("library/script.php"); ?>
 </body>
 </html>

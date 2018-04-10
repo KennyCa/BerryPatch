@@ -45,9 +45,8 @@ img {
 	visibility: hidden; 
 }
 
-.aboutPara{
-	background-image: images/modernBG.jpg;
-	background-repeat: no-repeat;
-	background-position: center;
-	width: 200px;
+
+.hidden{
+		display: none;
+	}
 

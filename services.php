@@ -10,8 +10,8 @@
 <?php require ("library/servicesNav.php"); ?>
 
 <div class="container-fluid" style="background-color: #f2f2f2;">
-	<div class="row">
-		<div class="col-sm-6 text-center" style="padding-top: 75px; background-color: #ff0000;color:#ffffff;">
+	<div class="row" style="padding-top:25px ">
+		<div class="col-sm-6 text-center" style="padding-top: 75px; background-color: #E00000;color:#ffffff;">
 			<h2>Services</h2>
 				<p>
 					Berry Patch IT Services in Ottumwa, Iowa offer any and all IT services you may need. We have great trained techs who have B.A. Degrees in Information Technology and continue training to keep up to date on the fast changing world of IT.<br>
@@ -52,7 +52,8 @@
 							<div class="item">
 								<h3>Computer Repair</h3>
 								<p>
-									Computer not running right? Give us a try! We can diagnose most PC problems and fix them.  
+									Computer not running right? Give us a try! We can diagnose most PC problems and fix them.
+									<br>  
 								</p>
 							</div>
 							<div class="item">
@@ -64,7 +65,8 @@
 							<div class="item">
 								<h3>Computer Data Recovery</h3>
 								<p>
-									Your PC die on you? Think you have lost all of your Information? Well maybe not! Bring your PC or drive to us and we can try and recover your data for you. 
+									Your PC die on you? Think you have lost all of your Information? Well maybe not! Bring your PC or drive to us and we can try and recover your data for you.
+									<br> 
 								</p>
 							</div>
 							<div class="item">
@@ -111,7 +113,7 @@
 				<br>
 				<br>
 			</div>
-			<div class="col-sm-6" style="background-color: #ff0000; height: 150px;">
+			<div class="col-sm-6" style="background-color: #E00000; height: 150px;">
 				<br>
 				<br>
 				<br>
@@ -123,7 +125,7 @@
 <!--footer-->
 <?php require ("library/footer.php"); ?>
 
-</script>
+
 <script src="css/jquery-3.3.1.js"></script>
 <!--<script src="js/jquery-2.1.4.min.js"></script> -->
 <script src="js/bootstrap.min.js"></script>
