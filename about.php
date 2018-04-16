@@ -12,7 +12,7 @@
 
 <div class="container-fluid">
     <div class="row" style="padding-top: 30px;">
-    <div class="row col-sm-8" style="background-color:#FFFFCD; box-shadow: 10px 10px 5px #e60000; ">
+    <div class="row col-sm-8" style="background-color:#FFFFCD; box-shadow: 10px 10px 5px #8B0000; ">
         <div style="padding-top: 30px;">
             <br>
             <h1 style="text-align:center; padding-top:20px;"><b>About Us</b></h1>
@@ -35,7 +35,7 @@
                  <p>Ottumwa! If you have a computer question you need answered, just call us or send us an e-mail and we will give you the answer. We will answer all questions, from what is the best pc for you to how to use different software. If we don’t know the answer, we will find it and get back to you. </p>
                  <br>
                  <blockquote>
-                    <i><b><h3 style="border-left-color: :none; text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000; color: #e60000">We are Ottumwa’s answer to computer needs and supplies.</h3></b></i>
+                    <i><b><h3 style="border-left-color: :none; text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000; color:#8B0000">We are Ottumwa’s answer to computer needs and supplies.</h3></b></i>
                 </blockquote>  
             </div>     
         </div>

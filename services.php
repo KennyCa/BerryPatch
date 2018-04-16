@@ -9,7 +9,7 @@
 <body>
 <?php require ("library/servicesNav.php"); ?>
 
-<div class="container-fluid" style="background-color: #f2f2f2;">
+<div class="container-fluid" style="background-color: #8B0000;">
 	<div class="row" style="padding-top:25px ">
 		<div class="col-sm-6 text-center" style="padding-top: 75px; background-color: #E00000;color:#ffffff;">
 			<h2>Services</h2>
@@ -42,7 +42,7 @@
 							<li data-target="#locations" data-slide-to="car6"></li>
 							
 						</ol>
-						<div class="carousel-inner" style="padding-right: 70px; padding-left: 70px;">
+						<div class="carousel-inner" style="padding-right: 70px; padding-left: 70px; min-height: 150px">
 							<div class="item active">
 								<h3>Custom Computer builds</h3>
 								<p>
@@ -101,7 +101,7 @@
 
 
 <div class="row">
-	<div class="container-fluid" style="background-color: #f2f2f2;">
+	<div class="container-fluid" style="background-color: #8B0000;">
 		<div class="row">
 			<div class="col-sm-4" style="background-color: #ffffff; height: 150px;">
 				<br>
