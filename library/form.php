@@ -1,7 +1,7 @@
 <?php
 	echo'
 		  <div id="contact-form" style="background-color: #f8f8f8;padding-bottom: 15px;">
-	          <form action="#">
+	          <form class="box" action="#">
 	            <div class="form-group">
 	                <label for="first_name">First Name</label>
 	                <input type="text" class="form-control" id="first_name" placeholder="Enter First Name" name="first_name">
@@ -18,7 +18,9 @@
 	              <label for="phone">Phone:</label>
 	              <input type="#" class="form-control" id="phone" placeholder="Enter phone number" name="phone">
 	            </div>
-	            <button type="button" class="btn btn-default btn-md">Submit</button>
+				<div class="text-center">
+					<button type="button" class="btn btn-info btn-md">Submit</button>
+				</div><br><br>
 	          </form><!-- end index-form-->
 	        </div><!-- end contact form-->'
 ?>

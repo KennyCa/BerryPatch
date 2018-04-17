@@ -52,3 +52,25 @@ img {
 .carousel-indicators li { 
 	visibility: hidden; 
 }
+
+.box {
+	box-shadow: 10px 10px 5px #b72a2a;
+}
+fieldset {
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: 2px groove (internal value);
+	
+}
+td {
+	margin:10px;
+}
+
+sup {
+	font-size: 8px;
+}

@@ -1,3 +1,7 @@
+<?php
+$page = "index";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +10,7 @@
 <?php require ("library/favicon.php"); ?>
 </head>
 <body>
-<?php require ("library/indexNav.php"); ?>
+	<?php require ("library/nav.php"); ?>
 <div class="jumbotron" style="background-color: #dcdcdc;" >
     <div class="container-fluid">
         <h1 style="color: #ce0f0f; padding-top: 70px;" ><i>Berry Patch IT Services and Computer Repair</i></h1>

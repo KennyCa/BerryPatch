@@ -40,7 +40,7 @@
 
                 <div class="container-fluid" style="background-color: #f8f8f8;padding-bottom: 25px;">
                     <div class="row">
-                        <div class="col-sm-6" style="box-shadow: 10px 10px 5px #b72a2a;">
+                        <div class="col-sm-6">
                             <p style="padding-top: 25px;">Please fill out the form below with any questions or problems that you may be having. One of our techs will contact you and try to answer any questions or fix any problems.</p>
 
                         <?php require ("library/form.php"); ?>
