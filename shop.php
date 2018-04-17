@@ -12,12 +12,12 @@
 <?php require ("library/head.php"); ?>
 
 </head>
-<body>
+<body style="background-color: #FFFFCD;">
 	<?php require ("library/shopNav.php"); ?>
 
 	<div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
                     <div class="row" style="padding-top: 20px;">
-                        <div class="col-sm-4 col-xs-12">
+                        <div class="col-sm-4 hidden-xs">
                             <br>
                             <br>
                             <br>
@@ -74,7 +74,7 @@
 		echo "</div>";
 		echo "<div class='col-sm-1'>";
 		echo "<br><br><br><br><br>";
-		echo "<button id='".$i."' onClick='reply_click(this.id)' class='btn btn-success btn-up'>Add to Cart</button>";
+		echo "<button id='".$i."' onClick='reply_click(this.id)' class='btn btn-info btn-up'>Add to Cart</button>";
 		echo "</div>";
 		echo "</div>";
 		//echo "</div>";
@@ -86,7 +86,7 @@
 	<form action='order.php' method='POST' enctype ='multipart/form-data'>
 		<div class="btncenter">
 			<input type = "hidden" id="ids" name="ids">
-			<input class="btn btn-info" type="submit" name="review" value="Review Order">
+			<input class="btn btn-success" type="submit" name="review" value="Review Order">
 		</div>
 	</form>
 </content>

@@ -103,7 +103,7 @@
 <div class="row">
 	<div class="container-fluid" style="background-color: #8B0000;">
 		<div class="row">
-			<div class="col-sm-4" style="background-color: #ffffff; height: 150px;">
+			<div class="col-sm-4" style="background-color: #ffffff; height: 120px;">
 				<br>
 				<br>
 				<br>
@@ -113,10 +113,9 @@
 				<br>
 				<br>
 			</div>
-			<div class="col-sm-6" style="background-color: #E00000; height: 150px;">
-				<br>
-				<br>
-				<br>
+			<div class="col-sm-6" style="background-color: #E00000; color: #ffffff; height: 140px;">
+				<h3>We're here to help</h3>
+				We know how intimidating your computer can be, so let us help. Why spend your day trying to solve your tech problems when one of our techs can get you online in no time? Call the Berry Patch IT Services in Ottumwa today with all of your computer needs!  Let us do the work so you can kick back and enjoy.
 			</div>
 		</div>	
 	</div>

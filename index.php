@@ -55,7 +55,7 @@ if( isset($_POST['submit'])){
 
 <div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); padding-top:50px; color: #ffffff; text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;">
     <div class="row">
-        <div class="col-sm-2">
+        <div class="col-sm-2 hidden-xs">
             <img src="images/rvBpLogo.png" class="img-responsive img-rounded" style="padding-top: 10px;" alt="logo" width="100px" height="150px" >
         </div>
         <div>
@@ -104,7 +104,7 @@ if( isset($_POST['submit'])){
                 <?php require ("library/form.php"); ?> 
           
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6" style="background-color: #FFFFCD;">
                 <blockquote class="quote-box">
                   <h1><b>
                     “
@@ -123,6 +123,7 @@ if( isset($_POST['submit'])){
             </div>
         </div>
     </div>
+
     
     <!--footer-->
     
