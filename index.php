@@ -1,17 +1,16 @@
 <?php
+<<<<<<< HEAD
 
 $page = "index";
 
 
 
+=======
+>>>>>>> afb6a0e8e4171817f7d1faf55e120581e6a90406
 $pagetitle = "Home";
 $page = "index.php";
-
-
 if( isset($_POST['submit'])){
-
             $first_name= $_POST['first_name'];
-
             $last_name= $_POST['last_name'] ;
             $email= $_POST['email'] ;
             $phone= $_POST['phone'] ;
@@ -21,10 +20,7 @@ if( isset($_POST['submit'])){
             $to= 'tiffany_baker@stu.indianhills.edu';
             $subject = 'contact form info';
             $human = $_POST['human'];
-
-
             $body = " from: $first_name.$last_name\n E-mail: $email \n Phone: $phone \n Time: $time \n Help needed: $comment";
-
        /*     if ($first_name != '' && $last_name != ''  && $email != '' && $phone != '') {
                 if ($human == '6') {    
                     if (mail ($to, $subject, $body, $from)) { 
@@ -41,9 +37,11 @@ if( isset($_POST['submit'])){
         } else {
             echo "nope";*/
         } 
-
 ?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> afb6a0e8e4171817f7d1faf55e120581e6a90406
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,6 +53,10 @@ if( isset($_POST['submit'])){
 <title>Berry Patch Home</title>
 <?php require ("library/favicon.php"); ?>
 </head>
+<<<<<<< HEAD
+=======
+
+>>>>>>> afb6a0e8e4171817f7d1faf55e120581e6a90406
 <body style="background-color: #FFFFCD;">
     <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
             <!-- grouping -->
@@ -163,4 +165,4 @@ if( isset($_POST['submit'])){
     <?php require("library/script.php");?>
 
 </body>
-</html>                   
+</html>
