@@ -1,12 +1,9 @@
 <?php
-<<<<<<< HEAD
 
 $page = "index";
 
 
 
-=======
->>>>>>> afb6a0e8e4171817f7d1faf55e120581e6a90406
 $pagetitle = "Home";
 $page = "index.php";
 if( isset($_POST['submit'])){
@@ -38,10 +35,6 @@ if( isset($_POST['submit'])){
             echo "nope";*/
         } 
 ?>
-<<<<<<< HEAD
-
-=======
->>>>>>> afb6a0e8e4171817f7d1faf55e120581e6a90406
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,10 +46,6 @@ if( isset($_POST['submit'])){
 <title>Berry Patch Home</title>
 <?php require ("library/favicon.php"); ?>
 </head>
-<<<<<<< HEAD
-=======
-
->>>>>>> afb6a0e8e4171817f7d1faf55e120581e6a90406
 <body style="background-color: #FFFFCD;">
     <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
             <!-- grouping -->
@@ -90,7 +79,12 @@ if( isset($_POST['submit'])){
         <div class="col-sm-2 hidden-xs">
             <img src="images/rvBpLogo.png" class="img-responsive img-rounded" style="padding-top: 10px;" alt="logo" width="100px" height="150px" >
         </div>
-        <div>
+        <div class="hidden-sm hidden-md hidden-lg hidden-xl" style="padding-top:50px;">
+            <h1 class="col-sm-10" style="padding-top: 30px; font-size: 35px; text-align: center;"><i>Berry Patch IT</i></h1>
+            <br>
+            <br>
+        </div>
+        <div class="hidden-xs" style="padding-top: 50px;">
             <h1 class="col-sm-10" style="padding-top: 30px; font-size: 52px;"><i>Berry Patch IT Services and Computer Repair</i></h1>
             <br>
                 <br>
@@ -127,24 +121,25 @@ if( isset($_POST['submit'])){
                 
     </div>
 </div>
-    <hr>
     <!-- form and customer quote -->
-    <div class="container-fluid" style="background-color: #f8f8f8;">
+    <div class="container-fluid" style="background-color: #FFFFCD;">
         <div class="row">
-            <div class="col-sm-6" style="box-shadow: 10px 10px 5px #b72a2a;">
+            <div class="col-sm-6" style="background-color: #f8f8f8; box-shadow: 10px 10px 5px #b72a2a;">
                 <h2 style="background-color: #f8f8f8;">Hire a Geek Today</h2>
                 <?php require ("library/form.php"); ?> 
           
             </div>
-            <div class="col-sm-6" style="background-color: #FFFFCD;">
+            <div class="col-sm-1" style="background-color:#FFFFCD; width:2px;">
+                
+            </div>
+            <div class="col-sm-5">
                 <blockquote class="quote-box">
                   <h1><b>
                     “
                   </b></h1>
-                  <p class="quote-text">
+                  <p>
                     <i> It was a dark and stormy night and our 6 year old Dell crashed for the 20th time while I was desperately trying to print plane tickets. I had done everything possible to limp it along until I could save what I needed to off the dang thing. The 21st time it crashed, it was dead, dead, dead. In what my husband would later refer to as a fit of blinding rage, I dismantled that machine down to 50 itty bitty parts, a box and the hard drive. Only afterwards did I realize that now all of our contacts, tax information, photos, etc was gone. LUCKILY, I work with David's wife and she took the hard drive to David and in short order he saved all of my important items on a flash drive.</i> 
                   </p>
-                  <hr>
                   <div class="blog-post-actions">
                     <p class="blog-post-bottom pull-left">
                       Joan H.<br>

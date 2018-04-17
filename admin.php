@@ -32,10 +32,10 @@
 			<!--collections Nav for toggle-->
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="admin.php" >HOME</a></li>
+					<li class="active"><a href="index.php" >HOME</a></li>
 					<li><a href="newitems.php">ITEM PAGE</a></li>
 					<li><a href="#.php">ORDERS</a></li>
-					<li><a href="index.php">MAIN MENU</a></li>
+					<li><a href="admin.php">MAIN MENU</a></li>
 				</ul>
 			</div>
 		</div>
