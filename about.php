@@ -5,13 +5,14 @@
 <title>About Us</title>
 <?php require ("library/favicon.php"); ?>
 </head>
-<body style="background-color: #FFFFF0;">
+<body style="background-color: #ffffff;">
 <?php require ("library/aboutNav.php"); ?>
 
 
 
 <div class="container-fluid">
-    <div class="row col-sm-8" style="background-color:#ffffff; box-shadow: 10px 10px 5px #e60000; ">
+    <div class="row" style="padding-top: 30px;">
+    <div class="row col-sm-8" style="background-color:#FFFFCD; box-shadow: 10px 10px 5px #8B0000; ">
         <div style="padding-top: 30px;">
             <br>
             <h1 style="text-align:center; padding-top:20px;"><b>About Us</b></h1>
@@ -22,7 +23,7 @@
                </p>
            </div>
         <div class="text-center">
-            <img class="img-responsive" src="images/storeFront.jpg" width="600px" alt="store" >
+            <img class="img-responsive img-rounded" src="images/storeFront.jpg" width="600px" alt="store" >
         </div>
     </div>
 
@@ -34,10 +35,11 @@
                  <p>Ottumwa! If you have a computer question you need answered, just call us or send us an e-mail and we will give you the answer. We will answer all questions, from what is the best pc for you to how to use different software. If we don’t know the answer, we will find it and get back to you. </p>
                  <br>
                  <blockquote>
-                    <i><b><h3 style="border-left-color: :none; text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000; color: #e60000">We are Ottumwa’s answer to computer needs and supplies.</h3></b></i>
+                    <i><b><h3 style="border-left-color: :none; text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000; color:#8B0000">We are Ottumwa’s answer to computer needs and supplies.</h3></b></i>
                 </blockquote>  
             </div>     
         </div>
+    </div>
 </div>
 <div class="container container-fluid">
     <div class="row" style="padding-top:30px;">
@@ -48,5 +50,6 @@
 <!--footer-->
 <?php require ("library/footer.php"); ?>
 
+<?php require ("library/script.php"); ?>
 </body>
 </html>

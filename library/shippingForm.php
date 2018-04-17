@@ -139,6 +139,9 @@
 						<label for="zip" class="hidden">Zip Code:</label>
 						<input type="text" class="form-control hidden" id="zip" name="zip">
 					</div>
+					<div class="form-group col-sm-3">
+						<input class="btn btn-success" type="submit" name="sumbit" value="Submit">
+					</div>
 				</div>
 			</form>	
 		</div>

@@ -12,27 +12,34 @@
 <?php require ("library/head.php"); ?>
 
 </head>
-<body>
+<body style="background-color: #FFFFCD;">
 	<?php require ("library/shopNav.php"); ?>
 
-	<div class="container-fluid" style="background: linear-gradient(#ce0f0f, #808080, #000000); color: #000000;" >
-		<div class="row">
-			<div class="col-sm-4" style="padding-top: 15px;">
-				<br>
-				<br>
-				<br>
-				  <img src="images/bp-logo.png" class="img-responsive img-rounded"  style="background-color: #dcdcdc;" alt="logo" width="80px" height="50px" >
-			</div>
+	<div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
+                    <div class="row" style="padding-top: 20px;">
+                        <div class="col-sm-4 hidden-xs">
+                            <br>
+                            <br>
+                            <br>
+                              <img src="images/rvBpLogo.png" class="img-responsive img-rounded" style="padding-top: 10px;" alt="logo" width="100px" height="150px" >
+                        </div>
+                    
+                       
 
-		   
+                       <div class="col-sm-4 text-center col-xs-12" style="padding-top: 50px;">
+                            <br>
+                            <br>
+                            <h2>Shop</h2>
+                                <h3>****</h3>
+                           <hr style="border-color: #000000; border-size: 2px"> 
+                        </div>
 
-			<div class="col-sm-4 text-center" style="padding-top: 15px;">
-				
-				<hr style="border-color: #000000; border-size: 2px"> 
-				<h1>SHOP</h1>
-			</div>
-		</div>
-	</div>
+                        <div class="col-sm-4">
+
+                        </div>
+                     </div>
+                </div>
+       
 <content class="container">
 	
 <?php
@@ -67,7 +74,7 @@
 		echo "</div>";
 		echo "<div class='col-sm-1'>";
 		echo "<br><br><br><br><br>";
-		echo "<button id='".$i."' onClick='reply_click(this.id)' class='btn btn-success btn-up'>Add to Cart</button>";
+		echo "<button id='".$i."' onClick='reply_click(this.id)' class='btn btn-info btn-up'>Add to Cart</button>";
 		echo "</div>";
 		echo "</div>";
 		//echo "</div>";
@@ -79,7 +86,7 @@
 	<form action='order.php' method='POST' enctype ='multipart/form-data'>
 		<div class="btncenter">
 			<input type = "hidden" id="ids" name="ids">
-			<input class="btn btn-info" type="submit" name="review" value="Review Order">
+			<input class="btn btn-success" type="submit" name="review" value="Review Order">
 		</div>
 	</form>
 </content>
@@ -100,5 +107,6 @@ function reply_click(clicked_id)
 }
 
 </script>
+<?php require ("library/script.php"); ?>
 </body>
 </html>

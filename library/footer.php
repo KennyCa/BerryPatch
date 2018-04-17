@@ -13,5 +13,5 @@ echo'
 
 	</div>	
 
-</footer'
+</footer>';
 ?>

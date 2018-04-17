@@ -41,33 +41,45 @@ if( isset($_POST['submit'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php require ("library/head.php"); ?>
+    <meta charset="UTF-8" http-equiv="Content-type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <link rel ="stylesheet" href = "css\bootstrap.css">
+    <link rel ="stylesheet" href = "css\custom.css">
+    
 <title>Berry Patch Home</title>
 <?php require ("library/favicon.php"); ?>
 </head>
 
-<body>
-<?php require ("library/indexNav.php"); ?>
+<body style="background-color: #FFFFCD;">
+<?php require ("library/indexNav.php");?>
 
-<div class="jumbotron jumbotron-fluid" style="background-color: #dcdcdc; " >
-        <h1 style="color: #ce0f0f; padding-top:10px;"><i>Berry Patch IT Services and Computer Repair</i></h1>
-        <img src="images/bp-logo.png" class="img-responsive col-sm-1" style="background-color: #dcdcdc;" alt="logo">
-        <br>
-        <br>
-        <p><i>"We Have A Passion For Technology!"</i></p>
+<div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); padding-top:50px; color: #ffffff; text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;">
+    <div class="row">
+        <div class="col-sm-2 hidden-xs">
+            <img src="images/rvBpLogo.png" class="img-responsive img-rounded" style="padding-top: 10px;" alt="logo" width="100px" height="150px" >
+        </div>
+        <div>
+            <h1 class="col-sm-10" style="padding-top: 30px; font-size: 52px;"><i>Berry Patch IT Services and Computer Repair</i></h1>
+            <br>
+                <br>
+                <br>
+                <br>
+            <p style=" text-align: right; padding-right:150px;"><i>"We Have A Passion For Technology!"</i></p>
+        </div>
+    </div>
 </div>
 <!--3 paagraph grid-->
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3" >
-            <h2 style="color: #ff0000; text-shadow: 2px 1px #000000; ">Computer Problems?<br>
+            <h2 style="color: #8B0000; text-shadow: 1px 1px #000000; ">Computer Problems?<br>
                     Need Computer Repair?<br>
                     Need a New or Used Computer?<br>
                     We are here to help you!<br></h2>
-            <p>Call Us At: 641-683-5754 or 
+            <p><b>Call Us At: 641-683-5754 or 
                     641-777-4441.<br> 
                 <i>Servicing Ottumwa and the 
-                    surrounding area since 2016!</i></p>
+                    surrounding area since 2016!</i></b></p>
         </div>
         <div class="col-sm-5" >
                 <img class="img-responsive img-rounded" style="padding-right:20px ;" src="images/storeFrontSign.png"  alt="store">
@@ -76,22 +88,23 @@ if( isset($_POST['submit'])){
         </div>
         <div class="col-sm-4">
             <br>
-            <h2>Phone & Tablet Screen Replacement</h2>
+            <h2 style="color: #8B0000; text-shadow: 1px 1px #000000; ">Phone & Tablet Screen Replacement</h2>
         
-                <p>Berry Patch IT Services now replaces screens on all devices phone or Tablets. Screens are ordered as needed and take 2-3 days to arrive. It takes about 2 hours to replace the screen. Contact us for an estimate.</p>  
+                <p><b>Berry Patch IT Services now replaces screens on all devices phone or Tablets. Screens are ordered as needed and take 2-3 days to arrive. It takes about 2 hours to replace the screen. Contact us for an estimate.</b></p> 
         </div>
+                
     </div>
 </div>
     <hr>
     <!-- form and customer quote -->
     <div class="container-fluid" style="background-color: #f8f8f8;">
         <div class="row">
-            <div class="col-sm-6 ">
+            <div class="col-sm-6" style="box-shadow: 10px 10px 5px #b72a2a;">
                 <h2 style="background-color: #f8f8f8;">Hire a Geek Today</h2>
                 <?php require ("library/form.php"); ?> 
           
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6" style="background-color: #FFFFCD;">
                 <blockquote class="quote-box">
                   <h1><b>
                     “
@@ -110,12 +123,14 @@ if( isset($_POST['submit'])){
             </div>
         </div>
     </div>
-    <br>
-    <br>
+
+    
     <!--footer-->
     
     <?php require ("library/footer.php"); ?>
 
+
+    <?php require("library/script.php");?>
 
 </body>
 </html>                   

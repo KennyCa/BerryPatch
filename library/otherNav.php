@@ -9,6 +9,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand col-sm-10" href="index.php"><i>Berry Patch IT Services and Computer Repair</i></a>
                 </div>
@@ -16,7 +18,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="nav navbar-nav">
 
-                        <li class="active"><a href="index.php">HOME</a></li>
+                        <li><a href="index.php">HOME</a></li>
                         <li><a href="services.php">SERVICES</a></li>
                         <li><a href="shop.php">SHOP</a></li>
                         <li><a href="about.php">ABOUT</a></li>

@@ -1,6 +1,6 @@
 <?php
 echo'
-		<nav id="myNavbar" class="navbar navbar-default navbar-inverse role="navigation">
+		<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
 		<!-- grouping -->
 		<div class="container">
 			<div class="navbar-header col-sm-5 col-xs4" style="padding-bottom: 10px;">
