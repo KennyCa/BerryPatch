@@ -1,15 +1,20 @@
 <?php
-require_once 'braintree-php-3.29.0/lib/Braintree.php';
-
+//require_once 'braintree-php-3.29.0/lib/Braintree.php';
+session_start();
 $delind = -1;
 $ind = 0;
 $cartarray = array();
 $itemarray = array();
-
+$qtyord = array();
+$_SESSION['array'] = array();
 
 	if (isset($_POST['review'])) {
 		$cartarray = json_decode($_POST['ids']);
-		//echo '<pre>'; print_r($cartarray); echo '</pre>';
+		$qtyord = json_decode($_POST['qtys']);
+		$_SESSION['array'] = $cartarray;
+		$_SESSION['qtyord'] = $qtyord;
+		
+		
 	}
 	
 	if (empty($itemarray)) {
@@ -17,29 +22,81 @@ $itemarray = array();
 			$itemarray = json_decode(file_get_contents("library/itemarray.php"), true);
 			$ind = count($cartarray);
 			//echo $ind;
-			$subtotal = calcsub($ind, $cartarray, $itemarray);
+			$subtotal = calcsub($ind, $cartarray, $itemarray, $qtyord);
+			calcweight($ind, $cartarray, $itemarray, $qtyord);
+			//echo '<pre>'; print_r($cartarray); echo '</pre><br>';
+			//echo '<pre>'; print_r($qtyord); echo '</pre>';
+			
+			
 
 		}
 	}
 	
 	if( isset($_POST['submit'])){
 		$cartarray = json_decode($_POST['array']);
+		$qtyord = json_decode($_POST['qtyarray']);
 		$ind = $_POST['ind'];
 		$subtotal = $_POST['sub'];
 		$delind = $_POST['delind'];
-		$minus = $_POST['cost'];
+		$minus = $_POST['cost']; 
+		
 		array_splice($cartarray,$delind, 1);
-		//file_put_contents('library/cartarray.php',json_encode($cartarray));
+		array_splice($qtyord, $delind, 1);
+
 		$ind -= 1;
-		$subtotal = calcsub($ind, $cartarray, $itemarray);
+		//echo '<pre>'; print_r($cartarray); echo '</pre><br>';
+		//echo '<pre>'; print_r($qtyord); echo '</pre>';
+		$_SESSION['array'] = $cartarray;
+		$_SESSION['qtyord'] = $qtyord;
+		$subtotal = calcsub($ind, $cartarray, $itemarray, $qtyord);
+		calcweight($ind, $cartarray, $itemarray, $qtyord);
 	}
 	
-	function calcsub ($in, $ca, $ia) {
+	function calcsub ($in, $ca, $ia, $qo) {
 		$sub = 0;
 		for ($i = 0; $i < $in; $i++) {
-			$sub += doubleval(preg_replace("/[^0-9.]/", "",$ia[$ca[$i]]['cost']));
+			$sub += doubleval(preg_replace("/[^0-9.]/", "",$ia[$ca[$i]]['cost'])) * $qo[$i];
 		}
+		$_SESSION['subtotal'] = $sub;
 		return $sub ='$ ' . number_format($sub, 2);
+	}
+	
+	function calcweight ($in, $ca, $ia, $qo) {
+		$weight = 0;
+		$lbs = 0;
+		$oz = 0;
+		$_SESSION['lbs2'] = 0;
+		$_SESSION['ozs2'] = 0;
+		for ($i = 0; $i < $in; $i++) {
+				$lbs += $ia[$ca[$i]]['lbs'] * $qo[$i];
+				$oz += $ia[$ca[$i]]['oz'] * $qo[$i];
+		}
+
+		if ($oz >= 16) {
+			$pd = floor($oz / 16);
+			$oz =  $oz - ($pd * 16);
+			$lbs += $pd;
+		}
+		
+		if ($lbs > 69) {
+			$max = 0;
+			for ($i = 0; $i < $in; $i++) {
+				$lb = $ia[$ca[$i]]['lbs'];
+				if ($lb > $max){
+					$max = $lb;
+					$box = $i;
+					
+				}
+			}
+			$lbs -= $max;
+			$oz -= $ia[$ca[$box]]['oz'];
+			$_SESSION['lbs2'] = $ia[$ca[$box]]['lbs'];
+			$_SESSION['ozs2'] = $ia[$ca[$box]]['oz'];
+		}
+
+		$_SESSION['lbs'] = $lbs;
+		$_SESSION['ozs'] = $oz;
+
 	}
 ?>
 <html>
@@ -88,7 +145,7 @@ $itemarray = array();
 		echo "<p>Name: ".$itemarray[$cartarray[$i]]['name']."</p>";
 		echo "<p>Description: ".$itemarray[$cartarray[$i]]['description']."</p>";
 		echo "<p>Price: ".$itemarray[$cartarray[$i]]['cost']."</p>";
-		echo "<p>Quantity: ".$itemarray[$cartarray[$i]]['qty']."</p>";
+		echo "<p>Quantity: ".$qtyord[$i]."</p>";
 		echo "</div>";
 		echo "<div class='btncenter col-sm-2'>";
 		echo "<br><br><br><br>";
@@ -97,6 +154,7 @@ $itemarray = array();
 		echo "<input type='hidden' name='ind' value =".$ind."'>";
 		echo "<input type='hidden' name='imagepath' value='".$itemarray[$cartarray[$i]]['imagepath']."'>";
 		echo "<input type='hidden' name='array' value='".json_encode($cartarray)."'>";
+		echo "<input type='hidden' name='qtyarray' value='".json_encode($qtyord)."'>";
 		echo "<input type ='hidden' name='delind' value='".$i."'><br><br>";
 		echo "<input class='btn btn-success btn-up' type='submit' name='submit' value='Remove Item from Cart'>";
 		echo "</div>";
@@ -116,6 +174,7 @@ $itemarray = array();
 	</div>
 	<div class="row text-center">
 		<form action="shipping.php" method="GET" enctype="multipart/form-data">
+			<input type="hidden" name="array" value="<?php echo json_encode($cartarray); ?>">
 			<input type="hidden" name="subtotal" value="<?php echo $subtotal; ?>">
 			<input class="btn btn-success" type="submit" name="ship" value="Continue">
 		</form>
@@ -125,10 +184,10 @@ $itemarray = array();
 <footer>
 
 </footer>
-<script>
+<!--<script>
     var button = document.querySelector('#submit-button');
 	var form = document.querySelector('#payment-form');
-	var client_token = "<?php echo($gateway->ClientToken()->generate()); ?>";
+	var client_token = "<?php //echo($gateway->ClientToken()->generate()); ?>";
 
             braintree.dropin.create({
           authorization: client_token,
@@ -154,6 +213,6 @@ $itemarray = array();
             });
           });
         });
-    </script>
+    </script> -->
 </body>
 </html>
