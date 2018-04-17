@@ -1,4 +1,12 @@
 <?php
+<<<<<<< HEAD
+
+$page = "index";
+
+
+
+=======
+>>>>>>> afb6a0e8e4171817f7d1faf55e120581e6a90406
 $pagetitle = "Home";
 $page = "index.php";
 if( isset($_POST['submit'])){
@@ -30,6 +38,10 @@ if( isset($_POST['submit'])){
             echo "nope";*/
         } 
 ?>
+<<<<<<< HEAD
+
+=======
+>>>>>>> afb6a0e8e4171817f7d1faf55e120581e6a90406
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +53,10 @@ if( isset($_POST['submit'])){
 <title>Berry Patch Home</title>
 <?php require ("library/favicon.php"); ?>
 </head>
+<<<<<<< HEAD
+=======
 
+>>>>>>> afb6a0e8e4171817f7d1faf55e120581e6a90406
 <body style="background-color: #FFFFCD;">
     <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
             <!-- grouping -->
