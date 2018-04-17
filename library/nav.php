@@ -4,6 +4,9 @@ echo '
         <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
 =======
     echo'
+<<<<<<< HEAD:library/indexNav.php
+        ';
+=======
         <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
 >>>>>>> 257f120188ecba6f1d78543434c3c6b5c6c05b63:library/indexNav.php
             <!-- grouping -->
@@ -36,6 +39,7 @@ echo '
 ?>
 =======
         </nav>';
+>>>>>>> 2b79d11c3fcdaf2c89701cedcde88d0f75b97d51:library/nav.php
 ?>
 
 >>>>>>> 257f120188ecba6f1d78543434c3c6b5c6c05b63:library/indexNav.php

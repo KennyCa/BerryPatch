@@ -1,17 +1,8 @@
 <?php
-<<<<<<< HEAD
-$page = "index";
-?>
-
-=======
 $pagetitle = "Home";
 $page = "index.php";
-
-
 if( isset($_POST['submit'])){
-
             $first_name= $_POST['first_name'];
-
             $last_name= $_POST['last_name'] ;
             $email= $_POST['email'] ;
             $phone= $_POST['phone'] ;
@@ -21,10 +12,7 @@ if( isset($_POST['submit'])){
             $to= 'tiffany_baker@stu.indianhills.edu';
             $subject = 'contact form info';
             $human = $_POST['human'];
-
-
             $body = " from: $first_name.$last_name\n E-mail: $email \n Phone: $phone \n Time: $time \n Help needed: $comment";
-
        /*     if ($first_name != '' && $last_name != ''  && $email != '' && $phone != '') {
                 if ($human == '6') {    
                     if (mail ($to, $subject, $body, $from)) { 
@@ -41,9 +29,7 @@ if( isset($_POST['submit'])){
         } else {
             echo "nope";*/
         } 
-
 ?>
->>>>>>> 257f120188ecba6f1d78543434c3c6b5c6c05b63
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,20 +41,34 @@ if( isset($_POST['submit'])){
 <title>Berry Patch Home</title>
 <?php require ("library/favicon.php"); ?>
 </head>
-<<<<<<< HEAD
-<body>
-	<?php require ("library/nav.php"); ?>
-<div class="jumbotron" style="background-color: #dcdcdc;" >
-    <div class="container-fluid">
-        <h1 style="color: #ce0f0f; padding-top: 70px;" ><i>Berry Patch IT Services and Computer Repair</i></h1>
-        <img src="images/bp-logo.png" class="img-responsive col-sm-1" style="background-color: #dcdcdc;" alt="logo"">
-        <br>
-        <br>
-        <p><i>"We Have A Passion For Technology!"</i></p>
-=======
 
 <body style="background-color: #FFFFCD;">
-<?php require ("library/indexNav.php");?>
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- grouping -->
+            <div class="container-fluid">
+                <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand col-sm-10" href="index.php"><i>Berry Patch IT Services and Computer Repair</i></a>
+                </div>
+                <!--collections Nav for toggle-->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="nav navbar-nav">
+
+                        <li class="active"><a href="index.php">HOME</a></li>
+                        <li><a href="services.php">SERVICES</a></li>
+                        <li><a href="shop.php">SHOP</a></li>
+                        <li><a href="about.php">ABOUT</a></li>
+                        <li><a href="contact.php">CONTACT</a></li>
+                        <li><a href="admin.php">ADMIN</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
 <div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); padding-top:50px; color: #ffffff; text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;">
     <div class="row">
@@ -83,7 +83,6 @@ if( isset($_POST['submit'])){
                 <br>
             <p style=" text-align: right; padding-right:150px;"><i>"We Have A Passion For Technology!"</i></p>
         </div>
->>>>>>> 257f120188ecba6f1d78543434c3c6b5c6c05b63
     </div>
 </div>
 <!--3 paagraph grid-->
@@ -151,4 +150,4 @@ if( isset($_POST['submit'])){
     <?php require("library/script.php");?>
 
 </body>
-</html>                   
+</html>
