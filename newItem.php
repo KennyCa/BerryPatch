@@ -122,9 +122,9 @@ require("library/item.php");
 				<label for="quantity">Quantity:</label><br>
 				<input type ="text" name="quantity"><br><br>
 				<h5><b>Weight</b></h5><br>
-				<label for="quantity">Lbs:</label><br>
+				<label for="lbs">Lbs:</label><br>
 				<input type ="text" name="lbs"><br><br>
-				<label for="quantity">Ozs:</label><br>
+				<label for="ozs">Ozs:</label><br>
 				<input type ="text" name="ozs"><br><br>
 				<input type="submit" name="submit" value="Submit">
 			</form>
