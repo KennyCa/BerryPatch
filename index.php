@@ -1,17 +1,8 @@
 <?php
-<<<<<<< HEAD
-$page = "index";
-?>
-
-=======
 $pagetitle = "Home";
 $page = "index.php";
-
-
 if( isset($_POST['submit'])){
-
             $first_name= $_POST['first_name'];
-
             $last_name= $_POST['last_name'] ;
             $email= $_POST['email'] ;
             $phone= $_POST['phone'] ;
@@ -21,10 +12,7 @@ if( isset($_POST['submit'])){
             $to= 'tiffany_baker@stu.indianhills.edu';
             $subject = 'contact form info';
             $human = $_POST['human'];
-
-
             $body = " from: $first_name.$last_name\n E-mail: $email \n Phone: $phone \n Time: $time \n Help needed: $comment";
-
        /*     if ($first_name != '' && $last_name != ''  && $email != '' && $phone != '') {
                 if ($human == '6') {    
                     if (mail ($to, $subject, $body, $from)) { 
@@ -41,9 +29,7 @@ if( isset($_POST['submit'])){
         } else {
             echo "nope";*/
         } 
-
 ?>
->>>>>>> 257f120188ecba6f1d78543434c3c6b5c6c05b63
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,17 +41,6 @@ if( isset($_POST['submit'])){
 <title>Berry Patch Home</title>
 <?php require ("library/favicon.php"); ?>
 </head>
-<<<<<<< HEAD
-<body>
-	<?php require ("library/nav.php"); ?>
-<div class="jumbotron" style="background-color: #dcdcdc;" >
-    <div class="container-fluid">
-        <h1 style="color: #ce0f0f; padding-top: 70px;" ><i>Berry Patch IT Services and Computer Repair</i></h1>
-        <img src="images/bp-logo.png" class="img-responsive col-sm-1" style="background-color: #dcdcdc;" alt="logo"">
-        <br>
-        <br>
-        <p><i>"We Have A Passion For Technology!"</i></p>
-=======
 
 <body style="background-color: #FFFFCD;">
 <?php require ("library/indexNav.php");?>
@@ -83,7 +58,6 @@ if( isset($_POST['submit'])){
                 <br>
             <p style=" text-align: right; padding-right:150px;"><i>"We Have A Passion For Technology!"</i></p>
         </div>
->>>>>>> 257f120188ecba6f1d78543434c3c6b5c6c05b63
     </div>
 </div>
 <!--3 paagraph grid-->
@@ -151,4 +125,4 @@ if( isset($_POST['submit'])){
     <?php require("library/script.php");?>
 
 </body>
-</html>                   
+</html>
