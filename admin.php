@@ -33,7 +33,7 @@
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="index.php" >HOME</a></li>
-					<li><a href="newitems.php">ITEM PAGE</a></li>
+					<li><a href="newItem.php">ITEM PAGE</a></li>
 					<li><a href="#.php">ORDERS</a></li>
 					<li><a href="admin.php">MAIN MENU</a></li>
 				</ul>
@@ -93,7 +93,6 @@
 <div class="container-fluid">
 	
 </div>
-
 
 <?php require ("library/script.php"); ?>
 </body>

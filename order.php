@@ -101,6 +101,7 @@ $_SESSION['array'] = array();
 ?>
 <html>
 <head>
+	<title>Berry Patch Order Page</title>
 <?php require ("library/head.php"); ?>
 <script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.min.js"></script>
 </head>

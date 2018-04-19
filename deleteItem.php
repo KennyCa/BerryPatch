@@ -22,6 +22,7 @@ $delind = -1;
  	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 	<link rel ="stylesheet" href = "css\bootstrap.css">
 	<link rel ="stylesheet" href = "css\custom.css">
+	<title>Berry Patch Delete Item Page</title>
 </head>
 <body>
 
@@ -40,12 +41,10 @@ $delind = -1;
 			<!--collections Nav for toggle-->
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="nav navbar-nav">
-					<li><a href="index.php" >HOME</a></li>
-					<li><a href="services.php">SERVICES</a></li>
-					<li><a href="shop.php">SHOP</a></li>
-					<li><a href="about.php">ABOUT</a></li>
-					<li><a href="contact.php">CONTACT</a></li>
-					<li class="active"><a href="admin.php">ADMIN</a></li>
+					<li class="active"><a href="index.php" >HOME</a></li>
+					<li><a href="newItem.php">ITEM PAGE</a></li>
+					<li><a href="#.php">ORDERS</a></li>
+					<li><a href="admin.php">MAIN MENU</a></li>
 				</ul>
 			</div>
 		</div>
