@@ -39,8 +39,7 @@ if (isset ($_POST['login'])){
     echo 'here';
 }
 ?>
-
-
+                        
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,10 +51,17 @@ if (isset ($_POST['login'])){
     <title>Berry Patch Home</title>
 <?php require ("library/favicon.php"); ?>
 </head>
+
+                                    <!-- FOUR SECTION BODY DISPLAY-->
+
 <body style="background-color: #FFFFCD;">
 
+                                 <!--SECTION ONE: navigation and header banner-->
+
     <nav id="myNavbar" class="navbar navbar-default navbar-inverse " role="navigation">
-            <!-- grouping -->
+
+                                         <!-- grouping -->
+
             <div class="container-fluid">
                 <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
@@ -66,7 +72,9 @@ if (isset ($_POST['login'])){
                     </button>
                     <i><a class="navbar-brand col-sm-10" onclick="document.getElementById('login').style.display = 'block'">Berry Patch IT Services and Computer Repair</a></i>
                 </div>
-                <!--collections Nav for toggle-->
+
+                                    <!--collections Nav for toggle-->
+
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="nav navbar-nav">
 
@@ -80,6 +88,8 @@ if (isset ($_POST['login'])){
                 </div>
             </div>
         </nav>
+
+                                        <!--header banner-->
 
 <div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); padding-top:50px; color: #ffffff; text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;">
     <div class="row">
@@ -101,7 +111,9 @@ if (isset ($_POST['login'])){
         </div>
     </div>
 </div>
-<!--3 paagraph grid-->
+                                        
+                                        <!--SECTION TWO: 3 paagraph grid-->
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3" >
@@ -116,19 +128,18 @@ if (isset ($_POST['login'])){
         </div>
         <div class="col-sm-5" >
                 <img class="img-responsive img-rounded" style="padding-right:20px ;" src="images/storeFrontSign.png"  alt="store">
-
-        
         </div>
         <div class="col-sm-4">
             <br>
             <h2 style="color: #8B0000; text-shadow: 1px 1px #000000; ">Phone & Tablet Screen Replacement</h2>
         
                 <p><b>Berry Patch IT Services now replaces screens on all devices phone or Tablets. Screens are ordered as needed and take 2-3 days to arrive. It takes about 2 hours to replace the screen. Contact us for an estimate.</b></p> 
-        </div>
-                
+        </div>           
     </div>
 </div>
-    <!-- form and customer quote -->
+
+                                        <!-- SECTION THREE: form and customer quote -->
+
     <div class="container-fluid" style="background-color: #FFFFCD;">
         <div class="row">
             <div class="col-sm-6" style="background-color: #f8f8f8; box-shadow: 10px 10px 5px #b72a2a;">
@@ -181,10 +192,10 @@ if (isset ($_POST['login'])){
 </div>
         
     
-    <!--footer-->
- <footer>   
+                                <!--SECTION FOUR: footer and script-->
+ 
     <?php require ("library/footer.php"); ?>
-</footer>
+
 
 <script>
     <?php require("library/script.php");?>

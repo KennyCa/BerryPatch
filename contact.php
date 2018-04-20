@@ -9,7 +9,7 @@ $page = "contact.php";
 <?php require ("library/favicon.php"); ?>
 </head>
 <body>
-               <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
+        <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
             <!-- grouping -->
             <div class="container-fluid">
                 <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
