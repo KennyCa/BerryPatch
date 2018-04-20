@@ -1,36 +1,6 @@
 <?php
-
-$page = "index";
-$pagetitle = "Home";
-
-if( isset($_POST['submit'])){
-            $first_name= $_POST['first_name'];
-            $last_name= $_POST['last_name'] ;
-            $email= $_POST['email'] ;
-            $phone= $_POST['phone'] ;
-            $time= $_POST['time'] ;
-            $comment= $_POST['comment'];
-            $from = 'From: Berry Patch IT';
-            $to= 'tiffany_baker@stu.indianhills.edu';
-            $subject = 'contact form info';
-            $human = $_POST['human'];
-            $body = " from: $first_name.$last_name\n E-mail: $email \n Phone: $phone \n Time: $time \n Help needed: $comment";
-           if ($first_name != '' && $last_name != ''  && $email != '' && $phone != '') { echo "works";
-                if ($human == '6') {    
-                    if (mail ($to, $subject, $body, $from)) { 
-                        echo '<p>Your message has been sent!</p>';
-                    } else { 
-                        echo '<p>Something went wrong, go back and try again!</p>'; 
-                        }
-                } else {
-                    echo '<p>You answered the anti-spam question incorrectly!</p>';
-                }
-            } else {
-                echo '<p>You need to fill in all required fields!!</p>';
-            }
-        } else {
-            echo "nope";
-        } 
+            
+/*require("library/formToEmail.php");*/
 
 
 if (isset ($_POST['login'])){
@@ -58,7 +28,7 @@ if (isset ($_POST['login'])){
 
                                  <!--SECTION ONE: navigation and header banner-->
 
-    <nav id="myNavbar" class="navbar navbar-default navbar-inverse " role="navigation">
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top " role="navigation">
 
                                          <!-- grouping -->
 
@@ -144,7 +114,7 @@ if (isset ($_POST['login'])){
         <div class="row">
             <div class="col-sm-6" style="background-color: #f8f8f8; box-shadow: 10px 10px 5px #b72a2a;">
                 <h2 style="background-color: #f8f8f8;">Hire a Geek Today</h2>
-                <?php require ("library/form.php"); ?> 
+                <?php require ("library/form submit.php"); ?> 
           
             </div>
 
@@ -173,7 +143,6 @@ if (isset ($_POST['login'])){
     </div>
 <div class="container-fluid">
     <div class="row">
-
         <div class="login-box" id="login">
             <img src="images/avatar.png" class="avatar">
             <h1>Login Here</h1>
@@ -186,9 +155,7 @@ if (isset ($_POST['login'])){
                 <a href="#">Forget Password</a>    
                 </form>
         </div>
-        
-    </div>
-    
+    </div>   
 </div>
         
     
@@ -196,9 +163,8 @@ if (isset ($_POST['login'])){
  
     <?php require ("library/footer.php"); ?>
 
-
+<?php require("library/script.php");?>
 <script>
-    <?php require("library/script.php");?>
     <script type="text/javascript">
         var login= document.getElementById('login');
         window.onclick = function(event){
@@ -206,10 +172,13 @@ if (isset ($_POST['login'])){
                 login.style.display = "none";
             }
         }
- 
-</script>
-    <?php require("library/script.php");?>
 
+var frmvalidator  = new Validator("helpForm");
+frmvalidator.addValidation("first_name","req","Please provide your name"); 
+frmvalidator.addValidation("email","req","Please provide your email"); 
+frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+</script>
+    
 
 </body>
 </html>

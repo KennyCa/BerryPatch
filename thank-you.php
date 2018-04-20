@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <?php require ("library/head.php"); ?>
-<title>starter page</title>
+<title>Thank you</title>
 <?php require ("library/favicon.php"); ?>
 </head>
 
@@ -70,22 +70,12 @@
                      </div>
                 </div>
 
-                                                    <!--SECTION ****: -->
+
+                                                    <!--SECTION TWO: content -->
 
                 <div class="container container-fluid">
                     <div class="row">
-                        <p>content</p>
-                        
-                    </div>
-
-                    <div class="row">
-                        <div>
-                            <p>goes</p>
-                        </div> 
-
-                        <div>
-                            <p>here</p>
-                        </div>
+                        <p><h1>Thanks for the submission!</h1></p>
                         
                     </div>
                 </div>
@@ -98,4 +88,3 @@
 
 </body>
 </html>
-       
