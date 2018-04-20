@@ -1,9 +1,9 @@
 <?php
 	echo'
 	  <div id="contact-form" style="background-color: #f8f8f8;padding-bottom: 15px;">
-	          <form action="$page" method="POST" enctype ="multipart/form-data">
+	          <form action="index.php" method="POST" enctype ="multipart/form-data">
 
-	            <div class="form-group">
+	            <div class="form-group>
 	                <label for="first_name">First Name</label>
 	                <input type="text" class="form-control" id="first_name" placeholder="Enter First Name" name="first_name">
 	            </div>
@@ -31,7 +31,7 @@
 	            <div class="form-group">
 	              <label for="textarea">Let use know how we can help:</label> 
 		            <br>
-		          <textaera name="comment" rows="5" cols="40"></textarea>
+		          <textarea name="comment" rows="5" cols="40"></textarea>
 		      	</div>
 	            <div>
 	            	<label>*What is 3+3? (Anti-spam)</label>

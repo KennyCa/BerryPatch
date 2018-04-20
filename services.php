@@ -128,7 +128,7 @@
 <div class="row">
 	<div class="container-fluid" style="background-color: #8B0000;">
 		<div class="row">
-			<div class="col-sm-4 hidden-xs" style="background-color: #ffffff; height: 120px;">
+			<div class="col-sm-4 hidden-xs" style="background-color: #ffffff; height: 100px;">
 				<br>
 				<br>
 				<br>

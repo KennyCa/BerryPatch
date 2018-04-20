@@ -1,11 +1,8 @@
 <?php
 
 $page = "index";
-
-
-
 $pagetitle = "Home";
-$page = "index.php";
+
 if( isset($_POST['submit'])){
             $first_name= $_POST['first_name'];
             $last_name= $_POST['last_name'] ;
@@ -18,7 +15,7 @@ if( isset($_POST['submit'])){
             $subject = 'contact form info';
             $human = $_POST['human'];
             $body = " from: $first_name.$last_name\n E-mail: $email \n Phone: $phone \n Time: $time \n Help needed: $comment";
-       /*     if ($first_name != '' && $last_name != ''  && $email != '' && $phone != '') {
+           if ($first_name != '' && $last_name != ''  && $email != '' && $phone != '') { echo "works";
                 if ($human == '6') {    
                     if (mail ($to, $subject, $body, $from)) { 
                         echo '<p>Your message has been sent!</p>';
@@ -32,8 +29,15 @@ if( isset($_POST['submit'])){
                 echo '<p>You need to fill in all required fields!!</p>';
             }
         } else {
-            echo "nope";*/
+            echo "nope";
         } 
+
+
+if (isset ($_POST['login'])){
+    $un = $_POST['username'];
+    $pw = $_POST['password'];
+    echo 'here';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,12 +46,12 @@ if( isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
     <link rel ="stylesheet" href = "css\bootstrap.css">
     <link rel ="stylesheet" href = "css\custom.css">
-    
-<title>Berry Patch Home</title>
+    <link rel ="stylesheet" href = "css\style.css"> 
+    <title>Berry Patch Home</title>
 <?php require ("library/favicon.php"); ?>
 </head>
 <body style="background-color: #FFFFCD;">
-    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse " role="navigation">
             <!-- grouping -->
             <div class="container-fluid">
                 <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
@@ -57,7 +61,7 @@ if( isset($_POST['submit'])){
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand col-sm-10" href="index.php"><i>Berry Patch IT Services and Computer Repair</i></a>
+                    <i><a class="navbar-brand col-sm-10" onclick="document.getElementById('login').style.display = 'block'">Berry Patch IT Services and Computer Repair</a></i>
                 </div>
                 <!--collections Nav for toggle-->
                 <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -133,7 +137,7 @@ if( isset($_POST['submit'])){
                 
             </div>
             <div class="col-sm-5">
-                <blockquote class="quote-box">
+                <blockquote style="border-left: none;">
                   <h1><b>
                     “
                   </b></h1>
@@ -150,14 +154,40 @@ if( isset($_POST['submit'])){
             </div>
         </div>
     </div>
+<div class="container-fluid">
+    <div class="row">
 
+        <div class="login-box" id="login">
+            <img src="images/avatar.png" class="avatar">
+            <h1>Login Here</h1>
+                <form action="index.php" method="post" enctype="multipart/form-data">>
+                <p>Username</p>
+                <input type="text" name="username" placeholder="Enter Username">
+                <p>Password</p>
+                <input type="password" name="password" placeholder="Enter Password">
+                <input type="submit" name="login" value="Login">
+                <a href="#">Forget Password</a>    
+                </form>
+        </div>
+        
+    </div>
+    
+</div>
+        
     
     <!--footer-->
     
     <?php require ("library/footer.php"); ?>
 
-
     <?php require("library/script.php");?>
-
+    <script type="text/javascript">
+        var login= document.getElementById('login');
+        window.onclick = function(event){
+            if (event.target == login){
+                login.style.display = "none";
+            }
+        }
+    </script>
+   
 </body>
 </html>
