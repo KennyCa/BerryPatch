@@ -39,6 +39,8 @@ if (isset ($_POST['login'])){
     echo 'here';
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,6 +53,7 @@ if (isset ($_POST['login'])){
 <?php require ("library/favicon.php"); ?>
 </head>
 <body style="background-color: #FFFFCD;">
+
     <nav id="myNavbar" class="navbar navbar-default navbar-inverse " role="navigation">
             <!-- grouping -->
             <div class="container-fluid">
@@ -133,11 +136,14 @@ if (isset ($_POST['login'])){
                 <?php require ("library/form.php"); ?> 
           
             </div>
+
             <div class="col-sm-1" style="background-color:#FFFFCD; width:2px;">
                 
             </div>
             <div class="col-sm-5">
+
                 <blockquote style="border-left: none;">
+
                   <h1><b>
                     “
                   </b></h1>
@@ -176,9 +182,11 @@ if (isset ($_POST['login'])){
         
     
     <!--footer-->
-    
+ <footer>   
     <?php require ("library/footer.php"); ?>
+</footer>
 
+<script>
     <?php require("library/script.php");?>
     <script type="text/javascript">
         var login= document.getElementById('login');
@@ -187,7 +195,10 @@ if (isset ($_POST['login'])){
                 login.style.display = "none";
             }
         }
-    </script>
-   
+ 
+</script>
+    <?php require("library/script.php");?>
+
+
 </body>
 </html>
