@@ -84,7 +84,7 @@ require("library/item.php");
 
 	<div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
                     <div class="row" style="padding-top: 20px;">
-                        <div class="col-sm-4 col-xs-12">
+                        <div class="col-sm-4 hidden-xs">
                             <br>
                             <br>
                             <br>
@@ -149,5 +149,7 @@ require("library/item.php");
 </body>
 <script>
 	$('.message').delay(3000).fadeOut('slow',function() { $(this).remove(); });
+
 </script>
+<?php require ("library/script.php"); ?>
 </html>

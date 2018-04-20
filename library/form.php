@@ -1,6 +1,6 @@
 <?php
-     
-	echo'	  <div id="contact-form" style="background-color: #f8f8f8;padding-bottom: 15px;">
+	echo'
+	  <div id="contact-form" style="background-color: #f8f8f8;padding-bottom: 15px;">
 	          <form action="$page" method="POST" enctype ="multipart/form-data">
 
 	            <div class="form-group">
@@ -20,9 +20,7 @@
 	              <input type="#" class="form-control" id="phone" placeholder="Enter phone number" name="phone">
 	            </div>
 
-				<div class="text-center">
-					<button type="button" class="btn btn-info btn-md">Submit</button>
-				</div><br><br>
+				<br>
 
 	            <div class="form-group">
 	              <label for="time">when is the best time to reach you?:</label>
@@ -33,13 +31,17 @@
 	            <div class="form-group">
 	              <label for="textarea">Let use know how we can help:</label> 
 		            <br>
-		          <textarea name="comment" rows="5" cols="40"></textarea>
-	            </div>
-	            <label>*What is 3+3? (Anti-spam)</label>
-				<input name="human" placeholder="Type Here">
+		          <textaera name="comment" rows="5" cols="40"></textarea>
+		      	</div>
+	            <div>
+	            	<label>*What is 3+3? (Anti-spam)</label>
+					<input name="human" placeholder="Type Here">
+				</div>
 				<br>
-	            <input class="btn btn-success" type="submit" name="sumbit" value="Submit">
-
+				<br>
+				<div class="text-center">
+	            	<input class="btn btn-success" type="submit" name="sumbit" value="Submit">
+				</div>
 	          </form><!-- end index-form-->
 	        </div><!-- end contact form-->'
 ?>

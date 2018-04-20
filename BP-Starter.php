@@ -1,59 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Starter</title>
-<script src="css/jquery-3.3.1.js"></script>
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<?php require ("library/head.php"); ?>
+<title>starter page</title>
+<?php require ("library/favicon.php"); ?>
 </head>
 <body>
+               <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
+            <!-- grouping -->
+            <div class="container-fluid">
+                <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand col-sm-10" href="index.php"><i>Berry Patch IT Services and Computer Repair</i></a>
+                </div>
+                <!--collections Nav for toggle-->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="nav navbar-nav">
 
-<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
-    <!-- grouping -->
-    <div class="container-fluid">
-        <div class="navbar-header col-sm-5 col-xs4" style="padding-bottom: 10px;">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand"><i>Berry Patch IT Services and Computer Repair</i></a>
-        </div>
-        <!--collections Nav for toggle-->
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="index.php" >HOME</a></li>
-                <li><a href="services.php">SERVICES</a></li>
-                <li><a href="shop.php">SHOP</a></li>
-                <li><a href="about.php">ABOUT</a></li>
-                <li><a href="contact.php">CONTACT</a></li>
-				<li><a href="admin.php">ADMIN</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<!--footer-->
-    
-                <div class="row">
-                    <div class="col-sm-9" style="background-color:#000000; color:#ffffff;">
-                        <footer>
-                            <p>641-683-5754
-                                <br>
-                            Berry Patch IT Services
-                        </p>
-                        </footer>
-                    </div>
-                    <div class="col-sm-3" style="background-color:#000000; color:#ffffff;">
-                        <footer>
-                            <br>
-                        
-                            <p>&copy; 2016 by Berry Patch IT Services.</p>
-                        </footer>
-                    </div>
+                        <li><a href="index.php">HOME</a></li>
+                        <li><a href="services.php">SERVICES</a></li>
+                        <li><a href="shop.php">SHOP</a></li>
+                        <li><a href="about.php">ABOUT</a></li>
+                        <li><a href="contact.php">CONTACT</a></li>
+                        <li><a href="admin.php">ADMIN</a></li>
+                    </ul>
                 </div>
             </div>
+        </nav>
+
+                <div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
+                    <div class="row" style="padding-top: 20px;">
+                        <div class="col-sm-4 hidden-xs">
+                            <br>
+                            <br>
+                            <br>
+                              <img src="images/rvBpLogo.png" class="img-responsive img-rounded" alt="logo" width="100px" height="150px" >
+                        </div>
+
+                       
+
+                       <div class="col-sm-4 text-center col-xs-12" style="padding-top: 50px;">
+                            <br>
+                            <br>
+                            <h2>header wording goes here</h2>
+                                <h3>
+﻿                                    ****</h3>
+                           <hr style="border-color: #000000; border-size: 2px"> 
+                        </div>
+
+                        <div class="col-sm-4">
+            
+                        </div>
+                     </div>
+                </div>
+
+                <div class="container container-fluid">
+                    <div class="row">
+                        <p>content</p>
+                        
+                    </div>
+                    <div class="row">
+                        <div>
+                            <p>goes</p>
+                        </div> 
+                        <div>
+                            <p>here</p>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+<!--footer-->
+    
+    <?php require ("library/footer.php"); ?>
+
+<!--script-->
+    <?php require("library/script.php");?>
+
 </body>
 </html>
+       
