@@ -1,14 +1,8 @@
 <?php
-<<<<<<< HEAD
 
 $page = "index";
-
-
-
-=======
->>>>>>> afb6a0e8e4171817f7d1faf55e120581e6a90406
 $pagetitle = "Home";
-$page = "index.php";
+
 if( isset($_POST['submit'])){
             $first_name= $_POST['first_name'];
             $last_name= $_POST['last_name'] ;
@@ -38,10 +32,6 @@ if( isset($_POST['submit'])){
             echo "nope";*/
         } 
 ?>
-<<<<<<< HEAD
-
-=======
->>>>>>> afb6a0e8e4171817f7d1faf55e120581e6a90406
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,12 +43,8 @@ if( isset($_POST['submit'])){
 <title>Berry Patch Home</title>
 <?php require ("library/favicon.php"); ?>
 </head>
-<<<<<<< HEAD
-=======
-
->>>>>>> afb6a0e8e4171817f7d1faf55e120581e6a90406
 <body style="background-color: #FFFFCD;">
-    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse" role="navigation">
             <!-- grouping -->
             <div class="container-fluid">
                 <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
@@ -136,7 +122,7 @@ if( isset($_POST['submit'])){
                 <?php require ("library/form.php"); ?> 
           
             </div>
-            <div class="col-sm-6" style="background-color: #FFFFCD;">
+            <div class="col-sm-5" style="background-color: #FFFFCD; padding-left:25px;">
                 <blockquote class="quote-box">
                   <h1><b>
                     “
@@ -158,11 +144,11 @@ if( isset($_POST['submit'])){
 
     
     <!--footer-->
-    
+ <footer>   
     <?php require ("library/footer.php"); ?>
-
-
+</footer>
+<script>
     <?php require("library/script.php");?>
-
+</script>
 </body>
 </html>
