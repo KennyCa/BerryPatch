@@ -10,7 +10,8 @@
 <html>
 <head>
 <?php require ("library/head.php"); ?>
-
+<title>Shop</title>
+<?php require ("library/favicon.php"); ?>
 </head>
 <body style="background-color: #FFFFCD;">
 	<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">

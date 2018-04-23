@@ -1,5 +1,6 @@
 <?php
-
+            
+/*require("library/formToEmail.php");*/
 $page = "index";
 
 $pagetitle = "Home";
@@ -32,7 +33,16 @@ if( isset($_POST['submit'])){
         } else {
             echo "nope";*/
         } 
+
+
+if (isset ($_POST['login'])){
+    $un = $_POST['username'];
+    $pw = $_POST['password'];
+    echo 'here';
+}
+
 ?>
+                        
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,13 +50,21 @@ if( isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
     <link rel ="stylesheet" href = "css\bootstrap.css">
     <link rel ="stylesheet" href = "css\custom.css">
-    
-<title>Berry Patch Home</title>
+    <link rel ="stylesheet" href = "css\style.css"> 
+    <title>Berry Patch Home</title>
 <?php require ("library/favicon.php"); ?>
 </head>
+
+                                    <!-- FOUR SECTION BODY DISPLAY-->
+
 <body style="background-color: #FFFFCD;">
+
     <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
             <!-- grouping -->
+
+                                 <!--SECTION ONE: navigation and header banner-->
+
+
             <div class="container-fluid">
                 <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
@@ -55,9 +73,11 @@ if( isset($_POST['submit'])){
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand col-sm-10" href="index.php"><i>Berry Patch IT Services and Computer Repair</i></a>
+                    <i><a class="navbar-brand col-sm-10" onclick="document.getElementById('login').style.display = 'block'">Berry Patch IT Services and Computer Repair</a></i>
                 </div>
-                <!--collections Nav for toggle-->
+
+                                    <!--collections Nav for toggle-->
+
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="nav navbar-nav">
 
@@ -71,6 +91,8 @@ if( isset($_POST['submit'])){
                 </div>
             </div>
         </nav>
+
+                                        <!--header banner-->
 
 <div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); padding-top:50px; color: #ffffff; text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;">
     <div class="row">
@@ -92,7 +114,9 @@ if( isset($_POST['submit'])){
         </div>
     </div>
 </div>
-<!--3 paagraph grid-->
+                                        
+                                        <!--SECTION TWO: 3 paagraph grid-->
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3" >
@@ -107,35 +131,30 @@ if( isset($_POST['submit'])){
         </div>
         <div class="col-sm-5" >
                 <img class="img-responsive img-rounded" style="padding-right:20px ;" src="images/storeFrontSign.png"  alt="store">
-
-        
         </div>
         <div class="col-sm-4">
             <br>
             <h2 style="color: #8B0000; text-shadow: 1px 1px #000000; ">Phone & Tablet Screen Replacement</h2>
         
                 <p><b>Berry Patch IT Services now replaces screens on all devices phone or Tablets. Screens are ordered as needed and take 2-3 days to arrive. It takes about 2 hours to replace the screen. Contact us for an estimate.</b></p> 
-        </div>
-                
+        </div>           
     </div>
 </div>
-    <!-- form and customer quote -->
+
+                                        <!-- SECTION THREE: form and customer quote -->
+
     <div class="container-fluid" style="background-color: #FFFFCD;">
         <div class="row">
             <div class="col-sm-6" style="background-color: #f8f8f8; box-shadow: 10px 10px 5px #b72a2a;">
                 <h2 style="background-color: #f8f8f8;">Hire a Geek Today</h2>
-                <?php require ("library/form.php"); ?> 
-          
+                <?php require ("library/form submit.php"); ?> 
             </div>
-
             <div class="col-sm-5" style="background-color: #FFFFCD; padding-left:25px;">
-
             <div class="col-sm-1" style="background-color:#FFFFCD; width:2px;">
-                
             </div>
             <div class="col-sm-5">
-
                 <blockquote class="quote-box">
+                <blockquote style="border-left: none;">
                   <h1><b>
                     “
                   </b></h1>
@@ -152,14 +171,44 @@ if( isset($_POST['submit'])){
             </div>
         </div>
     </div>
-
+<div class="container-fluid">
+    <div class="row">
+        <div class="login-box" id="login">
+            <img src="images/avatar.png" class="avatar">
+            <h1>Login Here</h1>
+                <form action="index.php" method="post" enctype="multipart/form-data">>
+                <p>Username</p>
+                <input type="text" name="username" placeholder="Enter Username">
+                <p>Password</p>
+                <input type="password" name="password" placeholder="Enter Password">
+                <input type="submit" name="login" value="Login">
+                <a href="#">Forget Password</a>    
+                </form>
+        </div>
+    </div>   
+</div>
+        
     
-    <!--footer-->
- <footer>   
+                                <!--SECTION FOUR: footer and script-->
+ 
     <?php require ("library/footer.php"); ?>
-</footer>
+
+<?php require("library/script.php");?>
 <script>
-    <?php require("library/script.php");?>
+    <script type="text/javascript">
+        var login= document.getElementById('login');
+        window.onclick = function(event){
+            if (event.target == login){
+                login.style.display = "none";
+            }
+        }
+
+var frmvalidator  = new Validator("helpForm");
+frmvalidator.addValidation("first_name","req","Please provide your name"); 
+frmvalidator.addValidation("email","req","Please provide your email"); 
+frmvalidator.addValidation("email","email","Please enter a valid email address"); 
 </script>
+    
+
 </body>
 </html>
