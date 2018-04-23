@@ -1,12 +1,7 @@
 <?php
 
 $page = "index";
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 1b16f189eff5a8d8a8455e670fc1dcff255f0c84
 $pagetitle = "Home";
 
 if( isset($_POST['submit'])){
@@ -50,7 +45,7 @@ if( isset($_POST['submit'])){
 <?php require ("library/favicon.php"); ?>
 </head>
 <body style="background-color: #FFFFCD;">
-    <nav id="myNavbar" class="navbar navbar-default navbar-inverse" role="navigation">
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
             <!-- grouping -->
             <div class="container-fluid">
                 <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
@@ -132,14 +127,14 @@ if( isset($_POST['submit'])){
                 <?php require ("library/form.php"); ?> 
           
             </div>
-<<<<<<< HEAD
+
             <div class="col-sm-5" style="background-color: #FFFFCD; padding-left:25px;">
-=======
+
             <div class="col-sm-1" style="background-color:#FFFFCD; width:2px;">
                 
             </div>
             <div class="col-sm-5">
->>>>>>> 1b16f189eff5a8d8a8455e670fc1dcff255f0c84
+
                 <blockquote class="quote-box">
                   <h1><b>
                     “
