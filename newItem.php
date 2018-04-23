@@ -79,28 +79,59 @@ require("library/item.php");
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/customAdmin.css">
 </head>
-<body style="background-color: #FFFFCD;">
-       <?php require ("library/newItemNav.php"); ?>
 
-	<div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
+										<!-- FOUR SECTION BODY DISPLAY-->
+
+<body style="background-color: #FFFFCD;">
+
+								<!--SECTION ONE: navigation and header banner-->
+
+       <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
+		    									
+		    									<!-- grouping -->
+
+		    <div class="container-fluid">
+		        <div class="navbar-header" style="padding-bottom: 5px;">
+		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		            </button>
+		            <a class="navbar-brand col-sm-10 col-xs-10" href="#.php"><i>Berry Patch IT Services Admin Bar</i></a>
+		        </div>
+		       
+		       								 <!--collections Nav for toggle-->
+
+		        <div class="collapse navbar-collapse" id="navbarCollapse">
+		            <ul class="nav navbar-nav">
+		                <li><a href="index.php">Home</a></li>
+		                <li><a href="newitem.php">Item Page</a></li>
+		                <li><a href="#.php">Orders</a></li>
+		                <li><a href="admin.php">Main Menu</a></li>
+		            </ul>
+		        </div>
+		    </div>
+		</nav>
+
+											 <!--header banner-->
+
+
+				<div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
                     <div class="row" style="padding-top: 20px;">
-                        <div class="col-sm-4 col-xs-12">
+                        <div class="col-sm-4 hidden-xs">
                             <br>
                             <br>
                             <br>
                               <img src="images/rvBpLogo.png" class="img-responsive img-rounded" style="padding-top: 10px;" alt="logo" width="100px" height="150px" >
                         </div>
-                    
-                       
-
                        <div class="col-sm-4 text-center col-xs-12" style="padding-top: 50px;">
                             <br>
                             <br>
                             <h2>New Items</h2>
                                 <h3>****</h3>
                            <hr style="border-color: #000000; border-size: 2px"> 
-                        </div>
-
+                        </div>  
                         <div class="col-sm-4">
 
                         </div>
@@ -149,5 +180,7 @@ require("library/item.php");
 </body>
 <script>
 	$('.message').delay(3000).fadeOut('slow',function() { $(this).remove(); });
+
 </script>
+<?php require ("library/script.php"); ?>
 </html>

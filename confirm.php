@@ -35,6 +35,7 @@ require_once("braintree-php-3.29.0\lib\Braintree.php");
 <html>
 <head>
 	<?php require('library/head.php'); ?>
+	<title>Berry Patch Comfirmation Page</title>
 </head>
 <body>
 	

@@ -10,14 +10,35 @@
 <html>
 <head>
 <?php require ("library/head.php"); ?>
-
+<title>Shop</title>
+<?php require ("library/favicon.php"); ?>
 </head>
-<<<<<<< HEAD
-<body>
-=======
 <body style="background-color: #FFFFCD;">
->>>>>>> 257f120188ecba6f1d78543434c3c6b5c6c05b63
-	<?php require ("library/shopNav.php"); ?>
+	<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
+		<!-- grouping -->
+		<div class="container">
+			<div class="navbar-header col-sm-5 col-xs4" style="padding-bottom: 10px;">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand"><i>Berry Patch IT Services and Computer Repair</i></a>
+			</div>
+			<!--collections Nav for toggle-->
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.php" >HOME</a></li>
+					<li><a href="services.php">SERVICES</a></li>
+					<li class="active"><a href="shop.php">SHOP</a></li>
+					<li><a href="about.php">ABOUT</a></li>
+					<li><a href="contact.php">CONTACT</a></li>
+					<li><a href="admin.php">ADMIN</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
 	<div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
                     <div class="row" style="padding-top: 20px;">

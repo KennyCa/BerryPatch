@@ -1,22 +1,31 @@
 <?php
 echo'
-$fName= $_POST['first_name'] ;
-$lName= $_POST['last_name'] ;
-$email= $_POST['email'] ;
-$phone= $_POST['phone'] ;
-$time= $_POST['time'] ;
-$comment= $_POST['comment'];
-$from = 'From: Berry Patch IT';
-$to= 'tiffany_baker@stu.indianhills.edu';
-$subject = 'contact form info';
 
-$body = " from: $first_name.last_name\n E-mail: $email \n Phone: $phone \n Time: $time \n Help needed: $comment";
+<div id="contact-form" style="background-color: #f8f8f8;padding-bottom: 15px;">
+	          <form action="formToEmail.php" method="POST" enctype ="multipart/form-data" name="helpForm">
 
-if ($_POST['submit']) {
-    if (mail ($to, $subject, $body, $from)) { 
-        echo '<p>Your message has been sent!</p>';
-    } else { 
-        echo '<p>Something went wrong, go back and try again!</p>'; 
-    }
-}'
+		            <div class="form-group>
+		                <label for="first_name">First Name</label>
+		                <input type="text" class="form-control" id="first_name" placeholder="Enter First Name" name="first_name">
+		            </div>
+		            <div class="form-group">
+		                <label for="last_name">Last Name</label>
+		                <input type="text" class="form-control" id="last_name" placeholder="Enter Last Name" name="last_name">
+		            </div>
+		            <div class="form-group">
+		              <label for="email">Email:</label>
+		              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+		            </div>
+
+		            <div class="form-group">
+		              <label for="textarea">Let use know how we can help:</label> 
+			            <br>
+			          <textarea name="comment" rows="5" cols="40"></textarea>
+			      	</div>
+		            
+					<div class="text-center">
+		            	<input class="btn btn-success" type="submit" name="sumbit" value="Submit">
+					</div>
+	          </form><!-- end index-form-->
+	        </div><!-- end contact form-->'
 ?>
