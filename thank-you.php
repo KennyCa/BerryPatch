@@ -1,5 +1,9 @@
+<?php
+$page = "index ";
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang ="en">
 <head>
 <?php require ("library/head.php"); ?>
 <title>Thank you</title>
@@ -57,7 +61,7 @@
                        <div class="col-sm-4 text-center col-xs-12" style="padding-top: 50px;">
                             <br>
                             <br>
-                            <h2><?php echo $page ?></h2>
+                            <h2>Thank You</h2>
                                 <h3>****</h3>
                            <hr style="border-color: #000000; border-size: 2px"> 
 
@@ -73,14 +77,14 @@
 
                                                     <!--SECTION TWO: content -->
 
-                <div class="container container-fluid">
+                <div class="container container-fluid" style="min-height: 300px">
                     <div class="row">
                         <p><h1>Thanks for the submission!</h1></p>
                         
                     </div>
                 </div>
                                         <!--SECTION ****: footer and script-->
-    
+     
     <?php require ("library/footer.php"); ?>
 
 

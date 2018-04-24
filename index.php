@@ -4,7 +4,7 @@
 
 require("library/formToEmail.php");
 
-$page = "index";
+$page = "index.php";
 
 $pagetitle = "Home";
 
@@ -144,7 +144,7 @@ if (isset ($_POST['login'])){
     </div>
 </div>
 
-                                        <!-- SECTION THREE: form and customer quote -->
+            <!-- SECTION THREE: form and customer quote -->
 
     <div class="container-fluid" style="background-color: #FFFFCD;">
         <div class="row">
@@ -152,15 +152,12 @@ if (isset ($_POST['login'])){
                 <h2 style="background-color: #f8f8f8;">Hire a Geek Today</h2>
                 <?php require ("library/form submit.php"); ?> 
             </div>
-            <div class="col-sm-5" style="background-color: #FFFFCD; padding-left:25px;">
             <div class="col-sm-1" style="background-color:#FFFFCD; width:2px;">
             </div>
             <div class="col-sm-5">
-                <blockquote class="quote-box">
+                  
                 <blockquote style="border-left: none;">
-                  <h1><b>
-                    “
-                  </b></h1>
+                    <h1><b>“</b></h1>
                   <p>
                     <i> It was a dark and stormy night and our 6 year old Dell crashed for the 20th time while I was desperately trying to print plane tickets. I had done everything possible to limp it along until I could save what I needed to off the dang thing. The 21st time it crashed, it was dead, dead, dead. In what my husband would later refer to as a fit of blinding rage, I dismantled that machine down to 50 itty bitty parts, a box and the hard drive. Only afterwards did I realize that now all of our contacts, tax information, photos, etc was gone. LUCKILY, I work with David's wife and she took the hard drive to David and in short order he saved all of my important items on a flash drive.</i> 
                   </p>

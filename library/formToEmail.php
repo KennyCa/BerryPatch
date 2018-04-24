@@ -5,10 +5,10 @@ $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
 $vistor_email = $_POST['email'];
 $message = $_POST['comment'];
-}
+
 
 //Validate first
-if(empty($first_name)||empty($vistor_email)) 
+if  (empty($first_name)||empty($vistor_email)) 
 {
     echo "Name and email are mandatory!";
     exit;
@@ -27,11 +27,11 @@ $email_body = "You have received a new message from the user $firstname.$last_na
     
 $to = "tiffany_baker@stu.indianhills.edu";//<== update the email address
 $headers = "From: $email_from \r\n";
-$headers .= "Reply-To: $email \r\n";
+$headers = "Reply-To: $email \r\n";
 //Send the email!
 mail($to,$email_subject,$email_body,$headers);
 //done. redirect to thank-you page.
-header('Location: thank-you.html');
+header('Location: thank-you.php');
 
 
 // Function to validate against any email injection attempts
@@ -56,5 +56,5 @@ function IsInjected($str)
     return false;
   }
 }
-   
+   }
 ?> 
