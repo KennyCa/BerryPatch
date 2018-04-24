@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
 		
 		$options = $stamps->GetRates("52501", $zip, null, $lbs, 6, 6, 6, "Package", $shipDate, 0, null );
 		
-		echo "<pre>";print_r($options);echo"</pre>";
+		//echo "<pre>";print_r($options);echo"</pre>";
 		
 		$_SESSION['usps'] = $options;
 		$count = count($options);

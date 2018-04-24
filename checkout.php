@@ -27,7 +27,7 @@ $nonce = $_POST["payment_method_nonce"];
 		
 	if ($result->success || !is_null($result->transaction)) {
 		$transaction = $result->transaction;
-		header("Location: transaction.php?id=" . $transaction->id);
+		header("Location: transaction2.php?id=" . $transaction->id);
 	} else {
 		$errorString = "";
 		foreach($result->errors->deepAll() as $error) {

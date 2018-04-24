@@ -78,7 +78,7 @@ class stamps_com
                 "ToState" => $v->ToState,
             );
         }
-	echo "<pre>";print_r($result);echo "</pre>";
+	//echo "<pre>";print_r($result);echo "</pre>";
 	$count = count($result);
 	$x = 0;
 	for ($i = 0; $i < $count; $i++){

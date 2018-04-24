@@ -1,6 +1,40 @@
 <?php
             
+
 require("library/formToEmail.php");
+
+$page = "index";
+
+$pagetitle = "Home";
+
+if( isset($_POST['submit'])){
+            $first_name= $_POST['first_name'];
+            $last_name= $_POST['last_name'] ;
+            $email= $_POST['email'] ;
+            $phone= $_POST['phone'] ;
+            $time= $_POST['time'] ;
+            $comment= $_POST['comment'];
+            $from = 'From: Berry Patch IT';
+            $to= 'tiffany_baker@stu.indianhills.edu';
+            $subject = 'contact form info';
+            $human = $_POST['human'];
+            $body = " from: $first_name.$last_name\n E-mail: $email \n Phone: $phone \n Time: $time \n Help needed: $comment";
+       /*     if ($first_name != '' && $last_name != ''  && $email != '' && $phone != '') {
+                if ($human == '6') {    
+                    if (mail ($to, $subject, $body, $from)) { 
+                        echo '<p>Your message has been sent!</p>';
+                    } else { 
+                        echo '<p>Something went wrong, go back and try again!</p>'; 
+                        }
+                } else {
+                    echo '<p>You answered the anti-spam question incorrectly!</p>';
+                }
+            } else {
+                echo '<p>You need to fill in all required fields!!</p>';
+            }
+        } else {
+            echo "nope";*/
+        } 
 
 
 if (isset ($_POST['login'])){
@@ -8,6 +42,7 @@ if (isset ($_POST['login'])){
     $pw = $_POST['password'];
     echo 'here';
 }
+
 ?>
                         
 <!DOCTYPE html>
@@ -26,11 +61,11 @@ if (isset ($_POST['login'])){
 
 <body style="background-color: #FFFFCD;">
 
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- grouping -->
+
                                  <!--SECTION ONE: navigation and header banner-->
 
-    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top " role="navigation">
-
-                                         <!-- grouping -->
 
             <div class="container-fluid">
                 <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
@@ -115,16 +150,13 @@ if (isset ($_POST['login'])){
             <div class="col-sm-6" style="background-color: #f8f8f8; box-shadow: 10px 10px 5px #b72a2a;">
                 <h2 style="background-color: #f8f8f8;">Hire a Geek Today</h2>
                 <?php require ("library/form submit.php"); ?> 
-          
             </div>
-
+            <div class="col-sm-5" style="background-color: #FFFFCD; padding-left:25px;">
             <div class="col-sm-1" style="background-color:#FFFFCD; width:2px;">
-                
             </div>
             <div class="col-sm-5">
-
+                <blockquote class="quote-box">
                 <blockquote style="border-left: none;">
-
                   <h1><b>
                     “
                   </b></h1>
