@@ -1,14 +1,11 @@
 <?php
-if(!isset($_POST['submit']))
-{
-	//This page should not be accessed directly. Need to submit the form.
-	echo "error; you need to submit the form!";
-}
-$first_name = $_POST['first name'];
-$last_name = $_POST[' last name'];
-$vistor_email = $_POST['email']
-$message = $_POST['comment'];
 
+if (isset($_POST['submit'])){
+$first_name = $_POST['first_name'];
+$last_name = $_POST['last_name'];
+$vistor_email = $_POST['email'];
+$message = $_POST['comment'];
+}
 
 //Validate first
 if(empty($first_name)||empty($vistor_email)) 

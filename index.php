@@ -1,6 +1,6 @@
 <?php
             
-/*require("library/formToEmail.php");*/
+require("library/formToEmail.php");
 
 
 if (isset ($_POST['login'])){

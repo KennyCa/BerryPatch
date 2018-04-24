@@ -2,7 +2,7 @@
 echo'
 
 <div id="contact-form" style="background-color: #f8f8f8;padding-bottom: 15px;">
-	          <form action="formToEmail.php" method="POST" enctype ="multipart/form-data" name="helpForm">
+	          <form action="index.php" method="POST" enctype ="multipart/form-data" name="helpForm">
 
 		            <div class="form-group>
 		                <label for="first_name">First Name</label>
