@@ -8,7 +8,7 @@ $page = "index.php";
 
 $pagetitle = "Home";
 
-if( isset($_POST['submit'])){
+/*if( isset($_POST['submit'])){
             $first_name= $_POST['first_name'];
             $last_name= $_POST['last_name'] ;
             $email= $_POST['email'] ;
@@ -20,7 +20,7 @@ if( isset($_POST['submit'])){
             $subject = 'contact form info';
             $human = $_POST['human'];
             $body = " from: $first_name.$last_name\n E-mail: $email \n Phone: $phone \n Time: $time \n Help needed: $comment";
-       /*     if ($first_name != '' && $last_name != ''  && $email != '' && $phone != '') {
+            if ($first_name != '' && $last_name != ''  && $email != '' && $phone != '') {
                 if ($human == '6') {    
                     if (mail ($to, $subject, $body, $from)) { 
                         echo '<p>Your message has been sent!</p>';
@@ -34,8 +34,8 @@ if( isset($_POST['submit'])){
                 echo '<p>You need to fill in all required fields!!</p>';
             }
         } else {
-            echo "nope";*/
-        } 
+            echo "nope";
+        } */
 
 
 if (isset ($_POST['login'])){
@@ -49,11 +49,7 @@ if (isset ($_POST['login'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" http-equiv="Content-type" content="text/html">
-    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
-    <link rel ="stylesheet" href = "css\bootstrap.css">
-    <link rel ="stylesheet" href = "css\custom.css">
-    <link rel ="stylesheet" href = "css\style.css"> 
+<?php require ("library/head.php"); ?>
     <title>Berry Patch Home</title>
 <?php require ("library/favicon.php"); ?>
 </head>
