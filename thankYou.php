@@ -1,5 +1,6 @@
 <?php
 $page = "index ";
+require("library/formToEmail.php");
 ?>
 
 <!DOCTYPE html>
@@ -10,11 +11,11 @@ $page = "index ";
 <?php require ("library/favicon.php"); ?>
 </head>
 
-                                <!-- **** SECTION BODY DISPLAY-->
+                                <!-- THREE SECTION BODY DISPLAY-->
 
 <body style="background-color: #FFFFCD;">
 
-                            <!--SECTION ****: navigation and header banner-->
+                            <!--SECTION ONE: navigation and header banner-->
 
         <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
 
@@ -83,12 +84,14 @@ $page = "index ";
                         
                     </div>
                 </div>
-                                        <!--SECTION ****: footer and script-->
+                                        <!--SECTION THREE: footer and script-->
      
     <?php require ("library/footer.php"); ?>
 
-
     <?php require("library/script.php");?>
+    <script type="text/javascript">
+        window.setTimeout(function(){ window.location = 'index.php';}, 3000};)
+    </script>
 
 </body>
 </html>

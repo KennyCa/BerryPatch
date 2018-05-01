@@ -2,13 +2,13 @@
             
 
 
-require("library/formToEmail.php");
 
-$page = "index.php";
+
+/*$page = "index.php";
 
 $pagetitle = "Home";
 
-/*if( isset($_POST['submit'])){
+if( isset($_POST['submit'])){
             $first_name= $_POST['first_name'];
             $last_name= $_POST['last_name'] ;
             $email= $_POST['email'] ;
@@ -49,9 +49,23 @@ if (isset ($_POST['login'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php require ("library/head.php"); ?>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118470737-1"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-118470737-1');
+            </script>
+
+    <meta charset="UTF-8" http-equiv="Content-type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <link rel ="stylesheet" href = "css\bootstrap.css">
+    <link rel ="stylesheet" href = "css\custom.css">
+    <link rel ="stylesheet" href = "css\style.css"> 
     <title>Berry Patch Home</title>
-<?php require ("library/favicon.php"); ?>
+    <?php require ("library/favicon.php"); ?>
 </head>
 
                                     <!-- FOUR SECTION BODY DISPLAY-->
@@ -172,7 +186,7 @@ if (isset ($_POST['login'])){
         <div class="login-box" id="login">
             <img src="images/avatar.png" class="avatar">
             <h1>Login Here</h1>
-                <form action="index.php" method="post" enctype="multipart/form-data">>
+                <form action="formToEmail.php" method="post" enctype="multipart/form-data">>
                 <p>Username</p>
                 <input type="text" name="username" placeholder="Enter Username">
                 <p>Password</p>
@@ -187,7 +201,7 @@ if (isset ($_POST['login'])){
     
                                 <!--SECTION FOUR: footer and script-->
  
-    <?php require ("library/footer.php"); ?>
+<?php require ("library/footer.php"); ?>
 
 <?php require("library/script.php");?>
 <script>

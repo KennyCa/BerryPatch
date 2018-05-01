@@ -32,12 +32,18 @@
 <html lang="en">
 <head>
 <?php require ("library/head.php"); ?>
-<title>starter page</title>
+<title>Transaction Page</title>
 <?php require ("library/favicon.php"); ?>
 </head>
+
+                                                     <!--three section body display-->
 <body>
+                                                        <!--section one navigation-->
+
                <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
-            <!-- grouping -->
+                                                    
+                                                    <!-- grouping -->
+
             <div class="container-fluid">
                 <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
@@ -48,7 +54,9 @@
                     </button>
                     <a class="navbar-brand col-sm-10" href="index.php"><i>Berry Patch IT Services and Computer Repair</i></a>
                 </div>
-                <!--collections Nav for toggle-->
+                                            
+                                            <!--collections Nav for toggle-->
+
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="nav navbar-nav">
 
@@ -62,6 +70,8 @@
                 </div>
             </div>
         </nav>
+
+                                                    <!--header and banner-->
 
                 <div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
                     <div class="row" style="padding-top: 20px;">
@@ -77,7 +87,7 @@
                        <div class="col-sm-4 text-center col-xs-12" style="padding-top: 50px;">
                             <br>
                             <br>
-                            <h2>header wording goes here</h2>
+                            <h2></h2>
                                 <h3>
 ﻿                                    ****</h3>
                            <hr style="border-color: #000000; border-size: 2px"> 
@@ -88,6 +98,8 @@
                         </div>
                      </div>
                 </div>
+
+                                                    <!--secton two: transaction content-->
 
                 <div class="container container-fluid">
                     <div class="row">
@@ -103,11 +115,12 @@
 						
 					</div>
                 </div>
-<!--footer-->
+                                                
+                                                <!-- section three: footer and script-->
     
     <?php require ("library/footer.php"); ?>
 
-<!--script-->
+
     <?php require("library/script.php");?>
 
 </body>

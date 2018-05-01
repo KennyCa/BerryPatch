@@ -36,9 +36,15 @@ require_once("braintree-php-3.29.0\lib\Braintree.php");
 <head>
 	<?php require('library/head.php'); ?>
 	<title>Berry Patch Comfirmation Page</title>
+	<?php require ("library/favicon.php"); ?>
 </head>
-<body>
+
+												<!--TWO SECTION BODY DISPLAY-->
+
+<body style="background-color: #FFFFCD;">
 	
+													<!--SECTION ONE:FORM-->
+
 <header>
 	
 </header>
@@ -105,6 +111,8 @@ require_once("braintree-php-3.29.0\lib\Braintree.php");
 		   </div><!-- end contact form-->
 	</div>
 </content>
+
+												<!--SECTION TWO: FOOTER AND SCRIPT-->
 <footer>
 	<?php require('library/footer.php'); ?>
 </footer>

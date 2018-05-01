@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118470737-1"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-118470737-1');
+            </script>
 <?php require ("library/head.php"); ?>
 <title>Services</title>
 <?php require ("library/favicon.php"); ?>
 </head>
 
+											<!--five section body display-->
+
 <body>
+
+										<!--section one: navigation and header-->
+
 <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
-    <!-- grouping -->
+    											
+    											<!-- grouping -->
+
     <div class="container-fluid">
         <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
@@ -19,7 +35,9 @@
             </button>
             <a class="navbar-brand col-sm-10" href="index.php"><i>Berry Patch IT Services and Computer Repair</i></a>
         </div>
-        <!--collections Nav for toggle-->
+
+        									<!--collections Nav for toggle-->
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="nav navbar-nav">
 
@@ -33,6 +51,8 @@
         </div>
     </div>
 </nav>
+
+											<!--section two: paragraph and picture-->
 
 <div class="container-fluid" style="background-color: #8B0000;">
 	<div class="row" style="padding-top:25px ">
@@ -52,6 +72,7 @@
 	</div>
 </div>	
 
+										<!--section three: carousel-->
 <div class ="carousel">
 	<div class ="container-fluid">
 		<div class="row">
@@ -123,7 +144,7 @@
 	</div>
 </div>  
 
-
+											<!--section four: three paragraph section-->
 
 <div class="row">
 	<div class="container-fluid" style="background-color: #8B0000;">
@@ -146,6 +167,7 @@
 	</div>
 </div>
 
+										<!--section five: footer and script-->
 <!--footer-->
 <?php require ("library/footer.php"); ?>
 
