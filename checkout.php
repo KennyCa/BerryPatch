@@ -27,7 +27,7 @@ $nonce = $_POST["payment_method_nonce"];
 		
 	if ($result->success || !is_null($result->transaction)) {
 		$transaction = $result->transaction;
-		header("Location: transaction.php?id=" . $transaction->id);
+		header("Location: transaction2.php?id=" . $transaction->id);
 	} else {
 		$errorString = "";
 		foreach($result->errors->deepAll() as $error) {
@@ -47,9 +47,17 @@ $nonce = $_POST["payment_method_nonce"];
 <title>Berry Patch Checkout Page</title>
 <?php require ("library/favicon.php"); ?>
 </head>
-<body>
+
+											<!--ONE SECTION BODY DISPLAY-->
+
+<body style="background-color: #FFFFCD;">
+
+													<!--SECTION ONE: NAVATION AND HEADER-->
+
     <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
-        <!-- grouping -->
+        											
+        											<!-- grouping -->
+
         <div class="container-fluid">
             <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
@@ -60,7 +68,9 @@ $nonce = $_POST["payment_method_nonce"];
                 </button>
                 <a class="navbar-brand col-sm-10" href="index.php"><i>Berry Patch IT Services and Computer Repair</i></a>
             </div>
-            <!--collections Nav for toggle-->
+            									
+            									<!--collections Nav for toggle-->
+
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="nav navbar-nav">
 
@@ -74,6 +84,8 @@ $nonce = $_POST["payment_method_nonce"];
             </div>
         </div>
     </nav>
+
+    											<!--HEADER AND BANNER-->
 
 	<div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
 	    <div class="row" style="padding-top: 20px;">
@@ -94,7 +106,9 @@ $nonce = $_POST["payment_method_nonce"];
 	        <div class="col-sm-4">
 
 	        </div>
-	     </div>
+	    </div>
 	</div>
+
+												
 </body>
 </html>

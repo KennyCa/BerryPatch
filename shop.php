@@ -9,13 +9,28 @@
 ?>
 <html>
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118470737-1"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-118470737-1');
+            </script> 
 <?php require ("library/head.php"); ?>
-<title>Shop</title>
+<title>Shop</title> 
 <?php require ("library/favicon.php"); ?>
 </head>
+
+										<!--  three section body display-->
 <body style="background-color: #FFFFCD;">
+
+										<!-- section one: navigation and header-->
 	<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
-		<!-- grouping -->
+
+											<!-- grouping -->
+
 		<div class="container">
 			<div class="navbar-header col-sm-5 col-xs4" style="padding-bottom: 10px;">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
@@ -26,7 +41,8 @@
 				</button>
 				<a class="navbar-brand"><i>Berry Patch IT Services and Computer Repair</i></a>
 			</div>
-			<!--collections Nav for toggle-->
+									<!--collections Nav for toggle-->
+
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="nav navbar-nav">
 					<li><a href="index.php" >HOME</a></li>
@@ -39,6 +55,8 @@
 			</div>
 		</div>
 	</nav>
+
+									<!--header and banner-->
 
 	<div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
                     <div class="row" style="padding-top: 20px;">
@@ -65,6 +83,7 @@
                      </div>
                 </div>
        
+       								<!--section two: shop content-->
 <content class="container">
 	
 <?php
@@ -108,6 +127,8 @@
 		</div>
 	</form>
 </content>
+
+														<!--section three: footer and script-->
 <footer>
 
 </footer>

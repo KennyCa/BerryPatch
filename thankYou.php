@@ -1,16 +1,21 @@
+<?php
+$page = "index ";
+require("library/formToEmail.php");
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang ="en">
 <head>
 <?php require ("library/head.php"); ?>
-<title>starter page</title>
+<title>Thank you</title>
 <?php require ("library/favicon.php"); ?>
 </head>
 
-                                <!-- **** SECTION BODY DISPLAY-->
+                                <!-- THREE SECTION BODY DISPLAY-->
 
 <body style="background-color: #FFFFCD;">
 
-                            <!--SECTION ****: navigation and header banner-->
+                            <!--SECTION ONE: navigation and header banner-->
 
         <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
 
@@ -57,7 +62,7 @@
                        <div class="col-sm-4 text-center col-xs-12" style="padding-top: 50px;">
                             <br>
                             <br>
-                            <h2>.....</h2>
+                            <h2>Thank You</h2>
                                 <h3>****</h3>
                            <hr style="border-color: #000000; border-size: 2px"> 
 
@@ -70,32 +75,23 @@
                      </div>
                 </div>
 
-                                                    <!--SECTION ****: -->
 
-                <div class="container container-fluid">
+                                                    <!--SECTION TWO: content -->
+
+                <div class="container container-fluid" style="min-height: 300px">
                     <div class="row">
-                        <p>content</p>
-                        
-                    </div>
-
-                    <div class="row">
-                        <div>
-                            <p>goes</p>
-                        </div> 
-
-                        <div>
-                            <p>here</p>
-                        </div>
+                        <p><h1>Thanks for the submission!</h1></p>
                         
                     </div>
                 </div>
-                                        <!--SECTION ****: footer and script-->
-    
+                                        <!--SECTION THREE: footer and script-->
+     
     <?php require ("library/footer.php"); ?>
 
-
     <?php require("library/script.php");?>
+    <script type="text/javascript">
+        window.setTimeout(function(){ window.location = 'index.php';}, 3000};)
+    </script>
 
 </body>
 </html>
-       
