@@ -4,13 +4,31 @@ $page = "contact.php";
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118470737-1"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-118470737-1');
+            </script>
 <?php require ("library/head.php"); ?>
 <title>Berry Patch Contact</title>
 <?php require ("library/favicon.php"); ?>
 </head>
-<body>
+
+                                            <!-- THREE SECTION BODY DISPLAY-->
+
+<body style="background-color: #FFFFCD;">
+
+                                                 <!--SECTION ONE: NAVIGATION AND HEADER-->
+
         <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
-            <!-- grouping -->
+                                                
+                                                        <!-- grouping -->
+
             <div class="container-fluid">
                 <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
@@ -21,7 +39,9 @@ $page = "contact.php";
                     </button>
                     <a class="navbar-brand col-sm-10" href="index.php"><i>Berry Patch IT Services and Computer Repair</i></a>
                 </div>
-                <!--collections Nav for toggle-->
+                
+                                                     <!--collections Nav for toggle-->
+
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="nav navbar-nav">
 
@@ -35,6 +55,8 @@ $page = "contact.php";
                 </div>
             </div>
         </nav>
+
+                                                    <!--HEADER AND BANNER-->
 
                 <div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
                     <div class="row" style="padding-top: 20px;">
@@ -65,6 +87,7 @@ $page = "contact.php";
                      </div>
                 </div>
        
+                                                            <!--SECTION TWO: FORM AND MAP-->
 
                 <div class="container-fluid" style="background-color: #f8f8f8;padding-bottom: 25px;">
                     <div class="row">
@@ -83,9 +106,9 @@ $page = "contact.php";
                         </div>
                     </div>
                 </div>
-            <!--footer-->
-            <?php require ("library/footer.php"); ?>
-      
+                                                        <!-- SECTION THREE: FOOTER AND SCRIPT-->
+
+<?php require ("library/footer.php"); ?>      
 <?php require ("library/script.php"); ?>     
 </body>
 </html>                            

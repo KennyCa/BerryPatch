@@ -84,8 +84,10 @@ if (isset($_POST['go'])) {
 <head>
 	<?php require('library/head.php'); ?>
 </head>
-<body>
 
+										<!-- three section body display-->
+<body>
+										<!--section one: shipping form-->
 <header>
 	
 </header>
@@ -198,10 +200,12 @@ if (isset($_POST['go'])) {
 						</div>
 				</fieldset>
 		  </form><!-- end index-form-->
-	   </div><!-- end contact form-->
+	   </div><!-- end contact form--> 
 	</div>
 
 </content>
+
+												<!--footer and script-->
 <footer>
 	<?php require('library/footer.php'); ?>
 </footer>

@@ -73,14 +73,12 @@ require("library/item.php");
 ?>
 <html>
 <head>
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="css/jquery-3.3.1.js"></script>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/customAdmin.css">
+	<?php require ("library/head.php"); ?>
+	<title>New Item Page</title>
+	<?php require ("library/favicon.php"); ?>
 </head>
 
-										<!-- FOUR SECTION BODY DISPLAY-->
+										<!-- THREE SECTION BODY DISPLAY-->
 
 <body style="background-color: #FFFFCD;">
 
@@ -137,7 +135,7 @@ require("library/item.php");
                         </div>
                      </div>
                 </div>
-       
+       										<!--SECTION TWO: item entry-->
 <content class="container">
 	<div class="row">
 		<div class="col-sm-4 col-sm-offset-2">
@@ -162,6 +160,9 @@ require("library/item.php");
 		</div>
 	</div>
 </content>
+
+															<!--SECTION THREE: FOOTER AND SCRIPT-->
+
 <footer class="container">
 	<div class="row">
 		<div class="col-sm-12 text-center">
