@@ -88,6 +88,15 @@
 			</form>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-sm-offset-2 col-sm-10" style="padding-left: 30px">
+			<form action="placedorders.php" method ="POST" enctype ="multipart/form-data">
+				<legend>Orders Placed</legend>
+				<input class="btn btn-success btnwide" type="submit" name="submit1" value="Review Orders">
+			</form>
+			
+		</div>
+	</div>
 
 </content>
 <div class="container-fluid">

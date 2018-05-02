@@ -19,6 +19,7 @@
             $header = "Success!";
             $icon = "success";
             $message = "Your transaction has been successfully processed.";
+			require ("library/process.php");
         } else {
             $header = "Transaction Failed";
             $icon = "fail";
@@ -32,11 +33,11 @@
 <html lang="en">
 <head>
 <?php require ("library/head.php"); ?>
-<title>starter page</title>
+<title>Transaction</title>
 <?php require ("library/favicon.php"); ?>
 </head>
 <body>
-               <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
+               <nav id="myNavbar" class="navbar navbar-default navbar-inverse" role="navigation">
             <!-- grouping -->
             <div class="container-fluid">
                 <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
@@ -109,6 +110,12 @@
 
 <!--script-->
     <?php require("library/script.php");?>
+	
+<script>
+	window.setTimeout(function() {
+		window.location = 'index.php';
+	  }, 3000);
+</script>
 
 </body>
 </html>

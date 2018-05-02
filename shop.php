@@ -3,7 +3,8 @@
 	if (file_exists("library/itemarray.php")) {
 		$itemarray = json_decode(file_get_contents("library/itemarray.php"), true);
 		$ind = count($itemarray);
-
+		session_start();
+		$_SESSION['itemarray'] = $itemarray;
 	}
 	
 ?>

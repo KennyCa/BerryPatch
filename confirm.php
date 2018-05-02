@@ -20,17 +20,19 @@ require_once("braintree-php-3.29.0\lib\Braintree.php");
 	$options = $_SESSION['usps'];
 	$opind = $_SESSION['uspsind'];
 	
-	if (file_exists("library/itemarray.php")) {
-			$itemarray = json_decode(file_get_contents("library/itemarray.php"), true);
-	}
+	$itemarray = $_SESSION['itemarray'];
+	
 	if ($_SESSION['state'] == "IA") {
 		$tax = round($subtotal * $taxrate, 2, PHP_ROUND_HALF_UP);
 	} else {
 		$tax = 0;
 	}
 
-	$shipping = $options[$opind]['Amount'];
+	$shipping = number_format($options[$opind]['Amount'], 2);
 	$total = ($subtotal + $tax + $shipping);
+	
+	echo "<pre>";print_r($_SESSION);echo "</pre>";
+		
 ?>
 <html>
 <head>

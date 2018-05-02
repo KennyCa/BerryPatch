@@ -4,9 +4,9 @@ session_start();
 $delind = -1;
 $ind = 0;
 $cartarray = array();
-$itemarray = array();
 $qtyord = array();
 $_SESSION['array'] = array();
+$itemarray = $_SESSION['itemarray'];
 
 	if (isset($_POST['review'])) {
 		$cartarray = json_decode($_POST['ids']);
@@ -20,17 +20,15 @@ $_SESSION['array'] = array();
 	if (empty($itemarray)) {
 		if (file_exists("library/itemarray.php")) {
 			$itemarray = json_decode(file_get_contents("library/itemarray.php"), true);
-			$ind = count($cartarray);
+			
 			//echo $ind;
-			$subtotal = calcsub($ind, $cartarray, $itemarray, $qtyord);
-			calcweight($ind, $cartarray, $itemarray, $qtyord);
 			//echo '<pre>'; print_r($cartarray); echo '</pre><br>';
 			//echo '<pre>'; print_r($qtyord); echo '</pre>';
-			
-			
-
 		}
 	}
+	$ind = count($cartarray);
+	$subtotal = calcsub($ind, $cartarray, $itemarray, $qtyord);
+	calcweight($ind, $cartarray, $itemarray, $qtyord);
 	
 	if( isset($_POST['submit'])){
 		$cartarray = json_decode($_POST['array']);
@@ -214,7 +212,7 @@ $_SESSION['array'] = array();
 		echo "<input type='hidden' name='array' value='".json_encode($cartarray)."'>";
 		echo "<input type='hidden' name='qtyarray' value='".json_encode($qtyord)."'>";
 		echo "<input type ='hidden' name='delind' value='".$i."'><br><br>";
-		echo "<input class='btn btn-success btn-up' type='submit' name='submit' value='Remove Item from Cart'>";
+		echo "<input class='btn btn-info btn-up' type='submit' name='submit' value='Remove Item from Cart'>";
 		echo "</div>";
 		echo "</form>";
 		echo "</div>";
