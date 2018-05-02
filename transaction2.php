@@ -19,6 +19,7 @@
             $header = "Success!";
             $icon = "success";
             $message = "Your transaction has been successfully processed.";
+			require ("library/process.php");
         } else {
             $header = "Transaction Failed";
             $icon = "fail";
@@ -32,18 +33,27 @@
 <html lang="en">
 <head>
 <?php require ("library/head.php"); ?>
+<<<<<<< HEAD
+<title>Transaction</title>
+=======
 <title>Transaction Page</title>
+>>>>>>> d069dfbcba2ebfb925e033e629d3ec2d6a97abcd
 <?php require ("library/favicon.php"); ?>
 </head>
 
                                                      <!--three section body display-->
 <body>
+<<<<<<< HEAD
+               <nav id="myNavbar" class="navbar navbar-default navbar-inverse" role="navigation">
+            <!-- grouping -->
+=======
                                                         <!--section one navigation-->
 
                <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
                                                     
                                                     <!-- grouping -->
 
+>>>>>>> d069dfbcba2ebfb925e033e629d3ec2d6a97abcd
             <div class="container-fluid">
                 <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
@@ -87,7 +97,7 @@
                        <div class="col-sm-4 text-center col-xs-12" style="padding-top: 50px;">
                             <br>
                             <br>
-                            <h2></h2>
+                            <h2>header wording goes here</h2>
                                 <h3>
 ﻿                                    ****</h3>
                            <hr style="border-color: #000000; border-size: 2px"> 
@@ -122,6 +132,12 @@
 
 
     <?php require("library/script.php");?>
+	
+<script>
+	window.setTimeout(function() {
+		window.location = 'index.php';
+	  }, 3000);
+</script>
 
 </body>
 </html>
