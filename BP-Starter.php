@@ -57,7 +57,7 @@
                        <div class="col-sm-4 text-center col-xs-12" style="padding-top: 50px;">
                             <br>
                             <br>
-                            <h2>.....</h2>
+                            <h2><?php echo $page ?></h2>
                                 <h3>****</h3>
                            <hr style="border-color: #000000; border-size: 2px"> 
 

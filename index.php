@@ -42,6 +42,8 @@ if (isset ($_POST['login'])){
     $un = $_POST['username'];
     $pw = $_POST['password'];
     echo 'here';
+
+
 }
 
 ?>
@@ -160,7 +162,7 @@ if (isset ($_POST['login'])){
         <div class="row">
             <div class="col-sm-6" style="background-color: #f8f8f8; box-shadow: 10px 10px 5px #b72a2a;">
                 <h2 style="background-color: #f8f8f8;">Hire a Geek Today</h2>
-                <?php require ("library/form submit.php"); ?> 
+                <?php require ("library/form.php"); ?> 
             </div>
             <div class="col-sm-1" style="background-color:#FFFFCD; width:2px;">
             </div>
@@ -186,7 +188,7 @@ if (isset ($_POST['login'])){
         <div class="login-box" id="login">
             <img src="images/avatar.png" class="avatar">
             <h1>Login Here</h1>
-                <form action="formToEmail.php" method="post" enctype="multipart/form-data">>
+                <form action="index.php" method="post" enctype="multipart/form-data">>
                 <p>Username</p>
                 <input type="text" name="username" placeholder="Enter Username">
                 <p>Password</p>
