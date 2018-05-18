@@ -1,18 +1,22 @@
+<?php 
+include('functions.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <?php require ("library/head.php"); ?>
-<title>starter page</title>
+<title>register page</title>
 <?php require ("library/favicon.php"); ?>
 </head>
 
-                                <!-- **** SECTION BODY DISPLAY-->
+                                <!-- three SECTION BODY DISPLAY-->
 
 <body style="background-color: #FFFFCD;">
 
-                            <!--SECTION ****: navigation and header banner-->
+                            <!--SECTION one: navigation and header banner-->
 
-        <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
+        <nav id="myNavbar" class="navbar navbar-default navbar-inverse role="navigation">
 
                                              <!-- grouping -->
 
@@ -57,7 +61,7 @@
                        <div class="col-sm-4 text-center col-xs-12" style="padding-top: 50px;">
                             <br>
                             <br>
-                            <h2><?php echo $page ?></h2>
+                            <h2></h2>
                                 <h3>****</h3>
                            <hr style="border-color: #000000; border-size: 2px"> 
 
@@ -70,26 +74,29 @@
                      </div>
                 </div>
 
-                                                    <!--SECTION ****: -->
+                                                    <!--SECTION two: -->
 
-                <div class="container container-fluid">
-                    <div class="row">
-                        <p>content</p>
-                        
+                    <div class="container-fluid col-sm-12 text-center" style="padding-bottom: 20px;">
+                        <div class="row">
+                            <div class="register-box" id="register">
+                                <img src="images/admin_profile.png" class="userPic">
+                                <h1>Register User Here</h1>
+                                    <form action="register.php" method="post" enctype="multipart/form-data">
+                                       
+                                        <p>Username:</p>
+                                        <input style="padding-left: 10px;" type="text" name="username" placeholder="Enter Username">
+                                        <p>Password:</p>
+                                        <input style="padding-left: 10px;" type="password" name="password" placeholder="Enter Password">
+                                        <p>Comfirm Password:</p>
+                                        <input style="padding-left: 10px;" type="password" name="password2" placeholder="Enter Password Again">
+                                        <br>
+                                        <br>
+                                        <input type="submit" name="register" value="register">   
+                                    </form>
+                            </div>
+                        </div>   
                     </div>
-
-                    <div class="row">
-                        <div>
-                            <p>goes</p>
-                        </div> 
-
-                        <div>
-                            <p>here</p>
-                        </div>
-                        
-                    </div>
-                </div>
-                                        <!--SECTION ****: footer and script-->
+                                        <!--SECTION three: footer and script-->
     
     <?php require ("library/footer.php"); ?>
 
@@ -98,4 +105,3 @@
 
 </body>
 </html>
-       

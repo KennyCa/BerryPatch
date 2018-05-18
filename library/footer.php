@@ -12,6 +12,8 @@ echo'
 			&copy2016 by Berry Patch IT Services.
 
 		</div>	
-	</div>
+		<div>
+			<span class="social social-facebook"></span>
+		</div>
 </footer>';
 ?>
