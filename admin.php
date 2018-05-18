@@ -1,10 +1,6 @@
-<?php
+ <?php
 
-	if( isset($_POST['submit1'])){
-		$choice = 1;
-	}else if (isset($_POST['submit2'])) {
-		print_r("there");
-	}
+
 
 ?>
 <html>
@@ -14,6 +10,8 @@
  	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel ="stylesheet" href = "css\custom.css">
+	<title>Berry Patch admin</title>
+	<?php require ("library/favicon.php"); ?>
 </head>
 <body style="background-color: #FFFFCD;">
 
@@ -32,7 +30,7 @@
 			<!--collections Nav for toggle-->
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="index.php" >HOME</a></li>
+					<li><a href="index.php" >HOME</a></li>
 					<li><a href="newItem.php">ITEM PAGE</a></li>
 					<li><a href="#.php">ORDERS</a></li>
 					<li><a href="admin.php">MAIN MENU</a></li>
@@ -97,12 +95,21 @@
 			
 		</div>
 	</div>
-
+	<div class="row">
+		<div class="col-sm-offset-2 col-sm-10" style="padding-left: 30px">
+			<form action="register.php" method ="POST" enctype ="multipart/form-data">
+				<legend>Create a New User</legend>
+				<input class="btn btn-success btnwide" type="submit" name="newUser" value="New Admin">
+			</form>
+			
+		</div>
+	</div>
 </content>
 <div class="container-fluid">
 	
 </div>
 
 <?php require ("library/script.php"); ?>
+
 </body>
 </html>

@@ -1,50 +1,25 @@
 <?php
-            
+           
+if (isset($_POST['login'])) {
 
+    include('functions.php');
+    // connect to database
+    $db = new mysqli ("$db_host","$db_username","$db_pass","$db_name")
+    or die('Error connecting to mysql server.');
 
-
-
-/*$page = "index.php";
-
-$pagetitle = "Home";
-
-if( isset($_POST['submit'])){
-            $first_name= $_POST['first_name'];
-            $last_name= $_POST['last_name'] ;
-            $email= $_POST['email'] ;
-            $phone= $_POST['phone'] ;
-            $time= $_POST['time'] ;
-            $comment= $_POST['comment'];
-            $from = 'From: Berry Patch IT';
-            $to= 'tiffany_baker@stu.indianhills.edu';
-            $subject = 'contact form info';
-            $human = $_POST['human'];
-            $body = " from: $first_name.$last_name\n E-mail: $email \n Phone: $phone \n Time: $time \n Help needed: $comment";
-            if ($first_name != '' && $last_name != ''  && $email != '' && $phone != '') {
-                if ($human == '6') {    
-                    if (mail ($to, $subject, $body, $from)) { 
-                        echo '<p>Your message has been sent!</p>';
-                    } else { 
-                        echo '<p>Something went wrong, go back and try again!</p>'; 
-                        }
-                } else {
-                    echo '<p>You answered the anti-spam question incorrectly!</p>';
-                }
-            } else {
-                echo '<p>You need to fill in all required fields!!</p>';
-            }
-        } else {
-            echo "nope";
-        } */
-
-
-if (isset ($_POST['login'])){
-    $un = $_POST['username'];
-    $pw = $_POST['password'];
-    echo 'here';
+        
+        
+    // variable declaration
+    $username = "";
+    $email    = "";
+    $message  = "";
+    $messagesw = false;
+    $errors   = array(); 
+    login();
 
 
 }
+
 
 ?>
                         
@@ -66,13 +41,14 @@ if (isset ($_POST['login'])){
     <link rel ="stylesheet" href = "css\bootstrap.css">
     <link rel ="stylesheet" href = "css\custom.css">
     <link rel ="stylesheet" href = "css\style.css"> 
-    <title>Berry Patch Home</title>
+    <title>Berry Patch IT Home</title>
     <?php require ("library/favicon.php"); ?>
 </head>
 
                                     <!-- FOUR SECTION BODY DISPLAY-->
 
-<body style="background-color: #FFFFCD;">
+<body onload="message()" style="background-color: #FFFFCD;">
+    
 
     <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
             <!-- grouping -->
@@ -101,9 +77,11 @@ if (isset ($_POST['login'])){
                         <li><a href="shop.php">SHOP</a></li>
                         <li><a href="about.php">ABOUT</a></li>
                         <li><a href="contact.php">CONTACT</a></li>
-                        <li><a href="admin.php">ADMIN</a></li>
-                    </ul>
-                </div>
+                    </ul> 
+                    <div class="fb-page" style="text-align: right;">
+                     <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fberrypatchitservices%2F%3Fref%3Daymt_homepage_panel&tabs&width=340&height=70&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="270" height="70" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                    </div>   
+                </div> 
             </div>
         </nav>
 
@@ -179,22 +157,23 @@ if (isset ($_POST['login'])){
                         Oskaloosa, Iowa
                     </p>
                   </div>
-                </blockquote>
+                </blockquote>   
             </div>
         </div>
     </div>
 <div class="container-fluid">
     <div class="row">
         <div class="login-box" id="login">
-            <img src="images/avatar.png" class="avatar">
+            <img src="images/avatar.png" class="avatar" alt="avatar">
             <h1>Login Here</h1>
-                <form action="index.php" method="post" enctype="multipart/form-data">>
-                <p>Username</p>
-                <input type="text" name="username" placeholder="Enter Username">
-                <p>Password</p>
-                <input type="password" name="password" placeholder="Enter Password">
-                <input type="submit" name="login" value="Login">
-                <a href="#">Forget Password</a>    
+                <form action="index.php" method="post" enctype="multipart/form-data">
+                    <p>Username</p>
+                    <input style="padding-left: 10px;" type="text" name="username" placeholder="Enter Username">
+                    <p>Password</p>
+                    <input style="padding-left: 10px;" type="password" name="password" placeholder="Enter Password">
+                    <input type="submit" name="login" value="Login"> 
+                    <br>
+                       <p style="text-align:right;"><small><a href="index.php">Dismiss</a></small></p>
                 </form>
         </div>
     </div>   
@@ -203,11 +182,13 @@ if (isset ($_POST['login'])){
     
                                 <!--SECTION FOUR: footer and script-->
  
-<?php require ("library/footer.php"); ?>
+<?php require ("library/footer.php");?>
 
 <?php require("library/script.php");?>
-<script>
-    <script type="text/javascript">
+
+
+
+<script type="text/javascript">
         var login= document.getElementById('login');
         window.onclick = function(event){
             if (event.target == login){
@@ -219,6 +200,18 @@ var frmvalidator  = new Validator("helpForm");
 frmvalidator.addValidation("first_name","req","Please provide your name"); 
 frmvalidator.addValidation("email","req","Please provide your email"); 
 frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+
+ $(document).ready(function() { Load(message()); })
+</script>
+<script type="text/javascript">
+        function message() {
+
+            
+            if ( <?php echo $messagesw ?> == 1){
+                var message = "<?php echo $message ?>";
+                alert(message);
+            }
+        }
 </script>
     
 

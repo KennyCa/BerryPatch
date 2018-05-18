@@ -193,5 +193,6 @@ $headers = 'From: '.$email_from."\r\n".
         window.location.href= 'index.php';},3000);
     </script>
 
+
 </body>
 </html>
