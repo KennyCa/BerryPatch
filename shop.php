@@ -109,7 +109,9 @@
 			echo "</select>";
 		} else {
 			echo "<p><b style='color:red'>1 Available</b></p>";
-
+			echo "<select id='".$i."s' name='quantity' class='selhide'>";
+			echo "<option class='selhide' value='1'></option>";
+			echo "</select>";
 		}
 		echo "</div>";
 		echo "<div class='col-sm-1'>";
@@ -146,7 +148,13 @@ function reply_click(clicked_id)
 		document.getElementById("ids").value = json;
 		document.getElementById(clicked_id).style.display = "none";
 		var e = document.getElementById(clicked_id + "s");
-		var value = e.options[e.selectedIndex].value;
+		var value;
+		if (e.options[e.selectedIndex].value >= 1){
+			value = e.options[e.selectedIndex].value;
+		} else {
+			value = 1;
+		}
+		alert(e.options[e.selectedIndex].value);
 		qtys.push(value);
 		json2 = JSON.stringify(qtys);
 		document.getElementById("qtys").value = json2;
