@@ -26,8 +26,8 @@
 		
 	}
 	file_put_contents('library/itemarray.php',json_encode($itemarray));
-	echo "<pre>";print_r($itemarray);echo "</pre>";
-	echo "<pre>";print_r($ordered);echo "</pre>";
+	//echo "<pre>";print_r($itemarray);echo "</pre>";
+	//echo "<pre>";print_r($ordered);echo "</pre>";
 	
 	$user = "root"; 
 	$password = ""; 
@@ -98,9 +98,9 @@
 		$sql = "INSERT INTO `orders`(customer_id, order_date, ship_method, ship_cost, cc4, printed) VALUES (?,?,?,?,?,?)";
 		
 		if ($stmt = $conn->prepare($sql)) {
-			echo "prepared orders<br>";
+			//echo "prepared orders<br>";
 		} else {
-			echo "prepare failed<br>";
+			//echo "prepare failed<br>";
 		}
 		$stmt->bind_param('issdis', $custid, $date, $method, $shipcost, $cc4, $printed);
 		$stmt->execute();

@@ -7,13 +7,13 @@
 $delind = -1;	
 	if( isset($_POST['submit'])){
 		$delind = $_POST['delind'];
-		echo $delind;
+		//echo $delind;
 		array_splice($itemarray,$delind, 1);
 		file_put_contents('library/itemarray.php',json_encode($itemarray));
 		$ind--;
 		unlink($_POST['imagepath']);
 	}
-	echo '<pre>'; print_r($itemarray); echo '</pre>';
+	//echo '<pre>'; print_r($itemarray); echo '</pre>';
 ?>
 <html>
 <head>
@@ -47,10 +47,10 @@ $delind = -1;
 
 				        <div class="collapse navbar-collapse" id="navbarCollapse">
 				            <ul class="nav navbar-nav">
-				                <li><a href="index.php">Home</a></li>
-				                <li><a href="newitem.php">Item Page</a></li>
-				                <li><a href="#.php">Orders</a></li>
-				                <li class="active"><a href="admin.php">Main Menu</a></li>
+				                <li><a href="index.php">HOME</a></li>
+				                <li><a href="newitem.php">ITEM PAGE</a></li>
+				                <li><a href="#.php">ORDERS</a></li>
+				                <li class="active"><a href="admin.php">ADMIN</a></li>
 				            </ul>
 				        </div>
 				    </div>

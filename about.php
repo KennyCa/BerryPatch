@@ -45,7 +45,7 @@
                             <li><a href="shop.php">SHOP</a></li>
                             <li class="active"><a href="about.php">ABOUT</a></li>
                             <li><a href="contact.php">CONTACT</a></li>
-                            <li><a href="admin.php">ADMIN</a></li>
+
                         </ul>
                     </div>
                 </div>

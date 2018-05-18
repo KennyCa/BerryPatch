@@ -34,7 +34,7 @@ $nonce = $_POST["payment_method_nonce"];
 			$errorString .= 'Error: ' . $error->code . ": " . $error->message . "\n";
 		}
 		$_SESSION["errors"] = $errorString;
-		echo "here";
+		//echo "here";
 		header("Location: confirm.php");
 	}
 
