@@ -33,27 +33,22 @@
 <html lang="en">
 <head>
 <?php require ("library/head.php"); ?>
-<<<<<<< HEAD
-<title>Transaction</title>
-=======
+
+
 <title>Transaction Page</title>
->>>>>>> d069dfbcba2ebfb925e033e629d3ec2d6a97abcd
+
 <?php require ("library/favicon.php"); ?>
 </head>
 
                                                      <!--three section body display-->
 <body>
-<<<<<<< HEAD
-               <nav id="myNavbar" class="navbar navbar-default navbar-inverse" role="navigation">
-            <!-- grouping -->
-=======
                                                         <!--section one navigation-->
 
-               <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
+               <nav id="myNavbar" class="navbar navbar-default navbar-inverse role="navigation">
                                                     
                                                     <!-- grouping -->
 
->>>>>>> d069dfbcba2ebfb925e033e629d3ec2d6a97abcd
+
             <div class="container-fluid">
                 <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
@@ -134,9 +129,9 @@
     <?php require("library/script.php");?>
 	
 <script>
-	window.setTimeout(function() {
+	/* window.setTimeout(function() {
 		window.location = 'index.php';
-	  }, 3000);
+	  }, 3000); */
 </script>
 
 </body>
