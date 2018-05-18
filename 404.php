@@ -45,13 +45,13 @@
                         <div class="text-center">
                             <H3><b> WE'RE SORRY<br>
                          WHAT YOUR LOOKING FOR ISNT HERE</b></H3>
-                                <img src="" alt="cryComp">
+                                <img src="images/cross.png" alt="cross" height="100px" width="150px">
                         </div>
                     </div>
 
                      <div class="row">    
                         <div class="text-center">
-                            <P><button class="btn-danger">CLICK HERE</button><br> <b>TO RETURN TO THE MAIN PAGE AND TRY YOUR SEARCH AGAIN.<h3><i>BUT</i></h3></b></P>
+                            <P><input type=button class="btn btn-danger"  onClick="location.href='index.php'" value='click here'><br> <b>TO RETURN TO THE MAIN PAGE AND TRY YOUR SEARCH AGAIN.<h3><i>BUT</i></h3></b></P>
                         </div>
 
                    
