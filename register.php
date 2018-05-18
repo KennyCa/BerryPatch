@@ -62,7 +62,7 @@ include('functions.php');
                             <br>
                             <br>
                             <h2></h2>
-                                <h3>****</h3>
+                                <h3>Register New Admin</h3>
                            <hr style="border-color: #000000; border-size: 2px"> 
 
                         </div>
@@ -91,7 +91,7 @@ include('functions.php');
                                         <input style="padding-left: 10px;" type="password" name="password2" placeholder="Enter Password Again">
                                         <br>
                                         <br>
-                                        <input type="submit" name="register" value="register">   
+                                        <input class="btn btn-success" type="submit" name="register" value="Register">   
                                     </form>
                             </div>
                         </div>   

@@ -32,7 +32,7 @@ require_once("braintree-php-3.29.0\lib\Braintree.php");
 	$shipping = number_format($options[$opind]['Amount'], 2);
 	$total = ($subtotal + $tax + $shipping);
 	
-	echo "<pre>";print_r($_SESSION['stamp']);echo "</pre>";
+	//echo "<pre>";print_r($_SESSION['stamp']);echo "</pre>";
 		
 ?>
 <html>

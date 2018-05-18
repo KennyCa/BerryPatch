@@ -4,7 +4,7 @@ session_start();
 
 
 
-$db_host = "localhost";
+$db_host = "localhost:3306";
 $db_username = "root";
 $db_pass = "";
 $db_name = "berrypatch";
@@ -36,9 +36,9 @@ function register(){
 
 	// receive all input values from the form. Call the e() function
     // defined below to escape form values
-	$username    =  e($_POST['username']);
-	$password_1  =  e($_POST['password']);
-	$password_2  =  e($_POST['password2']);
+	$username    =  $_POST['username'];
+	$password_1  =  $_POST['password'];
+	$password_2  =  $_POST['password2'];
 
 	
 	// form validation: ensure that the form is correctly filled
@@ -112,5 +112,5 @@ function login(){
 
 
 }
-   //database lets anyone in
+
 ?>

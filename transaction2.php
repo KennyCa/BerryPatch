@@ -70,7 +70,7 @@
                         <li><a href="shop.php">SHOP</a></li>
                         <li><a href="about.php">ABOUT</a></li>
                         <li><a href="contact.php">CONTACT</a></li>
-                        <li><a href="admin.php">ADMIN</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                        <div class="col-sm-4 text-center col-xs-12" style="padding-top: 50px;">
                             <br>
                             <br>
-                            <h2>header wording goes here</h2>
+                            <h2>Transaction</h2>
                                 <h3>
 ﻿                                    ****</h3>
                            <hr style="border-color: #000000; border-size: 2px"> 
@@ -129,9 +129,9 @@
     <?php require("library/script.php");?>
 	
 <script>
-	/* window.setTimeout(function() {
+	 window.setTimeout(function() {
 		window.location = 'index.php';
-	  }, 3000); */
+	  }, 3000); 
 </script>
 
 </body>

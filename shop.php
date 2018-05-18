@@ -51,7 +51,7 @@
 					<li class="active"><a href="shop.php">SHOP</a></li>
 					<li><a href="about.php">ABOUT</a></li>
 					<li><a href="contact.php">CONTACT</a></li>
-					<li><a href="admin.php">ADMIN</a></li>
+
 				</ul>
 			</div>
 		</div>
@@ -154,7 +154,7 @@ function reply_click(clicked_id)
 		} else {
 			value = 1;
 		}
-		alert(e.options[e.selectedIndex].value);
+		//alert(e.options[e.selectedIndex].value);
 		qtys.push(value);
 		json2 = JSON.stringify(qtys);
 		document.getElementById("qtys").value = json2;

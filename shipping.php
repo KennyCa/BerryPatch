@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
 	$shipDate   = date('Y-m-d');
 	
 	$address = json_decode($stamps->CleanseAddress($_POST['fname'], $_POST['lname'], $_POST['street'], $_POST['city'], $_POST['state'], $_POST['zip']), true);
-	echo "<pre>";print_r($address);echo"</pre>";
+	//echo "<pre>";print_r($address);echo"</pre>";
 	
 	if (isset($address['Address']['Error'])){
 		$_SESSION['error'] = true;
