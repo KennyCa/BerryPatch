@@ -16,8 +16,17 @@
 	for ($i = 0; $i < $ind; $i++){
 		$ordered['customer']['items'][$i] = $itemarray[$cartarray[$i]];
 		$ordered['customer']['items'][$i]['qty'] = $qtyord[$i];
+		
+	if ($itemarray[$cartarray[$i]]['qty'] > $qtyord[$i]) {
+			$itemarray[$cartarray[$i]]['qty'] -= $qtyord[$i];
+		} else {
+			array_splice($itemarray, $i, 1);
+		}
+			
+		
 	}
-	
+	file_put_contents('library/itemarray.php',json_encode($itemarray));
+	//echo "<pre>";print_r($itemarray);echo "</pre>";
 	//echo "<pre>";print_r($ordered);echo "</pre>";
 	
 	$user = "root"; 
@@ -35,7 +44,6 @@
 	// DOING THE QUERY
 	if(!empty($ordered)){
 
-		$printed = 'F';
 		$fname = $ordered['customer']['firstname'];
 		$lname = $ordered['customer']['lastname']; 
 		$street = $ordered['customer']['street'];
@@ -43,6 +51,7 @@
 		$state = $ordered['customer']['state'];
 		$zip = $ordered['customer']['zip'];
 		$zip4 = $ordered['customer']['zip4'];
+		$printed = 'F';
 		$custid = 0;
 		
 		//echo "Checking if customer id exist<br>";
@@ -62,12 +71,12 @@
 		//echo $result."fetch<br>";
 		
 		if ($custid == 0) {
-			$sql = "INSERT INTO `customer` (`firstname`, `lastname`, `street`, `city`, `state`, `zip`, `zip4`, `printed`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+			$sql = "INSERT INTO `customer` (`firstname`, `lastname`, `street`, `city`, `state`, `zip`, `zip4`) VALUES (?, ?, ?, ?, ?, ?, ?)";
 			
 			if ($stmt = $conn->prepare($sql)) {
 			//echo "prepared<br>";
 			
-				if ($stmt->bind_param('sssssiis', $fname, $lname, $street, $city, $state, $zip, $zip4, $printed)) {
+				if ($stmt->bind_param('sssssii', $fname, $lname, $street, $city, $state, $zip, $zip4)) {
 					//echo "binded<br>";
 				}
 				
@@ -80,15 +89,20 @@
 		} 
 		
 		//echo "inserting into orders<br>";
-		
-		$sql = "INSERT INTO `orders`(customer_id) VALUES (?)";
+		$date = date("Ymd");
+		//echo "Date: ".$date."<br>";
+		$cc4 = $transaction->creditCardDetails->last4;
+		//echo "cc4: ".$cc4."<br>";
+		$method = $_SESSION['stamp']['ServiceType'];
+		$shipcost = $_SESSION['stamprate'];
+		$sql = "INSERT INTO `orders`(customer_id, order_date, ship_method, ship_cost, cc4, printed) VALUES (?,?,?,?,?,?)";
 		
 		if ($stmt = $conn->prepare($sql)) {
 			//echo "prepared orders<br>";
 		} else {
 			//echo "prepare failed<br>";
 		}
-		$stmt->bind_param('i', $custid);
+		$stmt->bind_param('issdis', $custid, $date, $method, $shipcost, $cc4, $printed);
 		$stmt->execute();
 		$last_id = $conn->insert_id;
 		//echo $last_id."Orders<br>";

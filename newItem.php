@@ -103,10 +103,10 @@ require("library/item.php");
 
 		        <div class="collapse navbar-collapse" id="navbarCollapse">
 		            <ul class="nav navbar-nav">
-		                <li><a href="index.php">Home</a></li>
-		                <li><a href="newitem.php">Item Page</a></li>
-		                <li><a href="#.php">Orders</a></li>
-		                <li><a href="admin.php">Main Menu</a></li>
+		                <li><a href="index.php">HOME</a></li>
+		                <li class="active"><a href="newitem.php">ITEM PAGE</a></li>
+		                <li><a href="#.php">ORDERS</a></li>
+		                <li><a href="admin.php">ADMIN</a></li>
 		            </ul>
 		        </div>
 		    </div>

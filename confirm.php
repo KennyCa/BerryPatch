@@ -19,7 +19,8 @@ require_once("braintree-php-3.29.0\lib\Braintree.php");
 	$ozs = 0;
 	$options = $_SESSION['usps'];
 	$opind = $_SESSION['uspsind'];
-	
+	$_SESSION['stamp'] = $options[$opind];
+	$_SESSION['stamprate'] = number_format($options[$opind]['Amount'], 2);
 	$itemarray = $_SESSION['itemarray'];
 	
 	if ($_SESSION['state'] == "IA") {
@@ -31,7 +32,7 @@ require_once("braintree-php-3.29.0\lib\Braintree.php");
 	$shipping = number_format($options[$opind]['Amount'], 2);
 	$total = ($subtotal + $tax + $shipping);
 	
-	echo "<pre>";print_r($_SESSION);echo "</pre>";
+	//echo "<pre>";print_r($_SESSION['stamp']);echo "</pre>";
 		
 ?>
 <html>
@@ -61,6 +62,9 @@ require_once("braintree-php-3.29.0\lib\Braintree.php");
 						</div>
 						<div class="form-group">
 							<p>Street: <b><?php echo $_SESSION['street']; ?></b></p>
+						</div>
+						<div class="form-group">
+							<p>Apt# or P>O> Box: <b><?php if ($_SESSION['add2'] != ""){ echo $_SESSION['street'];} ?></b></p>
 						</div>
 						<div class="form-group">
 							<p>City: &nbsp&nbsp&nbsp<b><?php echo $_SESSION['city']; ?></b></p>
@@ -106,7 +110,7 @@ require_once("braintree-php-3.29.0\lib\Braintree.php");
 							<input type="hidden" name="amount" value=" <?php echo $total ?> ">
 							<input id="nonce" name="payment_method_nonce" type="hidden" />
 							<button class="btn btn-success" type="submit"><span>Buy Now</span></button>
-						<!--	<button type="submit" class="btn btn-success btn-md" name="submit">Place Order</button> -->
+
 						</div>
 				</fieldset>
 			  </form><!-- end index-form-->

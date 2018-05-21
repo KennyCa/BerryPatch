@@ -1,6 +1,6 @@
 <?php
-	require ("library/uspsaddress.php");
-	require ("library/usps.php");
+	//require ("library/uspsaddress.php");
+	//require ("library/usps.php");
 
 	session_start();
 	
@@ -17,6 +17,7 @@ if (isset($_GET['ship'])) {
 	$_SESSION['fname'] = "";
 	$_SESSION['lname'] = "";
 	$_SESSION['street'] = "";
+	$_SESSION['add2'] = "";
 	$_SESSION['city'] = "";
 	$_SESSION['state'] = "";
 	$_SESSION['zip'] = "";
@@ -53,6 +54,7 @@ if (isset($_POST['submit'])) {
 		$_SESSION['fname'] = $address['Address']['FirstName'];
 		$_SESSION['lname'] = $address['Address']['LastName'];
 		$_SESSION['street'] = $address['Address']['Address1'];
+		$_SESSION['add2'] = $address['Address']['Address2'];
 		$_SESSION['city'] = $address['Address']['City'];
 		$_SESSION['state'] = $address['Address']['State'];
 		$_SESSION['zip'] = $zip = $address['Address']['ZIPCode'];
@@ -63,7 +65,7 @@ if (isset($_POST['submit'])) {
 		$lbs2 = $_SESSION['lbs2'];
 		$ozs2 = $_SESSION['ozs2'];
 		
-		$options = $stamps->GetRates("52501", $zip, null, $lbs, 6, 6, 6, "Package", $shipDate, 0, null );
+		$options = $stamps->GetRates("52501", $zip, null, null, $lbs, 6, 6, 6, "Package", $shipDate, 0, null );
 		
 		//echo "<pre>";print_r($options);echo"</pre>";
 		
@@ -111,6 +113,10 @@ if (isset($_POST['go'])) {
 						<div class="form-group">
 						  <label for="street">Street:</label>
 						  <input type="text" class="form-control" id="street" placeholder="Enter Street" name="street" value="<?php if ($_SESSION['street'] != "") echo $_SESSION['street'] ?>">
+						</div>
+						<div class="form-group">
+						  <label for="add2">Apt# or P.O. Box:</label>
+						  <input type="text" class="form-control" id="add2" placeholder="Enter Apt# or P.O.Box" name="add2" value="<?php if ($_SESSION['add2'] != "") echo $_SESSION['add2'] ?>">
 						</div>
 						<div class="form-group">
 						  <label for="city">City:</label>

@@ -39,7 +39,6 @@
 
                                                      <!--three section body display-->
 <body>
-
                                                         <!--section one navigation-->
 
                <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
@@ -88,7 +87,7 @@
                        <div class="col-sm-4 text-center col-xs-12" style="padding-top: 50px;">
                             <br>
                             <br>
-                            <h2>header wording goes here</h2>
+                            <h2>Transaction</h2>
                                 <h3>
 ﻿                                    ****</h3>
                            <hr style="border-color: #000000; border-size: 2px"> 
@@ -125,9 +124,9 @@
     <?php require("library/script.php");?>
 	
 <script>
-	window.setTimeout(function() {
+	 window.setTimeout(function() {
 		window.location = 'index.php';
-	  }, 3000);
+	  }, 3000); 
 </script>
 
 </body>

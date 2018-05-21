@@ -36,7 +36,7 @@ class stamps_com
         $this->authenticator = $result->Authenticator;
         return $result;
     }
-    public function GetRates($FromZIPCode, $ToZIPCode = null, $ToCountry = null, $WeightLb, $Length, $Width, $Height, $PackageType, $ShipDate, $InsuredValue, $ToState = null)
+    public function GetRates($FromZIPCode, $ToZIPCode = null, $st = null, $ToCountry = null, $WeightLb, $Length, $Width, $Height, $PackageType, $ShipDate, $InsuredValue, $ToState = null)
     {
 		$options = array();
         $data = [
@@ -59,7 +59,11 @@ class stamps_com
         if ($ToState != null) {
             $data["Rate"]['ToState'] = $ToState;
         }
+		if ($st != null) {
+			$data["Rate"]['ServiceType'] = $st;
+		}
         $rates = $this->makeCall('getRates', $data)->Rates->Rate;
+		//echo "<pre>rates:";print_r($rates);echo "</pre>";
         foreach ($rates as $k => $v) {
             foreach ($data['Rate'] as $kk => $vv) {
                 $result[$k][$kk] = $v->$kk;
@@ -115,6 +119,130 @@ class stamps_com
 		$clean = $this->makeCall('CleanseAddress', $data);
 	return json_encode($clean);
 	}
+	
+	public function CreateIndicium ($to, $sc, $sdes, $sd) {
+		    // 4. Generate label
+   $IntegratorTxID=time();
+     /**
+	 * If true, generates a sample label without real value.
+	 * @var bool
+	 */ 
+	  //$Loger = new Logger();
+	  
+	switch ($sdes) {
+		case "USPS Priority Mail":
+			$st = "US-PM";
+			break;
+		case "USPS Priority Mail Express":
+			$st = "US-XM";
+			break;
+		case "USPS Parcel Select":
+			$st = "US-PS";
+			break;
+	}  
+	 
+	$isSampleOnly = true;
+		$labelOptions = [
+			'Authenticator'     =>$this->authenticator,
+			'IntegratorTxID'    => $IntegratorTxID,
+			'SampleOnly'        =>$isSampleOnly,
+			'ImageType'         => 'Auto',
+			'TrackingNumber' => '',
+			'Rate' => [
+				'FromZIPCode' => 52501,
+				'ToZIPCode'   => $to->zip,
+				'Amount'      => $sc,
+				'ServiceType' => $st,
+				'ServiceDescription' => $sdes,
+				'PackageType' => "Package",
+				'ShipDate'    => $sd,
+				'ContentType' => "Merchandise"
+			],
+
+			'From' => [
+			  'FullName'  => 'Berry Patch It Services',
+				'Address1'  => '15330 Truman Street',
+				'City'      => 'Ottumwa',
+				'State'     => 'Iowa',
+				'ZIPcode'   => '52501'
+			],
+
+			'To' => [
+				'FullName'  => $to->name,
+				'Address1'  => $to->address1,
+				'Address2'  => $to->address2,
+				'City'      => $to->city,
+				'State'     => $to->state,
+				'ZIPCode'   => $to->zip
+			]
+		];
+
+		$indiciumResponse = $this->makeCall('CreateIndicium', $labelOptions);
+		   /**
+	 * If use tracking $indiciumResponse->TrackingNumber
+	 * 
+	 */
+	  /**
+	 * If download label $indiciumResponse->URL
+	 * 
+	 */ 
+
+	 $filename=false;
+	 //$Loger->msg(LOG_ERROR,"stamps 1 ".$Loger->var_ex($labelOptions), __FILE__, __LINE__);
+	 // $Loger->msg(LOG_ERROR,"stamps 2 ".$Loger->var_ex($indiciumResponse), __FILE__, __LINE__);
+	 if(!isset($indiciumResponse->URL)){
+			return array('err'=>'yes','code'=>_('No create label'));  
+
+
+		}
+		if(is_array($indiciumResponse) && !count($indiciumResponse)){
+			return array('err'=>'yes','code'=>_('No create label'));  
+
+
+		}
+		if ($filename) {
+
+			$ch = curl_init($indiciumResponse->URL);
+			$fp = fopen($filename, 'wb');
+			curl_setopt($ch, CURLOPT_FILE, $fp);
+			curl_setopt($ch, CURLOPT_HEADER, 0);
+			curl_exec($ch);
+			curl_close($ch);
+			fclose($fp);
+		}
+
+
+
+		$daa['err']='no';
+		$daa['URL']=$indiciumResponse->URL;
+		$daa['TrackingNumber']=$indiciumResponse->TrackingNumber;
+		return $daa ;
+		}
+		
+		public function PurchasePostage ($a, $ct) {
+			$data = [
+		"Authenticator" => $this->authenticator,
+		"PurchaseAmount" => $a,
+		"ControlTotal" => $ct];
+		
+		$amount = $this->makeCall('PurchasePostage', $data);
+		return $amount;
+		}
+		
+		public function GetAccountInfo () {
+			$data = [
+		"Authenticator" => $this->authenticator];
+		$acc = $this->makeCall('GetAccountInfo', $data);
+		return $acc;
+		}
+		
+		public function TrackShipment ($tr) {
+			$data = [
+		"Authenticator" => $this->authenticator,
+		"TrackingNumber" => $tr];
+		$track = $this->makeCall('TrackShipment', $data);
+		return $track;
+		}
 }
 
 ?>
