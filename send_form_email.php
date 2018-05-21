@@ -105,7 +105,7 @@ $headers = 'From: '.$email_from."\r\n".
 <html lang ="en">
 <head>
 <?php require ("library/head.php"); ?>
-<title>Thank you</title>
+<title>Thank You Page </title>
 <?php require ("library/favicon.php"); ?>
 </head>
 
@@ -140,7 +140,6 @@ $headers = 'From: '.$email_from."\r\n".
                         <li><a href="shop.php">SHOP</a></li>
                         <li><a href="about.php">ABOUT</a></li>
                         <li><a href="contact.php">CONTACT</a></li>
-                        <li><a href="admin.php">ADMIN</a></li>
                     </ul>
                 </div>
             </div>

@@ -5,12 +5,8 @@
 ?>
 <html>
 <head>
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
- 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel ="stylesheet" href = "css\custom.css">
-	<title>Berry Patch admin</title>
+	<?php require ("library/head.php"); ?>
+	<title>Berry Patch Admin Home</title>
 	<?php require ("library/favicon.php"); ?>
 </head>
 <body style="background-color: #FFFFCD;">

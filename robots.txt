@@ -1,0 +1,26 @@
+User-agent:*
+Disallow: / bp-starter.php/
+Disallow: / admin.php/
+Disallow: / checkout.php/
+Disallow: / confirm.php/
+Disallow: / deleteItem.php/
+Disallow: / functions.php/
+Disallow: / newItem.php/
+Disallow: / order.php/
+Disallow: / placedoreders.php/
+Disallow: / README.md/
+Disallow: / register.php/
+Disallow: / send_form_email.php/
+Disallow: / shipping.php/
+Disallow: / transaction.php/
+Disallow: / transaction2.php/
+Disallow: / css/
+Disallow: / fonts/
+Disallow: / images/
+Disallow: / safari-pinned-tab.svg/
+Disallow: / js/
+Disallow: / library/
+Disallow: / PHPMailer/
+Disallow: / newitems/
+Disallow: / braintree-php-3.29.0/
+Sitemap: https://www.berrypatchitservices.com/sitemap.xml

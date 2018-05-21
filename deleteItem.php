@@ -50,7 +50,7 @@ $delind = -1;
 				                <li><a href="index.php">Home</a></li>
 				                <li><a href="newitem.php">Item Page</a></li>
 				                <li><a href="#.php">Orders</a></li>
-				                <li class="active"><a href="admin.php">Main Menu</a></li>
+				                <li><a href="admin.php">Main Menu</a></li>
 				            </ul>
 				        </div>
 				    </div>

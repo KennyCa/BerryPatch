@@ -11,7 +11,8 @@
               gtag('config', 'UA-118470737-1');
             </script>
 <?php require ("library/head.php"); ?>
-<title>About Us</title>
+<meta name="Description" content="berry patch tech services, computer and device repair services about us page.">
+<title>Berry Patch About Us</title>
 <?php require ("library/favicon.php"); ?>
 </head>
 
@@ -45,7 +46,6 @@
                             <li><a href="shop.php">SHOP</a></li>
                             <li class="active"><a href="about.php">ABOUT</a></li>
                             <li><a href="contact.php">CONTACT</a></li>
-                            <li><a href="admin.php">ADMIN</a></li>
                         </ul>
                     </div>
                 </div>

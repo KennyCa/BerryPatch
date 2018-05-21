@@ -15,6 +15,7 @@ $page = "contact.php";
               gtag('config', 'UA-118470737-1');
             </script>
 <?php require ("library/head.php"); ?>
+<meta name="Description" content="berry patch tech services, computer and device repair services contact information page and contact form">
 <title>Berry Patch Contact</title>
 <?php require ("library/favicon.php"); ?>
 </head>
@@ -50,7 +51,6 @@ $page = "contact.php";
                         <li><a href="shop.php">SHOP</a></li>
                         <li><a href="about.php">ABOUT</a></li>
                         <li class="active"><a href="contact.php">CONTACT</a></li>
-                        <li><a href="admin.php">ADMIN</a></li>
                     </ul>
                 </div>
             </div>
@@ -100,9 +100,7 @@ $page = "contact.php";
                         <!--map-->
                         <div class="col-sm-6" style="box-shadow: 10px 10px 5px #b72a2a;">
                             
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.0736796868878!2d-92.43469508710203!3d41.10888211491939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87e61c208f99a511%3A0x8b2f666ebb1fc344!2sBerry+Patch+IT+Services!5e0!3m2!1sen!2sus!4v1520628756167" width="100%" height="675" frameborder="0" style="border:0" allowfullscreen></iframe>
-                     
-                            
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.0736796868878!2d-92.43469508710203!3d41.10888211491939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87e61c208f99a511%3A0x8b2f666ebb1fc344!2sBerry+Patch+IT+Services!5e0!3m2!1sen!2sus!4v1520628756167" width="100%" height="695" frameborder="0" style="border:0" allowfullscreen></iframe>                                                 
                         </div>
                     </div>
                 </div>
