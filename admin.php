@@ -66,7 +66,7 @@
                      </div>
                 </div>
        
-       												<!--SECTION TWO:ADMIN BUTTONS-->
+       					<!--SECTION TWO:ADMIN BUTTONS-->
 
 <header class="container">
 	<div class="row">

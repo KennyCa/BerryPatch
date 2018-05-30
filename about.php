@@ -16,14 +16,14 @@
 <?php require ("library/favicon.php"); ?>
 </head>
 
-                                                    <!--   THREE SECTION BODY DISPLAY-->
+             <!--   THREE SECTION BODY DISPLAY-->
 
-                                                <!--SECTION ONE: NAVIGATION AND HEADER-->
+            <!--SECTION ONE: NAVIGATION AND HEADER-->
 
 <body style="background-color: #ffffff;">
             <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
 
-                                                         <!-- grouping -->
+                                    <!--grouping -->
 
                 <div class="container-fluid">
                     <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
@@ -36,7 +36,7 @@
                         <a class="navbar-brand col-sm-10" href="index.php"><i>Berry Patch IT Services and Computer Repair</i></a>
                     </div>
 
-                                                    <!--collections Nav for toggle-->
+                           <!--collections Nav for toggle-->
 
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="nav navbar-nav">
@@ -52,7 +52,7 @@
             </nav>
 
 
-                                                <!--SECTION TWO: THREE COLOUMN CONTENT -->
+                         <!--SECTION TWO: THREE COLOUMN CONTENT -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-8" style="background-color:#FFFFCD; box-shadow: 10px 10px 5px #8B0000; ">
@@ -90,10 +90,7 @@
             
         </div><!--end row-->
     </div><!--end container-->
-
-
-
-                                                            <!-- SECTION THREE FOOTER AND SCRIPT-->
+              <!-- SECTION THREE FOOTER AND SCRIPT-->
 
 <?php require ("library/footer.php"); ?>
 <?php require ("library/script.php"); ?>

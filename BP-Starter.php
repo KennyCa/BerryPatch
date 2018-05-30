@@ -7,15 +7,15 @@
 <?php require ("library/favicon.php"); ?>
 </head>
 
-                                <!-- **** SECTION BODY DISPLAY-->
+                  <!-- **** SECTION BODY DISPLAY-->
 
 <body style="background-color: #FFFFCD;">
 
-                            <!--SECTION ****: navigation and header banner-->
+                     <!--SECTION ****: navigation and header banner-->
 
         <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
 
-                                             <!-- grouping -->
+                                 <!-- grouping -->
 
             <div class="container-fluid">
                 <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
@@ -28,7 +28,7 @@
                     <a class="navbar-brand col-sm-10" href="index.php"><i>Berry Patch IT Services and Computer Repair</i></a>
                 </div>
 
-                                    <!--collections Nav for toggle-->
+                            <!--collections Nav for toggle-->
 
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="nav navbar-nav">
@@ -44,7 +44,7 @@
             </div>
         </nav>
 
-                                                    <!--header banner-->
+                                    <!--header banner-->
 
                 <div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
                     <div class="row" style="padding-top: 20px;">
@@ -71,7 +71,7 @@
                      </div>
                 </div>
 
-                                                    <!--SECTION ****: -->
+                                  <!--SECTION ****: -->
 
                 <div class="container container-fluid">
                     <div class="row">
@@ -90,7 +90,7 @@
                         
                     </div>
                 </div>
-                                        <!--SECTION ****: footer and script-->
+                         <!--SECTION ****: footer and script-->
     
     <?php require ("library/footer.php"); ?>
 

@@ -20,15 +20,15 @@ $page = "contact.php";
 <?php require ("library/favicon.php"); ?>
 </head>
 
-                                            <!-- THREE SECTION BODY DISPLAY-->
+                         <!-- THREE SECTION BODY DISPLAY-->
 
 <body style="background-color: #FFFFCD;">
 
-                                                 <!--SECTION ONE: NAVIGATION AND HEADER-->
+                           <!--SECTION ONE: NAVIGATION AND HEADER-->
 
         <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
                                                 
-                                                        <!-- grouping -->
+                           <!-- grouping -->
 
             <div class="container-fluid">
                 <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
@@ -41,7 +41,7 @@ $page = "contact.php";
                     <a class="navbar-brand col-sm-10" href="index.php"><i>Berry Patch IT Services and Computer Repair</i></a>
                 </div>
                 
-                                                     <!--collections Nav for toggle-->
+                <!--collections Nav for toggle-->
 
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="nav navbar-nav">
@@ -56,7 +56,7 @@ $page = "contact.php";
             </div>
         </nav>
 
-                                                    <!--HEADER AND BANNER-->
+                                <!--HEADER AND BANNER-->
 
                 <div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
                     <div class="row" style="padding-top: 20px;">
@@ -86,9 +86,7 @@ $page = "contact.php";
                         </div>
                      </div>
                 </div>
-       
-                                                            <!--SECTION TWO: FORM AND MAP-->
-
+                              <!--SECTION TWO: FORM AND MAP-->
                 <div class="container-fluid" style="background-color: #f8f8f8;padding-bottom: 25px;">
                     <div class="row">
                         <div class="col-sm-6" style="box-shadow: 10px 10px 5px #b72a2a;">
