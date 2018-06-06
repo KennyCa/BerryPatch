@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <?php require ("library/head.php"); ?>
+<meta name="Description" content="berry patch tech services 404 page">
 <title>404 page</title>
 <?php require ("library/favicon.php"); ?>
 </head>

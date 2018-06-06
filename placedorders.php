@@ -220,7 +220,7 @@ require ("library/stamps.php");
 <html lang="en">
 <head>
 <?php require ("library/head.php"); ?>
-<title>Ordered</title>
+<title>Ordered Libary</title>
 <?php require ("library/favicon.php"); ?>
 
 </head>
@@ -256,7 +256,6 @@ require ("library/stamps.php");
                         <li><a href="shop.php">SHOP</a></li>
                         <li><a href="about.php">ABOUT</a></li>
                         <li><a href="contact.php">CONTACT</a></li>
-                        <li><a href="admin.php">ADMIN</a></li>
                     </ul>
                 </div>
             </div>

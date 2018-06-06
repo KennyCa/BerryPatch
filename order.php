@@ -105,15 +105,15 @@ $itemarray = $_SESSION['itemarray'];
 <script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.min.js"></script>
 </head>
 
-												<!-- THREE SECTION BODY DISPLAY-->
+							<!-- THREE SECTION BODY DISPLAY-->
 
 <body style="background-color: #FFFFCD;">
 
-											<!--SECTION ONE:NAVIGATION AND HEADER-->
+						<!--SECTION ONE:NAVIGATION AND HEADER-->
 
     	<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
             										
-            										<!-- grouping -->
+            					<!-- grouping -->
 
             <div class="container-fluid">
                 <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
@@ -126,7 +126,7 @@ $itemarray = $_SESSION['itemarray'];
                     <a class="navbar-brand col-sm-10" href="index.php"><i>Berry Patch IT Services and Computer Repair</i></a>
                 </div>
 
-                									<!--collections Nav for toggle-->
+                			<!--collections Nav for toggle-->
 
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="nav navbar-nav">
@@ -136,12 +136,11 @@ $itemarray = $_SESSION['itemarray'];
                         <li><a href="shop.php">SHOP</a></li>
                         <li><a href="about.php">ABOUT</a></li>
                         <li><a href="contact.php">CONTACT</a></li>
-
                     </ul>
                 </div>
             </div>
         </nav>
-												<!--header banner-->
+							<!--header banner-->
 
 				<div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
                     <div class="row" style="padding-top: 20px;">
@@ -168,7 +167,7 @@ $itemarray = $_SESSION['itemarray'];
                      </div>
                 </div>
 
-                									<!--SECTION TWO: CONTENT-->
+                				<!--SECTION TWO: CONTENT-->
 
 <content class="container">
 
@@ -221,7 +220,7 @@ $itemarray = $_SESSION['itemarray'];
 	<br><br><br>
 </content>
 
-										<!--SECTION THREE FOOTER AND SCRIPT-->
+					<!--SECTION THREE FOOTER AND SCRIPT-->
 <footer>
 
 </footer>

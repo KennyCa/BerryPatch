@@ -33,10 +33,7 @@
 <html lang="en">
 <head>
 <?php require ("library/head.php"); ?>
-
-
 <title>Transaction Page</title>
-
 <?php require ("library/favicon.php"); ?>
 </head>
 
@@ -44,10 +41,9 @@
 <body>
                                                         <!--section one navigation-->
 
-               <nav id="myNavbar" class="navbar navbar-default navbar-inverse role="navigation">
+               <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
                                                     
                                                     <!-- grouping -->
-
 
             <div class="container-fluid">
                 <div class="navbar-header col-sm-5" style="padding-bottom: 15px;">
@@ -70,7 +66,6 @@
                         <li><a href="shop.php">SHOP</a></li>
                         <li><a href="about.php">ABOUT</a></li>
                         <li><a href="contact.php">CONTACT</a></li>
-
                     </ul>
                 </div>
             </div>

@@ -23,14 +23,14 @@ $delind = -1;
 
 </head>
 
-													<!--THREE SECTION BODY DISPLAY-->
+							<!--THREE SECTION BODY DISPLAY-->
 <body style="background-color: #FFFFCD;">
 
-												<!--SECTION PONE: NAVIGATION AND HEADER-->
+						<!--SECTION PONE: NAVIGATION AND HEADER-->
 
 				<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
 				    									
-				    									<!-- grouping -->
+				    				<!-- grouping -->
 
 				    <div class="container-fluid">
 				        <div class="navbar-header" style="padding-bottom: 5px;">
@@ -43,7 +43,7 @@ $delind = -1;
 				            <a class="navbar-brand col-sm-10 col-xs-10" href="#.php"><i>Berry Patch IT Services Admin Bar</i></a>
 				        </div>
 				       
-				       								 <!--collections Nav for toggle-->
+				       			 <!--collections Nav for toggle-->
 
 				        <div class="collapse navbar-collapse" id="navbarCollapse">
 				            <ul class="nav navbar-nav">
@@ -55,7 +55,7 @@ $delind = -1;
 				        </div>
 				    </div>
 				</nav>
-													<!--HEADER AND BANNER-->
+								<!--HEADER AND BANNER-->
 
                  <div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
                     <div class="row" style="padding-top: 20px;">
@@ -82,7 +82,7 @@ $delind = -1;
                      </div>
                 </div>
 
-                									<!--SECTION TWO: DELETE ITEM CONTENT-->
+                		<!--SECTION TWO: DELETE ITEM CONTENT-->
        
 <content class="container">
 	
@@ -113,7 +113,7 @@ $delind = -1;
 
 </content>
 
-											<!-- SECTION THREE: FOOTER AND SCRIPT-->
+						<!-- SECTION THREE: FOOTER AND SCRIPT-->
 
 <footer>
 	

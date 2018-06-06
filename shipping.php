@@ -85,6 +85,8 @@ if (isset($_POST['go'])) {
 <html>
 <head>
 	<?php require('library/head.php'); ?>
+	<title>Shipping Page</title>
+	<?php require('library/favicon.php'); ?>
 </head>
 
 										<!-- three section body display-->

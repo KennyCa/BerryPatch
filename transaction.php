@@ -32,6 +32,8 @@
 <html>
 <head>
 <?php require ("library/head.php"); ?>
+<title>Transaction Page</title>
+<?php require('library/favicon.php'); ?>
 </head>
 <body>
 <header>

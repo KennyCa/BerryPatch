@@ -6,7 +6,7 @@ include('functions.php');
 <html lang="en">
 <head>
 <?php require ("library/head.php"); ?>
-<title>register page</title>
+<title>Register Login Page</title>
 <?php require ("library/favicon.php"); ?>
 </head>
 
@@ -41,8 +41,6 @@ include('functions.php');
                         <li><a href="shop.php">SHOP</a></li>
                         <li><a href="about.php">ABOUT</a></li>
                         <li><a href="contact.php">CONTACT</a></li>
-                        <li><a href="admin.php">ADMIN</a></li>
-                    </ul>
                 </div>
             </div>
         </nav>

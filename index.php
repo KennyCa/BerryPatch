@@ -36,11 +36,8 @@ if (isset($_POST['login'])) {
               gtag('config', 'UA-118470737-1');
             </script>
 
-    <meta charset="UTF-8" http-equiv="Content-type" content="text/html">
-    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
-    <link rel ="stylesheet" href = "css\bootstrap.css">
-    <link rel ="stylesheet" href = "css\custom.css">
-    <link rel ="stylesheet" href = "css\style.css"> 
+<?php require ("library/head.php"); ?>
+<meta name="Description" content="berry patch tech services, computer and device repair services main index page"> 
     <title>Berry Patch IT Home</title>
     <?php require ("library/favicon.php"); ?>
 </head>
@@ -50,7 +47,7 @@ if (isset($_POST['login'])) {
 <body onload="message()" style="background-color: #FFFFCD;">
     
 
-    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top " role="navigation">
             <!-- grouping -->
 
                                  <!--SECTION ONE: navigation and header banner-->
@@ -123,7 +120,7 @@ if (isset($_POST['login'])) {
                     surrounding area since 2016!</i></b></p>
         </div>
         <div class="col-sm-5" >
-                <img class="img-responsive img-rounded" style="padding-right:20px ;" src="images/storeFrontSign.png"  alt="store">
+                <img class="img-responsive img-rounded" style="padding-right:20px ;" src="images/storeFrontSign.png"  alt="storeFront">
         </div>
         <div class="col-sm-4">
             <br>
@@ -196,12 +193,12 @@ if (isset($_POST['login'])) {
             }
         }
 
-var frmvalidator  = new Validator("helpForm");
-frmvalidator.addValidation("first_name","req","Please provide your name"); 
-frmvalidator.addValidation("email","req","Please provide your email"); 
-frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+//var frmvalidator  = new Validator("helpForm");
+//frmvalidator.addValidation("first_name","req","Please provide your name"); 
+//frmvalidator.addValidation("email","req","Please provide your email"); 
+//frmvalidator.addValidation("email","email","Please enter a valid email address"); 
 
- $(document).ready(function() { Load(message()); })
+ //$(document).ready(function() { Load(message()); })
 </script>
 <script type="text/javascript">
         function message() {

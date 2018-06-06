@@ -4,30 +4,19 @@
 ?>
 <html>
 <head>
-
 	<?php require ("library/head.php"); ?>
-	<title>Admin Main</title>
-
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
- 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel ="stylesheet" href = "css\custom.css">
-	<title>Berry Patch admin</title>
-
+	<title>Berry Patch Admin Home</title>
 	<?php require ("library/favicon.php"); ?>
-</head>
-
-																<!--FOUR SECTION BOBY DISPLAY-->
+</head>														<!--FOUR SECTION BOBY DISPLAY-->
 
 <body style="background-color: #FFFFCD;">
 
 
-												<!--SECTION ONE: NAVIGATION AND HEADER-->
+								<!--SECTION ONE: NAVIGATION AND HEADER-->
 
 
-													<!--HEADER AND BANNER-->
-      <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
+									<!--HEADER AND BANNER-->
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
 		<!-- grouping -->
 		<div class="container">
 			<div class="navbar-header col-sm-5" style="padding-bottom: 10px;">
@@ -58,7 +47,7 @@
                             <br>
                             <br>
                             <br>
-                              <img src="images/rvBpLogo.png" class="img-responsive img-rounded" style="padding-top: 10px;" alt="logo" width="100px" height="150px" >
+                            <img src="images/rvBpLogo.png" class="img-responsive img-rounded" style="padding-top: 10px;" alt="logo" width="100px" height="150px" >
                         </div>
                     
                        
@@ -77,7 +66,7 @@
                      </div>
                 </div>
        
-       												<!--SECTION TWO:ADMIN BUTTONS-->
+       					<!--SECTION TWO:ADMIN BUTTONS-->
 
 <header class="container">
 	<div class="row">

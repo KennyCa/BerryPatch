@@ -40,7 +40,7 @@
 					<br>
 					<br>
 					<div class="text-center">
-		            	<input class="btn btn-success" type="submit" name="sumbit" value="submit">
+		            	<input class="btn btn-success" type="submit" name="submit" value="submit">
 					</div>
 	          </form><!-- end index-form-->
 	        </div><!-- end contact form-->'

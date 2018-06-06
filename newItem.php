@@ -78,15 +78,15 @@ require("library/item.php");
 	<?php require ("library/favicon.php"); ?>
 </head>
 
-										<!-- THREE SECTION BODY DISPLAY-->
+						<!-- THREE SECTION BODY DISPLAY-->
 
 <body style="background-color: #FFFFCD;">
 
-								<!--SECTION ONE: navigation and header banner-->
+					<!--SECTION ONE: navigation and header banner-->
 
        <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
 		    									
-		    									<!-- grouping -->
+		    						<!-- grouping -->
 
 		    <div class="container-fluid">
 		        <div class="navbar-header" style="padding-bottom: 5px;">
@@ -99,7 +99,7 @@ require("library/item.php");
 		            <a class="navbar-brand col-sm-10 col-xs-10" href="#.php"><i>Berry Patch IT Services Admin Bar</i></a>
 		        </div>
 		       
-		       								 <!--collections Nav for toggle-->
+		       				 <!--collections Nav for toggle-->
 
 		        <div class="collapse navbar-collapse" id="navbarCollapse">
 		            <ul class="nav navbar-nav">
@@ -112,7 +112,7 @@ require("library/item.php");
 		    </div>
 		</nav>
 
-											 <!--header banner-->
+								 <!--header banner-->
 
 
 				<div class="container-fluid" style="background: linear-gradient( #ff3333, #262626); color: #ffffff; text-shadow: 2px 1px #000000;" >
@@ -135,7 +135,7 @@ require("library/item.php");
                         </div>
                      </div>
                 </div>
-       										<!--SECTION TWO: item entry-->
+       						<!--SECTION TWO: item entry-->
 <content class="container">
 	<div class="row">
 		<div class="col-sm-4 col-sm-offset-2">

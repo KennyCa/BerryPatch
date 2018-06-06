@@ -2,8 +2,8 @@
 if(isset($_POST['email'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "tidelkai@gmail.com";
-    $email_subject = "contact testing";
+    $email_to = "servicedesk@berrypatchitservices.com";
+    $email_subject = "contact form recieved!";
  
     function died($error) {
         // your error code can go here
@@ -11,7 +11,8 @@ if(isset($_POST['email'])) {
         echo "These errors appear below.<br /><br />";
         echo $error."<br /><br />";
         echo "Please go back and fix these errors.<br /><br />";
-        die();
+        die(); 
+        
     }
  
  
@@ -23,7 +24,8 @@ if(isset($_POST['email'])) {
         !isset($_POST['time']) ||
         !isset($_POST['human']) ||
         !isset($_POST['comments'])) {
-        died('We are sorry, but there appears to be a problem with the form you submitted.');       
+        died('We are sorry, but there appears to be a problem with the form you submitted.'); 
+            
     }
  
      
@@ -39,15 +41,18 @@ if(isset($_POST['email'])) {
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
     
+    
  
   if(!preg_match($email_exp,$email_from)) {
     $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+    
   }
  
     $string_exp = "/^[A-Za-z .'-]+$/";
  
   if(!preg_match($string_exp,$first_name)) {
     $error_message .= 'The First Name you entered does not appear to be valid.<br />';
+   
   }
  
   if(!preg_match($string_exp,$last_name)) {
@@ -67,6 +72,7 @@ if(isset($_POST['email'])) {
  
   if(strlen($error_message) > 0) {
     died($error_message);
+    
   }
  
     $email_message = "Form details below.\n\n";
@@ -85,12 +91,13 @@ if(isset($_POST['email'])) {
     $email_message .= "Telephone: ".clean_string($telephone)."\n";
     $email_message .= "Comments: ".clean_string($comments)."\n";
     $email_message .= "time: ".clean_string($time)."\n";
+    
  
 // create email headers
 $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $time, $headers);  
+@mail($email_to, $email_subject, $email_message, $time, $headers); 
 ?>
  
 <!-- include your own success html here -->
@@ -105,7 +112,7 @@ $headers = 'From: '.$email_from."\r\n".
 <html lang ="en">
 <head>
 <?php require ("library/head.php"); ?>
-<title>Thank you</title>
+<title>Thank You Page </title>
 <?php require ("library/favicon.php"); ?>
 </head>
 
@@ -115,7 +122,7 @@ $headers = 'From: '.$email_from."\r\n".
 
                             <!--SECTION ONE: navigation and header banner-->
 
-        <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top role="navigation">
+        <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
 
                                              <!-- grouping -->
 
@@ -140,7 +147,6 @@ $headers = 'From: '.$email_from."\r\n".
                         <li><a href="shop.php">SHOP</a></li>
                         <li><a href="about.php">ABOUT</a></li>
                         <li><a href="contact.php">CONTACT</a></li>
-                        <li><a href="admin.php">ADMIN</a></li>
                     </ul>
                 </div>
             </div>
