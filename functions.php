@@ -6,7 +6,7 @@ session_start();
 
 $db_host = "localhost:3306";
 $db_username = "root";
-$db_pass = "";
+$db_pass = "BerryPatch5600#";
 $db_name = "berrypatch";
 
 $messagesw = false;

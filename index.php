@@ -47,7 +47,7 @@ if (isset($_POST['login'])) {
 <body onload="message()" style="background-color: #FFFFCD;">
     
 
-    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top " role="navigation">
             <!-- grouping -->
 
                                  <!--SECTION ONE: navigation and header banner-->
@@ -193,12 +193,12 @@ if (isset($_POST['login'])) {
             }
         }
 
-var frmvalidator  = new Validator("helpForm");
-frmvalidator.addValidation("first_name","req","Please provide your name"); 
-frmvalidator.addValidation("email","req","Please provide your email"); 
-frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+//var frmvalidator  = new Validator("helpForm");
+//frmvalidator.addValidation("first_name","req","Please provide your name"); 
+//frmvalidator.addValidation("email","req","Please provide your email"); 
+//frmvalidator.addValidation("email","email","Please enter a valid email address"); 
 
- $(document).ready(function() { Load(message()); })
+ //$(document).ready(function() { Load(message()); })
 </script>
 <script type="text/javascript">
         function message() {
