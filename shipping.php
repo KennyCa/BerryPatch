@@ -33,10 +33,10 @@ if (isset($_POST['submit'])) {
 
 	$address = array();
 	
-	$wsdl           = "https://swsim.testing.stamps.com/swsim/swsimv69.asmx?wsdl";
+	$wsdl           = "https://swsim.stamps.com/swsim/swsimv69.asmx?wsdl";
 	$integrationID  = "6ccdfb3b-7ce6-49e5-94ff-e71b96792d04";
-	$username       = "BerryPatch-001";
-	$password       = "postage1";
+	$username       = "BPITS";
+	$password       = "Berry-5560";
 	$stamps     = new stamps_com($wsdl, $integrationID, $username, $password);
 	$shipDate   = date('Y-m-d');
 	

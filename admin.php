@@ -71,8 +71,9 @@
 <header class="container">
 	<div class="row">
 		
-		<div class="col-sm-offset-2 col-sm-8 text-center">
+		<div class="col-sm-offset-2 col-sm-8 text-center" style="padding-top: 20px;">
 			<b><h1>Berry Patch Admin</h1></b>
+			<p>Welcome!</p>
 		</div>
 	</div>
 	

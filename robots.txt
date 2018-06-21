@@ -23,4 +23,4 @@ Disallow: / library/
 Disallow: / PHPMailer/
 Disallow: / newitems/
 Disallow: / braintree-php-3.29.0/
-Sitemap: https://www.berrypatchitservices.com/sitemap.xml
+Sitemap: https://www.bpits.org/sitemap.xml
